@@ -1,0 +1,262 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Schedules (as amended 2022)",
+    "lastUpdated": "2024-12-19",
+    "note": "2022 Amendment restructured schedules: Schedule I & II (animals), Schedule III (animals), Schedule IV (CITES), Schedule V (vermin), Schedule VI (plants)"
+  },
+  "schedules": {
+    "I": {
+      "title": "Schedule I - Highest Protection (Absolute Protection)",
+      "description": "Species listed in Schedule I receive the highest degree of protection. Hunting is completely prohibited except under Section 11 (human safety/mercy killing). Trade is prohibited under Chapter VA.",
+      "protectionLevel": "Absolute - Hunting strictly prohibited, trade banned",
+      "keyCategories": {
+        "MAMMALS": [
+          "Tiger (Panthera tigris)", "Lion (Panthera leo)", "Leopard (Panthera pardus)", "Snow Leopard (Panthera uncia)", "Clouded Leopard (Neofelis nebulosa)",
+          "Elephant (Elephas maximus)", "Rhinoceros (Rhinoceros unicornis, Dicerorhinus sumatrensis)",
+          "Wild Buffalo (Bubalus arnee)", "Gaur (Bos gaurus)", "Yak (Bos grunniens)",
+          "Blackbuck (Antilope cervicapra)", "Chinkara (Gazella bennettii)", "Four-horned Antelope (Tetracerus quadricornis)",
+          "Tibetan Antelope (Pantholops hodgsonii)", "Tibetan Gazelle (Procapra picticaudata)",
+          "Hangul (Cervus hanglu)", "Swamp Deer (Rucervus duvaucelii)", "Eld's Deer (Rucervus eldii)",
+          "Mouse Deer (Moschiola meminna)", "Musk Deer (Moschus spp.)",
+          "Red Panda (Ailurus fulgens)", "Giant Panda (Ailuropoda melanoleuca)",
+          "Pangolin (Manis spp.)", "Sloth Bear (Melursus ursinus)", "Himalayan Black Bear (Ursus thibetanus)",
+          "Brown Bear (Ursus arctos)", "Wolf (Canis lupus)", "Dhole (Cuon alpinus)",
+          "Hyena (Hyaena hyaena)", "Caracal (Caracal caracal)", "Lynx (Lynx lynx)",
+          "Marbled Cat (Pardofelis marmorata)", "Fishing Cat (Prionailurus viverrinus)",
+          "Wild Dog (Cuon alpinus)", "Tibetan Wolf (Canis lupus chanco)",
+          "Nayan (Ovis ammon)", "Bharal (Pseudois nayaur)", "Himalayan Tahr (Hemitragus jemlahicus)",
+          "Nilgiri Tahr (Nilgiritragus hylocrius)", "Markhor (Capra falconeri)",
+          "Ibex (Capra ibex)", "Serow (Capricornis sumatraensis)", "Goral (Naemorhedus goral)",
+          "Takin (Budorcas taxicolor)", "Chiru (Pantholops hodgsonii)",
+          "Gangetic Dolphin (Platanista gangetica)", "Irrawaddy Dolphin (Orcaella brevirostris)",
+          "Dugong (Dugong dugon)", "Marine Turtles (all species)"
+        ],
+        "BIRDS": [
+          "Great Indian Bustard (Ardeotis nigriceps)", "Lesser Florican (Sypheotides indicus)",
+          "Bengal Florican (Houbaropsis bengalensis)", "White-bellied Heron (Ardea insignis)",
+          "Siberian Crane (Leucogeranus leucogeranus)", "Black-necked Crane (Grus nigricollis)",
+          "Himalayan Quail (Ophrysia superciliosa)", "Pink-headed Duck (Rhodonessa caryophyllacea)",
+          "Jerdon's Courser (Rhinoptilus bitorquatus)", "Forest Owlet (Heteroglaux blewitti)",
+          "White-rumped Vulture (Gyps bengalensis)", "Indian Vulture (Gyps indicus)",
+          "Slender-billed Vulture (Gyps tenuirostris)", "Red-headed Vulture (Sarcogyps calvus)",
+          "White-backed Vulture (Gyps africanus)", "Cinereous Vulture (Aegypius monachus)",
+          "Bearded Vulture (Gypaetus barbatus)", "Egyptian Vulture (Neophron percnopterus)",
+          "Himalayan Griffon (Gyps himalayensis)", "Griffon Vulture (Gyps fulvus)",
+          "Monals (Lophophorus spp.)", "Tragopans (Tragopan spp.)",
+          "Cheer Pheasant (Catreus wallichii)", "Himalayan Monal (Lophophorus impejanus)",
+          "Sclater's Monal (Lophophorus sclateri)", "Blyth's Tragopan (Tragopan blythii)",
+          "Western Tragopan (Tragopan melanocephalus)", "Satyr Tragopan (Tragopan satyra)",
+          "Kashmir Flycatcher (Ficedula subrubra)", "White-bellied Shortwing (Brachypteryx major)",
+          "Nilgiri Wood Pigeon (Columba elphinstonii)", "Malabar Grey Hornbill (Ocyceros griseus)",
+          "Great Hornbill (Buceros bicornis)", "Rufous-necked Hornbill (Aceros nipalensis)",
+          "Narcondam Hornbill (Rhyticeros narcondami)", "Wreathed Hornbill (Rhyticeros undulatus)",
+          "Brown Hornbill (Anorrhinus austeni)", "White-throated Brown Hornbill (Anorrhinus tickelli)"
+        ],
+        "REPTILES": [
+          "Gharial (Gavialis gangeticus)", "Saltwater Crocodile (Crocodylus porosus)",
+          "Mugger Crocodile (Crocodylus palustris)", "King Cobra (Ophiophagus hannah)",
+          "Indian Rock Python (Python molurus)", "Reticulated Python (Malayopython reticulatus)",
+          "Monitor Lizard (Varanus spp.)", "Indian Star Tortoise (Geochelone elegans)",
+          "River Terrapin (Batagur baska)", "Hawksbill Turtle (Eretmochelys imbricata)",
+          "Green Turtle (Chelonia mydas)", "Leatherback Turtle (Dermochelys coriacea)",
+          "Olive Ridley Turtle (Lepidochelys olivacea)", "Loggerhead Turtle (Caretta caretta)"
+        ],
+        "AMPHIBIANS": [
+          "Purple Frog (Nasikabatrachus sahyadrensis)", "Malabar Gliding Frog (Rhacophorus malabaricus)"
+        ],
+        "FISHES": [
+          "Whale Shark (Rhincodon typus)", "Giant Guitarfish (Glaucostegus typus)",
+          "Pondicherry Shark (Carcharhinus hemiodon)", "Ganges Shark (Glyphis gangeticus)",
+          "Mahseer (Tor spp.)"
+        ],
+        "INVERTEBRATES": [
+          "Butterflies (various species)", "Beetles (various species)"
+        ]
+      },
+      "legalImplications": [
+        "Hunting completely prohibited (Section 9)",
+        "Exception only under Section 11 (human safety/mercy killing)",
+        "Trade prohibited (Chapter VA)",
+        "Penalties: 3-7 years imprisonment, ₹25,000+ fine (Section 51)",
+        "Second offence: 7 years, ₹5 lakh fine",
+        "Bail restrictions under Section 51A"
+      ],
+      "amendments": ["1986", "1991", "2002", "2006", "2022 - major restructuring"]
+    },
+    "II": {
+      "title": "Schedule II - High Protection",
+      "description": "Species listed in Schedule II receive high protection. Hunting prohibited except under Section 11. Trade regulated. 2022 Amendment: Vermin can only be declared from Schedule II (previously Schedules III-V).",
+      "protectionLevel": "High - Hunting prohibited, trade regulated",
+      "keyCategories": {
+        "MAMMALS": [
+          "Jackal (Canis aureus)", "Fox (Vulpes bengalensis)", "Jungle Cat (Felis chaus)",
+          "Leopard Cat (Prionailurus bengalensis)", "Fishing Cat (Prionailurus viverrinus) - also in Sch I",
+          "Civet (Viverra spp., Paradoxurus spp.)", "Mongoose (Herpestes spp.)",
+          "Otter (Lutra lutra, Aonyx cinereus)", "Pangolin (Manis spp.) - also in Sch I",
+          "Porcupine (Hystrix indica)", "Hare (Lepus spp.)", "Squirrel (various)",
+          "Bat (various species)", "Monkey (Macaca spp., Semnopithecus spp.)",
+          "Langur (Semnopithecus spp.)", "Macaque (Macaca spp.)",
+          "Deer (various - Chital, Sambar, Barking Deer, Hog Deer)",
+          "Antelope (Nilgai, Blackbuck - also Sch I)", "Wild Boar (Sus scrofa)",
+          "Sloth Bear (Melursus ursinus) - also in Sch I"
+        ],
+        "BIRDS": [
+          "Peafowl (Pavo cristatus)", "Jungle Fowl (Gallus sonneratii)",
+          "Partridge (various)", "Quail (various)", "Dove (various)",
+          "Parakeet (Psittacula spp.)", "Myna (Acridotheres spp.)",
+          "Bulbul (Pycnonotus spp.)", "Drongo (Dicrurus spp.)",
+          "Kingfisher (various)", "Woodpecker (various)",
+          "Owl (various)", "Eagle (various)", "Kite (various)",
+          "Vulture (various - some in Sch I)", "Falcon (various)",
+          "Harrier (various)", "Buzzard (various)"
+        ],
+        "REPTILES": [
+          "Common Monitor (Varanus bengalensis)", "Python (Python molurus) - also in Sch I",
+          "Rat Snake (Ptyas mucosa)", "Cobra (Naja naja)", "Krait (Bungarus spp.)",
+          "Viper (Daboia russelii, Echis carinatus)", "Turtle (various - some in Sch I)",
+          "Terrapin (various)", "Gecko (various)", "Skink (various)"
+        ],
+        "AMPHIBIANS": [
+          "Frog (various)", "Toad (various)", "Tree Frog (various)"
+        ]
+      },
+      "legalImplications": [
+        "Hunting prohibited (Section 9)",
+        "Exception under Section 11 for human safety/mercy killing",
+        "Trade regulated (Chapter VA for scheduled animals)",
+        "Penalties: 3-7 years imprisonment, ₹25,000+ fine (Section 51)",
+        "2022: Only Schedule II animals can be declared vermin (Section 62)",
+        "Vermin declaration removes protection for that area/period"
+      ],
+      "amendments": ["1986", "1991", "2002", "2006", "2022 - vermin declaration changed"]
+    },
+    "III": {
+      "title": "Schedule III - Protected Animals",
+      "description": "Species listed in Schedule III are protected but with lesser restrictions than Schedules I/II. Hunting permitted under Section 11 for education, research, scientific management. 2022 Amendment: Schedule III now referenced in definitions for 'wild animal' and protected area provisions.",
+      "protectionLevel": "Moderate - Hunting permitted for specific purposes under Section 11",
+      "keyCategories": {
+        "MAMMALS": [
+          "Chital (Axis axis)", "Sambar (Rusa unicolor)", "Barking Deer (Muntiacus muntjak)",
+          "Hog Deer (Axis porcinus)", "Mouse Deer (Moschiola meminna) - also Sch I",
+          "Nilgai (Boselaphus tragocamelus)", "Four-horned Antelope (Tetracerus quadricornis) - also Sch I",
+          "Wild Boar (Sus scrofa)", "Indian Hare (Lepus nigricollis)",
+          "Indian Porcupine (Hystrix indica)", "Flying Squirrel (Petaurista spp.)",
+          "Giant Squirrel (Ratufa spp.)", "Malabar Giant Squirrel (Ratufa indica)",
+          "Indian Giant Flying Squirrel (Petaurista philippensis)"
+        ],
+        "BIRDS": [
+          "Common game birds", "Waterfowl (ducks, geese)", "Waders (snipes, sandpipers)",
+          "Pigeons and Doves (various)", "Parakeets (various - some in Sch II)",
+          "Mynas and Starlings (various)", "Bulbuls (various)"
+        ],
+        "REPTILES": [
+          "Common lizards", "Non-venomous snakes", "Freshwater turtles (some species)"
+        ]
+      },
+      "legalImplications": [
+        "Hunting permitted under Section 11 for education, research, scientific management",
+        "Permit required from Chief Wild Life Warden",
+        "Trade regulated",
+        "Penalties: 3-7 years imprisonment, fine (Section 51)",
+        "Lesser protection than Schedules I/II"
+      ],
+      "amendments": ["1991", "2002", "2006", "2022 - referenced in definitions"]
+    },
+    "IV": {
+      "title": "Schedule IV - CITES Listed Species (International Trade Regulation)",
+      "description": "NEW in 2022 Amendment (Chapter VB). Contains species listed in CITES Appendices I, II, III. Regulates international trade through Management Authority and Scientific Authority. Includes import, export, re-export, introduction from sea permits.",
+      "protectionLevel": "International Trade Regulation - CITES implementation",
+      "keyCategories": {
+        "APPENDIX_I": [
+          "All Schedule I species that are in CITES Appendix I",
+          "Tiger, Elephant, Rhino, Leopard, Snow Leopard, Clouded Leopard",
+          "Great Indian Bustard, Bengal Florican, Lesser Florican",
+          "Gharial, Saltwater Crocodile, King Cobra",
+          "Marine Turtles, Whale Shark",
+          "Pangolins, Musk Deer, Tibetan Antelope"
+        ],
+        "APPENDIX_II": [
+          "Species in CITES Appendix II",
+          "Many Schedule II species",
+          "Monitor Lizards, Pythons, Rat Snakes",
+          "Parrots, Falcons, Eagles",
+          "Corals, Giant Clams",
+          "Orchids, Cacti, Succulents",
+          "Mahogany, Rosewood, Agarwood"
+        ],
+        "APPENDIX_III": [
+          "Species in CITES Appendix III listed by India",
+          "Certain deer species", "Certain bird species",
+          "Specific to India's listings"
+        ]
+      },
+      "legalImplications": [
+        "Management Authority (Section 49E) issues permits/certificates",
+        "Scientific Authority (Section 49F) advises on non-detriment findings",
+        "Export/Import/Re-export/Introduction from sea require permits (Sections 49H-49L)",
+        "Possession/transfer/breeding of living Appendix I species requires registration (Section 49M)",
+        "Breeding of Appendix I species requires licence (Section 49N)",
+        "Penalties: Section 51 applies (3-7 years, ₹1 lakh+)"
+      ],
+      "amendments": ["2022 - entirely new Chapter VB"]
+    },
+    "V": {
+      "title": "Schedule V - Vermin",
+      "description": "Species declared as vermin by Central Government under Section 62. 2022 Amendment: Only Schedule II species can be declared vermin. Declared animals are deemed NOT in Schedule II for the specified area and period.",
+      "protectionLevel": "No protection - can be hunted freely during declaration period",
+      "keyCategories": {
+        "CURRENT_VERMIN": [
+          "None currently notified at national level",
+          "State-specific notifications may exist"
+        ],
+        "POTENTIAL_CANDIDATES": [
+          "Wild Boar (crop damage)", "Nilgai (crop damage)",
+          "Rhesus Macaque (urban conflict)", "Common Crow",
+          "Fruit Bats (orchard damage)"
+        ]
+      },
+      "legalImplications": [
+        "Central Government declares via notification (Section 62)",
+        "Only Schedule II species eligible (2022 Amendment)",
+        "Area and period specific",
+        "Declared vermin: no penalty for hunting/killing",
+        "Deemed removed from Schedule II for that area/period"
+      ],
+      "amendments": ["2002", "2022 - restricted to Schedule II only"]
+    },
+    "VI": {
+      "title": "Schedule VI - Specified Plants",
+      "description": "Plants that are prohibited from picking, uprooting, collection, possession, sale, transfer. 2022 Amendment: Definition updated - 'wild animal' now refers to Schedules I, II, III. Schedule VI plants have separate protection under Chapter IIIA.",
+      "protectionLevel": "Complete prohibition on collection, possession, trade",
+      "keyCategories": {
+        "TREES": [
+          "Red Sandalwood (Pterocarpus santalinus)", "Sandalwood (Santalum album)",
+          "Rosewood (Dalbergia latifolia)", "Agarwood (Aquilaria malaccensis)",
+          "Teak (Tectona grandis) - in some states", "Sal (Shorea robusta) - in some states"
+        ],
+        "ORCHIDS": [
+          "All orchid species (Orchidaceae)", "Paphiopedilum spp.", "Cymbidium spp.",
+          "Dendrobium spp.", "Vanda spp.", "Renanthera spp."
+        ],
+        "MEDICINAL_PLANTS": [
+          "Rauvolfia serpentina", "Saussurea costus", "Taxus wallichiana",
+          "Nardostachys grandiflora", "Picrorhiza kurrooa", "Aconitum spp.",
+          "Gentiana kurroo", "Swertia chirata"
+        ],
+        "OTHER": [
+          "Pitcher Plants (Nepenthes spp.)", "Cycas spp.", "Gnetum spp.",
+          "Podocarpus spp.", "Juniperus spp.", "Ephedra spp."
+        ]
+      },
+      "legalImplications": [
+        "Prohibition on picking, uprooting, collection (Section 17A)",
+        "Possession, sale, transfer prohibited (Sections 17D, 17F, 17G)",
+        "Cultivation without licence prohibited (Section 17C)",
+        "Declaration of stock required (Section 17E)",
+        "Plants become Government property (Section 17H)",
+        "Penalties: Section 51 - 3-7 years, ₹25,000+ fine"
+      ],
+      "amendments": ["1991", "2002", "2006", "2022 - definition references updated"]
+    }
+  }
+}

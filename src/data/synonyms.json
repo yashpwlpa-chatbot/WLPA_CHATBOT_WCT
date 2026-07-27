@@ -1,0 +1,468 @@
+{
+  "metadata": {
+    "description": "Synonym mappings for WLPA knowledge search normalization",
+    "lastUpdated": "2025-01-15",
+    "version": "1.0"
+  },
+  "synonyms": {
+    "Tiger": [
+      "Tiger",
+      "Panthera tigris",
+      "Royal Bengal Tiger",
+      "Bengal Tiger",
+      "वाघ",
+      "बाघ",
+      "शेर"
+    ],
+    "Leopard": [
+      "Leopard",
+      "Panther",
+      "Indian Leopard",
+      "Panthera pardus",
+      "बिबट्या",
+      "तेंदुआ"
+    ],
+    "Elephant": [
+      "Elephant",
+      "Asian Elephant",
+      "Elephas maximus",
+      "हत्ती",
+      "हाथी"
+    ],
+    "IndianRhinoceros": [
+      "Indian Rhinoceros",
+      "Rhinoceros unicornis",
+      "One-horned Rhino",
+      "Indian Rhino",
+      "गैंडा",
+      "गेंडा"
+    ],
+    "Lion": [
+      "Lion",
+      "Asiatic Lion",
+      "Panthera leo persica",
+      "शेर"
+    ],
+    "SnowLeopard": [
+      "Snow Leopard",
+      "Panthera uncia",
+      "Ounce",
+      "हिम तेंदुआ",
+      "हिमालयन बिबट्या"
+    ],
+    "CloudedLeopard": [
+      "Clouded Leopard",
+      "Neofelis nebulosa",
+      "मेघ बाघ",
+      "मेघ बिबट्या"
+    ],
+    "Blackbuck": [
+      "Blackbuck",
+      "Antilope cervicapra",
+      "Indian Antelope",
+      "काला हिरण",
+      "काळा हरीण"
+    ],
+    "Chinkara": [
+      "Chinkara",
+      "Indian Gazelle",
+      "Gazella bennettii",
+      "छिंकारा",
+      "चिंकारा"
+    ],
+    "FourHornedAntelope": [
+      "Four-horned Antelope",
+      "Chousingha",
+      "Tetracerus quadricornis",
+      "चौसिंगा",
+      "चौसिंगा"
+    ],
+    "TibetanAntelope": [
+      "Tibetan Antelope",
+      "Chiru",
+      "Pantholops hodgsonii",
+      "चीरू"
+    ],
+    "GangeticDolphin": [
+      "Gangetic Dolphin",
+      "South Asian River Dolphin",
+      "Platanista gangetica",
+      "सूंस",
+      "सुस"
+    ],
+    "Gharial": [
+      "Gharial",
+      "Gavialis gangeticus",
+      "Gavial",
+      "घड़ियाल",
+      "घड्याळ"
+    ],
+    "IndianPython": [
+      "Indian Python",
+      "Indian Rock Python",
+      "Python molurus",
+      "अजगर"
+    ],
+    "KingCobra": [
+      "King Cobra",
+      "Ophiophagus hannah",
+      "Hamadryad",
+      "किंग कोबरा",
+      "राजा नाग"
+    ],
+    "IndianPangolin": [
+      "Indian Pangolin",
+      "Manis crassicaudata",
+      "Scaly Anteater",
+      "चींटीखोर",
+      "खव्या मांजर"
+    ],
+    "SlothBear": [
+      "Sloth Bear",
+      "Melursus ursinus",
+      "भालू",
+      "अस्वल"
+    ],
+    "HimalayanBlackBear": [
+      "Himalayan Black Bear",
+      "Ursus thibetanus",
+      "Asiatic Black Bear",
+      "हिमालयी काला भालू"
+    ],
+    "WildBuffalo": [
+      "Wild Buffalo",
+      "Wild Water Buffalo",
+      "Bubalus arnee",
+      "जंगली भैंसा",
+      "जंगली महिष"
+    ],
+    "Gaur": [
+      "Gaur",
+      "Indian Bison",
+      "Bos gaurus",
+      "गौर"
+    ],
+    "SwampDeer": [
+      "Swamp Deer",
+      "Barasingha",
+      "Rucervus duvaucelii",
+      "बारहसिंगा"
+    ],
+    "Hangul": [
+      "Hangul",
+      "Kashmir Stag",
+      "Cervus hanglu",
+      "कश्मीर हिरण",
+      "कश्मीरी हरीण"
+    ],
+    "Sambar": [
+      "Sambar",
+      "Rusa unicolor",
+      "सांबर"
+    ],
+    "SpottedDeer": [
+      "Spotted Deer",
+      "Chital",
+      "Axis axis",
+      "चीतल"
+    ],
+    "BarkingDeer": [
+      "Barking Deer",
+      "Muntjac",
+      "Muntiacus muntjak",
+      "काकर",
+      "भेंकर"
+    ],
+    "Nilgai": [
+      "Nilgai",
+      "Blue Bull",
+      "Boselaphus tragocamelus",
+      "नीलगाय"
+    ],
+    "WildBoar": [
+      "Wild Boar",
+      "Wild Pig",
+      "Sus scrofa",
+      "जंगली सूअर",
+      "जंगली सुवर"
+    ],
+    "Peafowl": [
+      "Peafowl",
+      "Indian Peafowl",
+      "Peacock",
+      "Pavo cristatus",
+      "मोर"
+    ],
+    "GreatIndianBustard": [
+      "Great Indian Bustard",
+      "Ardeotis nigriceps",
+      "सोन चिड़िया",
+      "माळ पक्षी"
+    ],
+    "LesserFlorican": [
+      "Lesser Florican",
+      "Sypheotides indicus",
+      "लिक्ख",
+      "खरमोर"
+    ],
+    "BengalFlorican": [
+      "Bengal Florican",
+      "Houbaropsis bengalensis",
+      "बंगाल फ्लोरिकन"
+    ],
+    "IndianVulture": [
+      "Indian Vulture",
+      "Gyps indicus",
+      "गिद्ध"
+    ],
+    "WhiteRumpedVulture": [
+      "White-rumped Vulture",
+      "Gyps bengalensis",
+      "सफेद पीठ वाला गिद्ध"
+    ],
+    "RedHeadedVulture": [
+      "Red-headed Vulture",
+      "Sarcogyps calvus",
+      "लाल सिर वाला गिद्ध"
+    ],
+    "IndianVultureGeneral": [
+      "Vulture",
+      "गिद्ध"
+    ],
+    "KingCobra": [
+      "King Cobra",
+      "Ophiophagus hannah",
+      "Hamadryad",
+      "किंग कोबरा",
+      "राजा नाग"
+    ],
+    "IndianPython": [
+      "Indian Python",
+      "Indian Rock Python",
+      "Python molurus",
+      "अजगर"
+    ],
+    "RussellsViper": [
+      "Russell's Viper",
+      "Daboia russelii",
+      "Chain Viper",
+      "रसेल वाइपर"
+    ],
+    "IndianCobra": [
+      "Indian Cobra",
+      "Spectacled Cobra",
+      "Naja naja",
+      "नाग",
+      "नागिन"
+    ],
+    "SawScaledViper": [
+      "Saw-scaled Viper",
+      "Echis carinatus",
+      "कारपेट वाइपर"
+    ],
+    "CommonKrait": [
+      "Common Krait",
+      "Bungarus caeruleus",
+      "करैत"
+    ],
+    "MonitorLizard": [
+      "Monitor Lizard",
+      "Varanus",
+      "गोह",
+      "बिज्जू"
+    ],
+    "StarTortoise": [
+      "Indian Star Tortoise",
+      "Geochelone elegans",
+      "स्टार टॉरटॉयज",
+      "तारा कछुआ"
+    ],
+    "OliveRidleyTurtle": [
+      "Olive Ridley Turtle",
+      "Lepidochelys olivacea",
+      "ओलिव रिडले कछुआ"
+    ],
+    "GreenSeaTurtle": [
+      "Green Sea Turtle",
+      "Chelonia mydas",
+      "हरा समुद्री कछुआ"
+    ],
+    "HawksbillTurtle": [
+      "Hawksbill Turtle",
+      "Eretmochelys imbricata",
+      "हॉक्सबिल कछुआ"
+    ],
+    "LeatherbackTurtle": [
+      "Leatherback Turtle",
+      "Dermochelys coriacea",
+      "लैदरबैक कछुआ"
+    ],
+    "LoggerheadTurtle": [
+      "Loggerhead Turtle",
+      "Caretta caretta",
+      "लॉगरहेड कछुआ"
+    ],
+    "RedSandalwood": [
+      "Red Sandalwood",
+      "Red Sanders",
+      "Pterocarpus santalinus",
+      "रक्त चंदन",
+      "रक्तचंदन"
+    ],
+    "Sandalwood": [
+      "Sandalwood",
+      "Santalum album",
+      "चंदन"
+    ],
+    "Agarwood": [
+      "Agarwood",
+      "Aquilaria malaccensis",
+      "Oud",
+      "Agar",
+      "अगर"
+    ],
+    "Orchids": [
+      "Orchid",
+      "Orchidaceae",
+      "ऑर्किड"
+    ],
+    "RedPanda": [
+      "Red Panda",
+      "Ailurus fulgens",
+      "Firefox",
+      "लाल पांडा"
+    ],
+    "HimalayanMuskDeer": [
+      "Himalayan Musk Deer",
+      "Moschus leucogaster",
+      "Musk Deer",
+      "कस्तूरी मृग"
+    ],
+    "NilgiriTahr": [
+      "Nilgiri Tahr",
+      "Nilgiritragus hylocrius",
+      "नीलगिरी तहर"
+    ],
+    "NilgiriLangur": [
+      "Nilgiri Langur",
+      "Semnopithecus johnii",
+      "नीलगिरी लंगूर"
+    ],
+    "LionTailedMacaque": [
+      "Lion-tailed Macaque",
+      "Macaca silenus",
+      "शेर पूंछ बंदर"
+    ],
+    "HoolockGibbon": [
+      "Hoolock Gibbon",
+      "Hoolock hoolock",
+      "हूलॉक गिबन"
+    ],
+    "GoldenLangur": [
+      "Golden Langur",
+      "Trachypithecus geei",
+      "गोल्डन लंगूर"
+    ],
+    "CappedLangur": [
+      "Capped Langur",
+      "Trachypithecus pileatus",
+      "कैप्ड लंगूर"
+    ],
+    "AssamMacaque": [
+      "Assam Macaque",
+      "Macaca assamensis",
+      "असम मकाक"
+    ],
+    "StumpTailedMacaque": [
+      "Stump-tailed Macaque",
+      "Macaca arctoides",
+      "स्टंप-टेल्ड मकाक"
+    ],
+    "PhayresLeafMonkey": [
+      "Phayre's Leaf Monkey",
+      "Trachypithecus phayrei",
+      "फेयर्स लीफ मंकी"
+    ],
+    "SlowLoris": [
+      "Slow Loris",
+      "Nycticebus",
+      "धीमा लोरिस"
+    ],
+    "IndianOtter": [
+      "Indian Otter",
+      "Lutra lutra",
+      "उदबिलाव"
+    ],
+    "SmoothCoatedOtter": [
+      "Smooth-coated Otter",
+      "Lutrogale perspicillata",
+      "स्मूथ-कोटेड ऊदबिलाव"
+    ],
+    "SmallClawedOtter": [
+      "Small-clawed Otter",
+      "Aonyx cinereus",
+      "स्मॉल-क्लॉड ऊदबिलाव"
+    ],
+    "Mahseer": [
+      "Mahseer",
+      "Tor",
+      "महसीर"
+    ],
+    "GoldenMahseer": [
+      "Golden Mahseer",
+      "Tor putitora",
+      "गोल्डन महसीर"
+    ],
+    "Hilsa": [
+      "Hilsa",
+      "Tenualosa ilisha",
+      "इलिश"
+    ],
+    "GangesShark": [
+      "Ganges Shark",
+      "Glyphis gangeticus",
+      "गंगा शार्क"
+    ],
+    "MuggerCrocodile": [
+      "Mugger Crocodile",
+      "Crocodylus palustris",
+      "मगरमच्छ"
+    ],
+    "SaltwaterCrocodile": [
+      "Saltwater Crocodile",
+      "Crocodylus porosus",
+      "खारे पानी का मगरमच्छ"
+    ],
+    "GeneralTerms": {
+      "hunting": ["hunting", "poaching", "shikar", "शिकार", "शिकारी", "hunt"],
+      "poaching": ["poaching", "illegal hunting", "illegal shikar", "अवैध शिकार"],
+      "wildlife": ["wildlife", "wild life", "वन्यजीव", "वन्य जीवन", "wild animals"],
+      "protection": ["protection", "conservation", "संरक्षण", "सुरक्षा"],
+      "schedule": ["schedule", "अनुसूची"],
+      "section": ["section", "धारा", "कलम"],
+      "penalty": ["penalty", "punishment", "fine", "imprisonment", "दंड", "सजा", "जुर्माना", "कैद"],
+      "sanctuary": ["sanctuary", "wildlife sanctuary", "अभयारण्य", "अभ्यारण्य"],
+      "national park": ["national park", "राष्ट्रीय उद्यान", "राष्ट्रीय पार्क"],
+      "tiger reserve": ["tiger reserve", "बाघ आरक्षित", "वाघ आरक्षित"],
+      "conservation reserve": ["conservation reserve", "संरक्षण आरक्षित"],
+      "community reserve": ["community reserve", "सामुदायिक आरक्षित"],
+      "poaching": ["poaching", "illegal hunting", "अवैध शिकार"],
+      "illegal trade": ["illegal trade", "wildlife trade", "smuggling", "अवैध व्यापार", "तस्करी"],
+      "captive": ["captive", "कैद", "पालतू"],
+      "wild": ["wild", "जंगली", "वन्य"],
+      "endangered": ["endangered", "संकटग्रस्त", "लुप्तप्राय"],
+      "critically endangered": ["critically endangered", "गंभीर रूप से संकटग्रस्त"],
+      "vulnerable": ["vulnerable", "संवेदनशील"],
+      "protected": ["protected", "संरक्षित"],
+      "endemic": ["endemic", "स्थानिक"],
+      "native": ["native", "देशी", "स्थानीय"],
+      "invasive": ["invasive", "आक्रामक", "आक्रामक प्रजाति"],
+      "schedule I": ["schedule i", "schedule 1", "schedule I", "अनुसूची 1", "अनुसूची I"],
+      "schedule II": ["schedule ii", "schedule 2", "schedule II", "अनुसूची 2", "अनुसूची II"],
+      "schedule III": ["schedule iii", "schedule 3", "schedule III", "अनुसूची 3", "अनुसूची III"],
+      "schedule IV": ["schedule iv", "schedule 4", "schedule IV", "अनुसूची 4", "अनुसूची IV"],
+      "schedule V": ["schedule v", "schedule 5", "schedule V", "अनुसूची 5", "अनुसूची V"],
+      "schedule VI": ["schedule vi", "schedule 6", "schedule VI", "अनुसूची 6", "अनुसूची VI"]
+    }
+  }
+}

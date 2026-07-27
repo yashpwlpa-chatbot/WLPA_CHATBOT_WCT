@@ -1,0 +1,222 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Section 2 Definitions (as amended 2022)",
+    "lastUpdated": "2024-12-19"
+  },
+  "definitions": {
+    "animal": {
+      "clause": "2(1)",
+      "definition": "\"animal\" includes mammals, birds, reptiles, amphibians, fish, other chordates and invertebrates and also includes their young and eggs;",
+      "amendments": ["2002 - expanded to include all chordates and invertebrates", "1991 - included amphibians"],
+      "plainLanguage": "Every living creature - mammals, birds, reptiles, amphibians, fish, insects, worms, etc. - and their young/eggs."
+    },
+    "animalArticle": {
+      "clause": "2(2)",
+      "definition": "\"animal article\" means an article made from any captive animal or wild animal, other than vermin, and includes an article or object in which the whole or any part of such animal has been used, and ivory imported into India and an article made therefrom;",
+      "amendments": ["1991 - added ivory imported into India", "2022 - scheduled specimen added via Section 57"],
+      "plainLanguage": "Any item made from a wild/captive animal (not vermin) - including ivory items and items containing animal parts."
+    },
+    "board": {
+      "clause": "2(4)",
+      "definition": "\"Board\" means a State Board for Wild Life constituted under sub-section (1) of section 6;",
+      "amendments": ["2002 - substituted (was 'Central Board')"],
+      "plainLanguage": "The State-level wildlife advisory board headed by Chief Minister."
+    },
+    "captiveAnimal": {
+      "clause": "2(5)",
+      "definition": "\"captive animal\" means any animal, specified in Schedule I, Schedule II, Schedule III or Schedule IV, which is captured or kept or bred in captivity;",
+      "amendments": ["2022 - Schedule IV added (CITES species)", "1991 - Schedule IV included", "2002 - Part II Schedule II removed"],
+      "plainLanguage": "Any scheduled animal (Schedules I-IV) that is in captivity - caught, kept, or bred."
+    },
+    "chiefWildLifeWarden": {
+      "clause": "2(7)",
+      "definition": "\"Chief Wild Life Warden\" means the person appointed as such under clause (a) of sub-section (1) of section 4;",
+      "plainLanguage": "Top wildlife officer in a State, appointed by State Government."
+    },
+    "circus": {
+      "clause": "2(7A)",
+      "definition": "\"circus\" means an establishment, whether stationary or mobile, where animals are kept or used wholly or mainly for the purpose of performing tricks or manoeuvres;",
+      "amendments": ["1991 - inserted", "2002 - includes rescue centres but not dealer establishment"],
+      "plainLanguage": "Place where animals perform tricks. Includes rescue centres but not licensed dealer premises."
+    },
+    "collector": {
+      "clause": "2(9)",
+      "definition": "\"Collector\" means the chief officer in charge of the revenue administration of a district or any other officer not below the rank of a Deputy Collector as may be appointed by the State Government under section 18B in this behalf;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "District Collector or Deputy Collector appointed for sanctuary land acquisition."
+    },
+    "dealer": {
+      "clause": "2(11)",
+      "definition": "\"dealer\" in relation to any captive animal, animal article, trophy, uncured trophy, meat or specified plant, means a person who carries on the business of buying or selling any such animal or article, and includes a person who undertakes business in any single transaction;",
+      "amendments": ["2002 - substituted (single transaction included)"],
+      "plainLanguage": "Anyone buying/selling wildlife items as business - even one transaction counts."
+    },
+    "forestOfficer": {
+      "clause": "2(12A)",
+      "definition": "\"Forest officer\" means the Forest officer appointed under clause (2) of section 2 of the Indian Forest Act, 1927 or under any other Act for the time being in force in a State;",
+      "amendments": ["2002 - inserted"],
+      "plainLanguage": "Officer appointed under Indian Forest Act or State forest law."
+    },
+    "forestProduce": {
+      "clause": "2(12B)",
+      "definition": "\"forest produce\" shall have the same meaning as in sub-clause (b) of clause (4) of section 2 of the Indian Forest Act, 1927;",
+      "amendments": ["2002 - inserted"],
+      "plainLanguage": "Timber, charcoal, wood-oil, resin, bark, leaves, flowers, fruit, seeds, etc. as defined in Indian Forest Act."
+    },
+    "hunting": {
+      "clause": "2(16)",
+      "definition": "\"hunting\", with its grammatical variations and cognate expressions, includes— (a) killing or poisoning of any wild animal or captive animal and every attempt to do so; (b) capturing, coursing, snaring, trapping, driving or baiting any wild or captive animal and every attempt to do so;",
+      "amendments": ["1991 - expanded (added capturing, coursing, snaring, trapping, driving, baiting)", "2002 - substituted"],
+      "plainLanguage": "Killing, poisoning, capturing, chasing, snaring, trapping, driving, baiting - AND attempts. Very broad definition."
+    },
+    "invasiveAlienSpecies": {
+      "clause": "2(16A)",
+      "definition": "\"invasive alien species\" means a species of animal or plant which is not native to India and whose introduction or spread may threaten or adversely impact wild life or its habitat;",
+      "amendments": ["2022 - NEW (Section 62A regulation)"],
+      "plainLanguage": "Non-native species that can harm Indian wildlife/habitat. Central Govt can regulate/prohibit import/trade/possession."
+    },
+    "livestock": {
+      "clause": "2(18A)",
+      "definition": "\"livestock\" means farm animals and includes buffaloes, bulls, bullocks, camels, cows, donkeys, goats, sheep, horses, mules, yaks, pigs, ducks, geese, poultry and their young but does not include any animal specified in Schedules I, II and IV;",
+      "amendments": ["2002 - substituted (Schedules I-V)", "2022 - Schedules I, II and IV"],
+      "plainLanguage": "Farm animals (cattle, goats, sheep, poultry, etc.) - EXCLUDING scheduled wildlife species."
+    },
+    "manufacturer": {
+      "clause": "2(19)",
+      "definition": "\"manufacturer\" means a person who manufactures articles from any animal or plant specified in Schedules I to V and VI, as the case may be;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "Anyone making products from scheduled animals (I-V) or scheduled plants (VI)."
+    },
+    "meat": {
+      "clause": "2(20)",
+      "definition": "\"meat\" includes blood, bones, sinew, eggs, shell or carapace, fat and flesh with or without skin, whether raw or cooked, of any wild animal or captive animal, other than a vermin;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "ALL parts - blood, bones, eggs, shell, fat, flesh - raw or cooked. Excludes vermin."
+    },
+    "nationalBoard": {
+      "clause": "2(20A)",
+      "definition": "\"National Board\" means the National Board for Wild Life constituted under section 5A;",
+      "amendments": ["2002 - inserted"],
+      "plainLanguage": "National-level wildlife board headed by Prime Minister."
+    },
+    "protectedArea": {
+      "clause": "2(24A)",
+      "definition": "\"protected area\" means a National Park, a sanctuary, a conservation reserve or a community reserve notified under sections 18, 35, 36A and 36C of the Act;",
+      "amendments": ["2002 - inserted"],
+      "plainLanguage": "Four types: National Park, Sanctuary, Conservation Reserve, Community Reserve."
+    },
+    "reserveForest": {
+      "clause": "2(25B)",
+      "definition": "\"reserve forest\" means the forest declared to be reserved by the State Government under section 20 of the Indian Forest Act, 1927, or declared as such under any other State Act;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "Forest legally reserved under Indian Forest Act or State law."
+    },
+    "sanctuary": {
+      "clause": "2(26)",
+      "definition": "\"sanctuary\" means an area declared as a sanctuary by notification under the provisions of Chapter IV of this Act and shall also include a deemed sanctuary under sub-section (4) of section 66;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "Area notified as sanctuary under Chapter IV. Includes deemed sanctuaries."
+    },
+    "scheduledAnimal": {
+      "clause": "2(34A) / 49A(a)",
+      "definition": "\"scheduled animal\" means an animal specified for the time being in Schedule I or Schedule II;",
+      "amendments": ["1986 - Chapter VA: Schedule I or Part II of Schedule II", "2002 - Part II removed", "2022 - Schedule I or Schedule II"],
+      "plainLanguage": "Animals in Schedule I or II - highest protection, trade banned under Chapter VA."
+    },
+    "scheduledSpecimen": {
+      "clause": "2(24) / 49D(k)",
+      "definition": "\"scheduled specimen\" means any specimen of a species listed in Appendices I, II or III of the Convention and incorporated as such in Schedule IV;",
+      "amendments": ["2022 - NEW (Chapter VB - CITES)"],
+      "plainLanguage": "Any specimen of CITES-listed species (Schedule IV). Includes parts/derivatives."
+    },
+    "specimen": {
+      "clause": "49D(m)",
+      "definition": "\"specimen\" means— (i) any animal or plant, whether alive or dead; (ii) in case of animal: readily recognisable part or derivative (App I/II Schedule IV), specified parts (App III Schedule IV); (iii) in case of plant: readily recognisable part or derivative (App I Schedule IV), specified parts (App II/III Schedule IV);",
+      "amendments": ["2022 - NEW (Chapter VB)"],
+      "plainLanguage": "Whole animal/plant (dead/alive) OR recognizable parts/derivatives. CITES definition."
+    },
+    "taxidermy": {
+      "clause": "2(30)",
+      "definition": "\"taxidermy\", with its grammatical variations and cognate expressions, means the curing, preparation or preservation or mounting of trophies;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "Preserving/mounting animal trophies. Requires licence under Section 44."
+    },
+    "trophy": {
+      "clause": "2(31)",
+      "definition": "\"trophy\" means the whole or any part of any captive animal or wild animal which has been kept or preserved by any means, whether artificial or natural, and includes— (a) rugs, skins and specimens of such animals mounted in whole or in part through a process of taxidermy; (b) antler, bone, carapace, shell, horn, rhinoceros horn, hair, feather, nail, tooth, tusk, musk, eggs, nests and honeycomb;",
+      "amendments": ["1991 - expanded (added eggs, nests, honeycomb)", "2002 - substituted"],
+      "plainLanguage": "Preserved animal parts - skins, mounts, antlers, horns, bones, teeth, tusks, feathers, eggs, nests, honeycomb."
+    },
+    "uncuredTrophy": {
+      "clause": "2(32)",
+      "definition": "\"uncured trophy\" means the whole or any part of any captive animal or wild animal which has not undergone a process of taxidermy, and includes fresh meat, fresh hide, fresh horn, fresh antler, fresh feather, fresh egg;",
+      "plainLanguage": "Fresh (unpreserved) animal parts - fresh meat, hide, horn, antler, feather, egg."
+    },
+    "vermin": {
+      "clause": "2(34)",
+      "definition": "\"vermin\" means any wild animal notified under section 62;",
+      "amendments": ["1991 - substituted (was Schedule V)", "2022 - Schedule II only eligible"],
+      "plainLanguage": "Any wild animal Central Govt declares as vermin by notification. ONLY Schedule II species eligible (2022). No protection during declaration."
+    },
+    "wildAnimal": {
+      "clause": "2(36)",
+      "definition": "\"wild animal\" means any animal specified in Schedules I, II, III and IV and found wild in nature;",
+      "amendments": ["1991 - Schedules I-IV (was I-V)", "2002 - Schedule IV included", "2022 - Schedules I, II and III (IV for CITES)"],
+      "plainLanguage": "Scheduled animals (I-IV) living in wild. Schedule IV = CITES species."
+    },
+    "wildLife": {
+      "clause": "2(37)",
+      "definition": "\"wild life\" includes any animal, aquatic or land vegetation which forms part of any habitat;",
+      "amendments": ["2002 - substituted"],
+      "plainLanguage": "ALL biodiversity - animals, plants, aquatic life - that are part of any habitat."
+    },
+    "zoo": {
+      "clause": "2(39)",
+      "definition": "\"zoo\" means an establishment, whether stationary or mobile, where captive animals are kept for exhibiting to the public or ex-situ conservation and includes a circus and off-exhibit facilities such as rescue centres and conservation breeding centres, but does not include an establishment of a licensed dealer in captive animals;",
+      "amendments": ["1991 - inserted", "2002 - includes circus, rescue centres, breeding centres", "2022 - substituted (ex-situ conservation, off-exhibit facilities)"],
+      "plainLanguage": "Place keeping captive animals for public display or conservation. Includes rescue/breeding centres. Excludes licensed dealers."
+    },
+    "managementAuthority": {
+      "clause": "49D(g) / 49E",
+      "definition": "\"Management Authority\" means the Management Authority designated under section 49E; officer not below Additional Director General of Forests. Functions: issue permits/certificates for CITES trade, submit reports, implement Convention.",
+      "amendments": ["2022 - NEW (Chapter VB)"],
+      "plainLanguage": "Central Govt officer (ADG Forests+) who issues CITES permits and manages international trade."
+    },
+    "scientificAuthority": {
+      "clause": "49D(j) / 49F",
+      "definition": "\"Scientific Authority\" means a Scientific Authority designated under section 49F; research institutes advising on non-detriment findings, monitoring exports.",
+      "amendments": ["2022 - NEW (Chapter VB)"],
+      "plainLanguage": "Research institutes advising Management Authority on whether trade harms species survival."
+    },
+    "conservationReserve": {
+      "clause": "36A",
+      "definition": "Area declared by State Government (or Central Government per 2022) on government-owned land after consulting local communities. Managed by Conservation Reserve Management Committee.",
+      "amendments": ["2002 - inserted (Sections 36A, 36B)", "2022 - Central Govt can declare (Section 38(2A))"],
+      "plainLanguage": "Protected area on government land with community involvement. Less restrictive than sanctuary."
+    },
+    "communityReserve": {
+      "clause": "36C",
+      "definition": "Area declared by State Government on private/community land where community agrees to protect wildlife. Managed by Community Reserve Management Committee including land owner.",
+      "amendments": ["2002 - inserted (Sections 36C, 36D)", "2022 - Private land committee composition (Section 36D(2A))"],
+      "plainLanguage": "Protected area on private/community land with owner consent. Community-managed."
+    },
+    "tigerReserve": {
+      "clause": "38K(e) / 38V",
+      "definition": "Area notified as tiger reserve under Section 38V. Includes Core (critical tiger habitat - inviolate) and Buffer (co-existence zone). Requires Tiger Conservation Plan approved by NTCA.",
+      "amendments": ["2006 - inserted (Chapter IVB)", "2022 - Core inviolate, voluntary relocation with consent"],
+      "plainLanguage": "Tiger conservation area with inviolate core and co-existence buffer. NTCA oversight."
+    },
+    "coreArea": {
+      "clause": "38V Explanation(I)",
+      "definition": "Critical tiger habitat areas of National Parks/sanctuaries where established on scientific criteria as required to be kept inviolate for tiger conservation, without affecting Scheduled Tribes/forest dwellers rights.",
+      "amendments": ["2006 - inserted", "2022 - clarified inviolate, rights protected"],
+      "plainLanguage": "No-go zone for tigers. No human activity. Rights of tribals/forest dwellers protected."
+    },
+    "bufferArea": {
+      "clause": "38V Explanation(II)",
+      "definition": "Peripheral area around core where lesser habitat protection needed to ensure core integrity, promoting coexistence between wildlife and humans with recognition of livelihood rights.",
+      "amendments": ["2006 - inserted", "2022 - coexistence, livelihood rights"],
+      "plainLanguage": "Co-existence zone around core. Humans and wildlife share space. Livelihood rights recognized."
+    }
+  }
+}

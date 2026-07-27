@@ -1,0 +1,212 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Glossary of Legal and Technical Terms",
+    "lastUpdated": "2024-12-19",
+    "languages": ["en", "hi", "mr"]
+  },
+  "glossary": {
+    "absolute_protection": {
+      "en": "Absolute Protection",
+      "hi": "पूर्ण संरक्षण",
+      "mr": "पूर्ण संरक्षण",
+      "definition": "Highest level of legal protection where hunting, trade, and possession are completely prohibited except under extremely limited exceptions (e.g., Section 11 for human safety). Applies to Schedule I species.",
+      "relatedTerms": ["Schedule I", "Section 9", "Section 11"]
+    },
+    "appendix_i_ii_iii": {
+      "en": "CITES Appendices I, II, III",
+      "hi": "साइट्स परिशिष्ट I, II, III",
+      "mr": "साइट्स परिशिष्ट I, II, III",
+      "definition": "CITES (Convention on International Trade in Endangered Species) categorizes species by trade threat level. Appendix I: trade prohibited (except non-commercial). Appendix II: trade regulated with permits. Appendix III: species listed by individual countries for cooperation. Incorporated as Schedule IV in WLPA 2022.",
+      "relatedTerms": ["Schedule IV", "CITES", "Management Authority", "Scientific Authority"]
+    },
+    "captive_animal": {
+      "en": "Captive Animal",
+      "hi": "कैद जानवर",
+      "mr": "कॅद प्राणी",
+      "definition": "Any animal specified in Schedules I, II, III, or IV that is captured, kept, or bred in captivity. Requires ownership certificate (Section 42) and declaration (Section 40).",
+      "relatedTerms": ["Schedule I-IV", "Ownership Certificate", "Section 40", "Section 42"]
+    },
+    "cites": {
+      "en": "CITES",
+      "hi": "साइट्स (CITES)",
+      "mr": "साइट्स (CITES)",
+      "definition": "Convention on International Trade in Endangered Species of Wild Fauna and Flora (1973). International agreement regulating cross-border trade in wildlife. Implemented in India via WLPA Chapter VB (2022 Amendment).",
+      "relatedTerms": ["Chapter VB", "Schedule IV", "Management Authority", "Scientific Authority"]
+    },
+    "community_reserve": {
+      "en": "Community Reserve",
+      "hi": "सामुदायिक आरक्षित क्षेत्र",
+      "mr": "समुदाय आरक्षित क्षेत्र",
+      "definition": "Protected area declared on private/community land where the community/landowner agrees to protect wildlife (Section 36C). Managed by a committee including the land owner, Forest Dept representative, and Panchayat/tribal representative. Introduced in 2002 Amendment.",
+      "relatedTerms": ["Section 36C", "Section 36D", "Conservation Reserve", "Protected Area"]
+    },
+    "conservation_reserve": {
+      "en": "Conservation Reserve",
+      "hi": "संरक्षण आरक्षित क्षेत्र",
+      "mr": "संरक्षण आरक्षित क्षेत्र",
+      "definition": "Protected area declared on government-owned land after consulting local communities (Section 36A). Managed by Conservation Reserve Management Committee. 2022 Amendment: Central Government can also declare. Less restrictive than sanctuary.",
+      "relatedTerms": ["Section 36A", "Section 36B", "Section 38(2A)", "Protected Area"]
+    },
+    "core_area": {
+      "en": "Core Area (Critical Tiger Habitat)",
+      "hi": "कोर क्षेत्र (महत्वपूर्ण बाघ आवास)",
+      "mr": "कोर क्षेत्र (महत्वपूर्ण वाघ वासस्थान)",
+      "definition": "Inviolate zone within a tiger reserve identified on scientific criteria as essential for tiger conservation (Section 38V Explanation I). No human activity permitted. Rights of Scheduled Tribes/forest dwellers protected. Buffer area surrounds it.",
+      "relatedTerms": ["Tiger Reserve", "Buffer Area", "Section 38V", "NTCA"]
+    },
+    "buffer_area": {
+      "en": "Buffer Area / Peripheral Area",
+      "hi": "बफर क्षेत्र / परिधीय क्षेत्र",
+      "mr": "बफर क्षेत्र / परिमेय क्षेत्र",
+      "definition": "Area surrounding the core zone in a tiger reserve where a degree of habitat protection ensures core integrity while promoting human-wildlife coexistence with recognition of livelihood rights (Section 38V Explanation II).",
+      "relatedTerms": ["Tiger Reserve", "Core Area", "Section 38V", "Coexistence"]
+    },
+    "ecological_security": {
+      "en": "Ecological Security",
+      "hi": "पारिस्थितिक सुरक्षा",
+      "mr": "पारिस्थितिक सुरक्षा",
+      "definition": "Long title of WLPA since 2002 Amendment: 'ensuring the ecological and environmental security of the country'. Shifts focus from mere species protection to ecosystem-level security.",
+      "relatedTerms": ["Long Title", "2002 Amendment", "Environmental Security"]
+    },
+    "ex_gratia": {
+      "en": "Ex-Gratia Payment / Compensation",
+      "hi": "एक्स-ग्रेशिया भुगतान / मुआवजा",
+      "mr": "एक्स-ग्रेशिया भुगतान / भरपाई",
+      "definition": "Discretionary compensation paid by State Government for crop damage, livestock loss, human injury/death due to wildlife. Not a legal right under WLPA but provided under State schemes. Section 60B allows rewards up to ₹10,000 for assistance in detection.",
+      "relatedTerms": ["Section 60B", "Human-Wildlife Conflict", "State Schemes"]
+    },
+    "forfeiture": {
+      "en": "Forfeiture of Property",
+      "hi": "संपत्ति जब्ती",
+      "mr": "संपत्ति जब्ती",
+      "definition": "Civil proceeding (Chapter VIA, Sections 58A-58Y) where property acquired from illegal hunting/trade is forfeited to State Government. Burden of proof on accused. Competent Authority, Appellate Tribunal, Administrator manage process.",
+      "relatedTerms": ["Chapter VIA", "Competent Authority", "Appellate Tribunal", "Illegally Acquired Property"]
+    },
+    "government_property": {
+      "en": "Government Property (Wildlife)",
+      "hi": "सरकारी संपत्ति (वन्यजीव)",
+      "mr": "शासकीय संपत्ति (वन्यजीव)",
+      "definition": "Section 39: All wild animals (Schedules I-IV), animal articles, trophies, meat, ivory, specified plants, and scheduled specimens (2022) are Government property. Live animals to be housed in recognized zoo/rescue centre. No commercial sale on disposal.",
+      "relatedTerms": ["Section 39", "Section 40", "Ownership Certificate", "Scheduled Specimen"]
+    },
+    "habitat": {
+      "en": "Habitat",
+      "hi": "आवास / वासस्थान",
+      "mr": "वासस्थान",
+      "definition": "The natural environment where a species lives, including all ecological factors. WLPA protects habitat through protected areas, sanctuary/NP restrictions (Sections 29, 35), and tiger reserve core-buffer model.",
+      "relatedTerms": ["Protected Area", "Sanctuary", "National Park", "Tiger Reserve", "Section 29", "Section 35"]
+    },
+    "hunting": {
+      "en": "Hunting (Legal Definition)",
+      "hi": "शिकार (कानूनी परिभाषा)",
+      "mr": "शिकार (कायदेशीर व्याख्या)",
+      "definition": "Section 2(16): Killing, poisoning, capturing, coursing, snaring, trapping, driving, baiting any wild/captive animal AND every attempt to do so. Extremely broad - includes egg collection, nest disturbance, photography with disturbance.",
+      "relatedTerms": ["Section 2(16)", "Section 9", "Section 11", "Attempt"]
+    },
+    "invasive_alien_species": {
+      "en": "Invasive Alien Species",
+      "hi": "आक्रामक विदेशी प्रजाति",
+      "mr": "आक्रामक विदेशी प्रजाति",
+      "definition": "Section 2(16A) (2022): Non-native animal/plant species whose introduction/spread threatens Indian wildlife/habitat. Central Govt can regulate/prohibit import, trade, possession, proliferation (Section 62A). Seizure and destruction authorized.",
+      "relatedTerms": ["Section 2(16A)", "Section 62A", "Section 62B", "Biodiversity Threat"]
+    },
+    "management_authority": {
+      "en": "Management Authority (CITES)",
+      "hi": "प्रबंधन प्राधिकरण (साइट्स)",
+      "mr": "व्यवस्थापन प्राधिकरण (साइट्स)",
+      "definition": "Section 49E (2022): Central Govt officer not below Additional DG Forests. Issues CITES permits/certificates (import/export/re-export/introduction from sea), submits reports, implements Convention. Designated ports only.",
+      "relatedTerms": ["Section 49E", "Scientific Authority", "CITES", "Schedule IV", "Chapter VB"]
+    },
+    "national_board": {
+      "en": "National Board for Wild Life",
+      "hi": "राष्ट्रीय वन्यजीव बोर्ड",
+      "mr": "राष्ट्रीय वन्यजीव बोर्ड",
+      "definition": "Section 5A (2002): Apex advisory body chaired by Prime Minister. Vice-Chair: Environment Minister. 30+ members including MPs, NGOs, experts, Secretaries, Directors, CWLWs. Functions: policy, advice, protected areas, impact assessment, status reports.",
+      "relatedTerms": ["Section 5A", "Section 5B", "Section 5C", "Prime Minister", "Standing Committee"]
+    },
+    "ntca": {
+      "en": "National Tiger Conservation Authority (NTCA)",
+      "hi": "राष्ट्रीय बाघ संरक्षण प्राधिकरण (NTCA)",
+      "mr": "राष्ट्रीय वाघ संरक्षण प्राधिकरण (NTCA)",
+      "definition": "Chapter IVB (2006): Statutory body for tiger conservation. Chair: Environment Minister. Powers: approve Tiger Conservation Plans, disallow unsustainable land use in tiger reserves, tourism norms, human-wildlife conflict mitigation, direct States. Member-Secretary: IG Forests.",
+      "relatedTerms": ["Chapter IVB", "Section 38L", "Section 38O", "Section 38V", "Tiger Reserve", "Tiger Conservation Plan"]
+    },
+    "ownership_certificate": {
+      "en": "Certificate of Ownership",
+      "hi": "स्वामित्व प्रमाणपत्र",
+      "mr": "स्वामित्व प्रमाणपत्र",
+      "definition": "Section 42: Legal document issued by CWLW proving lawful possession of captive animal/animal article/trophy. Required for transfer/transport (Section 43). 2022: Voluntary surrender cancels certificate (Section 42A), no compensation.",
+      "relatedTerms": ["Section 40", "Section 42", "Section 42A", "Section 43", "CWLW"]
+    },
+    "protected_area": {
+      "en": "Protected Area",
+      "hi": "संरक्षित क्षेत्र",
+      "mr": "संरक्षित क्षेत्र",
+      "definition": "Section 2(24A) (2002): National Park, Sanctuary, Conservation Reserve, or Community Reserve notified under Sections 18, 35, 36A, 36C. Four-tier hierarchy of protection.",
+      "relatedTerms": ["National Park", "Sanctuary", "Conservation Reserve", "Community Reserve", "Section 2(24A)"]
+    },
+    "schedule": {
+      "en": "Schedule",
+      "hi": "अनुसूची",
+      "mr": "अनुसूची",
+      "definition": "Lists appended to WLPA categorizing species by protection level. 2022 restructure: Schedule I & II (animals - absolute/high protection), Schedule III (animals - moderate), Schedule IV (CITES species), Schedule V (vermin), Schedule VI (plants). Section 2(26A) defines 'Schedule'.",
+      "relatedTerms": ["Schedule I", "Schedule II", "Schedule III", "Schedule IV", "Schedule V", "Schedule VI", "Section 2(26A)"]
+    },
+    "scientific_authority": {
+      "en": "Scientific Authority (CITES)",
+      "hi": "वैज्ञानिक प्राधिकरण (साइट्स)",
+      "mr": "वैज्ञानिक प्राधिकरण (साइट्स)",
+      "definition": "Section 49F (2022): Research institute(s) designated by Central Govt. Advises Management Authority on non-detriment findings (trade won't harm species survival), monitors Appendix II exports, limits export permits if needed.",
+      "relatedTerms": ["Section 49F", "Management Authority", "Non-Detriment Finding", "CITES", "Schedule IV"]
+    },
+    "scheduled_animal": {
+      "en": "Scheduled Animal",
+      "hi": "अनुसूचित प्राणी",
+      "mr": "अनुसूचित प्राणी",
+      "definition": "Section 49A/2(34A): Animal specified in Schedule I or Schedule II. Highest trade prohibition under Chapter VA (Sections 49A-49C). Trade completely banned after 'specified date' (2 months from listing).",
+      "relatedTerms": ["Schedule I", "Schedule II", "Chapter VA", "Section 49A", "Section 49B", "Specified Date"]
+    },
+    "scheduled_specimen": {
+      "en": "Scheduled Specimen",
+      "hi": "अनुसूचित नमूना",
+      "mr": "अनुसूचित नमूना",
+      "definition": "Section 49D(k) (2022): Specimen of species listed in CITES Appendices I, II, III incorporated in Schedule IV. Includes whole animals/plants, readily recognizable parts/derivatives. CITES permits required for trade.",
+      "relatedTerms": ["Schedule IV", "CITES", "Specimen", "Chapter VB", "Section 49D"]
+    },
+    "specified_plant": {
+      "en": "Specified Plant",
+      "hi": "निर्दिष्ट पौधा",
+      "mr": "निर्दिष्ट वनस्पती",
+      "definition": "Plant species listed in Schedule VI. Protected under Chapter IIIA (Sections 17A-17H). Picking, uprooting, collection, possession, trade prohibited. Cultivation/dealing requires licence. Becomes Government property (Section 17H).",
+      "relatedTerms": ["Schedule VI", "Chapter IIIA", "Section 17A", "Section 17H", "Section 39"]
+    },
+    "tiger_reserve": {
+      "en": "Tiger Reserve",
+      "hi": "बाघ आरक्षित क्षेत्र",
+      "mr": "वाघ आरक्षित क्षेत्र",
+      "definition": "Area notified under Section 38V for tiger conservation. Comprises Core (critical tiger habitat - inviolate) and Buffer (coexistence zone). Requires NTCA-approved Tiger Conservation Plan. Voluntary relocation with consent/rehabilitation. No boundary change/de-notification without NTCA+National Board approval.",
+      "relatedTerms": ["Section 38V", "Core Area", "Buffer Area", "NTCA", "Tiger Conservation Plan", "Section 38W"]
+    },
+    "vermin": {
+      "en": "Vermin",
+      "hi": "कीट / वर्मिन",
+      "mr": "कीटक / वर्मिन",
+      "definition": "Section 2(34): Wild animal notified by Central Govt under Section 62. 2022: ONLY Schedule II species eligible. Declared vermin loses Schedule II protection for notified area/period. No penalty for killing during notification.",
+      "relatedTerms": ["Section 2(34)", "Section 62", "Schedule II", "2022 Amendment"]
+    },
+    "voluntary_surrender": {
+      "en": "Voluntary Surrender",
+      "hi": "स्वैच्छिक समर्पण",
+      "mr": "स्वेच्छिक समर्पण",
+      "definition": "Section 42A (2022): Person with ownership certificate can give 7 days notice and surrender captive animal/ivory to CWLW. Certificate cancelled. NO compensation. Surrendered items become State Govt property. Encourages compliance.",
+      "relatedTerms": ["Section 42A", "Section 42", "Ownership Certificate", "CWLW", "2022 Amendment"]
+    },
+    "wccb": {
+      "en": "Wildlife Crime Control Bureau (WCCB)",
+      "hi": "वन्यजीव अपराध नियंत्रण ब्यूरो (WCCB)",
+      "mr": "वन्यजीव गुन्हे नियंत्रण ब्यूरो (WCCB)",
+      "definition": "Chapter IVC (2006, renamed 2022): Centralized wildlife crime intelligence agency. Director: Director of Wildlife Preservation. Officers from Police, Customs, Forest. Functions: intelligence, coordination, CITES implementation, international cooperation, capacity building, policy advice. Officers can file complaints (Section 55).",
+      "relatedTerms": ["Chapter IVC", "Section 38Y", "Section 38Z", "Section 55", "Intelligence", "Enforcement"]
+    }
+  }
+}

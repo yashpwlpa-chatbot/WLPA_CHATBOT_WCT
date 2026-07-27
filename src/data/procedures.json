@@ -1,0 +1,278 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Key Procedures and Processes",
+    "lastUpdated": "2024-12-19"
+  },
+  "procedures": {
+    "sanctuaryDeclaration": {
+      "title": "Declaration of Sanctuary (Sections 18-26A)",
+      "steps": [
+        "State Government identifies area with ecological/faunal/floral significance",
+        "Issues notification declaring intention (Section 18)",
+        "Appoints Collector to determine rights (Section 18B)",
+        "Collector publishes proclamation (Section 21)",
+        "Inquiry into rights (Section 22)",
+        "Acquisition of rights (Section 24) - under RFCTLARR Act 2013 (2022)",
+        "Time limit for acquisition proceedings (Section 25A)",
+        "Final notification declaring sanctuary (Section 26A)",
+        "Chief Wild Life Warden assumes control (Section 33)"
+      ],
+      "keyPoints": [
+        "Cannot include reserve forest unless rights settled",
+        "Central Govt can also declare (Section 38)",
+        "2022: Management plans per Central Govt guidelines, Gram Sabha consultation in Scheduled Areas"
+      ],
+      "relatedSections": ["18", "18A", "18B", "19-26A", "33", "38"]
+    },
+    "nationalParkDeclaration": {
+      "title": "Declaration of National Park (Section 35)",
+      "steps": [
+        "State Government identifies area with ecological significance",
+        "Issues notification declaring intention (Section 35(1))",
+        "2022: Sections 27-33A apply IMMEDIATELY on declaration of intent (Section 35(3A))",
+        "Rights determination process (similar to sanctuary)",
+        "2022: Alternative arrangements for affected persons till rights settled (Section 35(3B))",
+        "Final notification declaring National Park (Section 35(4))",
+        "Higher protection: no grazing, no habitat alteration"
+      ],
+      "keyPoints": [
+        "Higher protection than sanctuary",
+        "No grazing permitted",
+        "No habitat alteration",
+        "Central Govt can also declare (Section 38)",
+        "2022: Interim protection on intent declaration"
+      ],
+      "relatedSections": ["35", "36", "38", "27-33A"]
+    },
+    "conservationReserveDeclaration": {
+      "title": "Declaration of Conservation Reserve (Sections 36A, 36B, 38(2A))",
+      "steps": [
+        "State Government (or Central Government post-2022) identifies government-owned area",
+        "Consults local communities",
+        "Issues notification declaring conservation reserve",
+        "Constitutes Conservation Reserve Management Committee (Section 36B)",
+        "Committee: Forest Officer, Wildlife Warden, Panchayat rep, NGO rep, experts"
+      ],
+      "keyPoints": [
+        "Government-owned land only",
+        "Community consultation mandatory",
+        "2022: Central Government can also declare (Section 38(2A))",
+        "Less restrictive than sanctuary"
+      ],
+      "relatedSections": ["36A", "36B", "38(2A)"]
+    },
+    "communityReserveDeclaration": {
+      "title": "Declaration of Community Reserve (Sections 36C, 36D)",
+      "steps": [
+        "Community/land owner agrees to protect wildlife on their land",
+        "State Government issues notification declaring community reserve",
+        "Constitutes Community Reserve Management Committee (Section 36D)",
+        "2022: Private land committee = owner + Forest Dept rep + Panchayat/tribal rep",
+        "Committee prepares management plan"
+      ],
+      "keyPoints": [
+        "Private/community land with owner consent",
+        "Community-driven conservation",
+        "2022: Specific composition for private land reserves"
+      ],
+      "relatedSections": ["36C", "36D"]
+    },
+    "tigerReserveNotification": {
+      "title": "Tiger Reserve Notification & Management (Sections 38V, 38W)",
+      "steps": [
+        "State Government identifies area with tiger population",
+        "Prepares Tiger Conservation Plan (core + buffer)",
+        "Submits to NTCA for approval (Section 38V)",
+        "NTCA approves/modifies plan",
+        "State Government notifies tiger reserve",
+        "Core area = inviolate (critical tiger habitat)",
+        "Buffer area = co-existence zone",
+        "Voluntary relocation with consent & rehabilitation (Section 38V)",
+        "No boundary alteration without NTCA + National Board approval (Section 38W)",
+        "No de-notification without NTCA + National Board approval"
+      ],
+      "keyPoints": [
+        "NTCA approval mandatory for plan",
+        "Core inviolate, buffer coexistence",
+        "Voluntary relocation ONLY with consent",
+        "Rights settlement under FRA 2006 before relocation",
+        "Double approval for boundary changes/de-notification"
+      ],
+      "relatedSections": ["38K", "38L", "38V", "38W", "38X"]
+    },
+    "huntingPermit": {
+      "title": "Hunting Permit Procedure (Sections 11, 12)",
+      "steps": [
+        "Application to Chief Wild Life Warden",
+        "Schedule I/II: ONLY if dangerous to human life/property OR disabled/diseased beyond recovery",
+        "Schedule III/IV: For education, research, scientific management",
+        "CWLW evaluates, may grant permit with conditions",
+        "Permit specifies: species, number, area, period, method",
+        "CANNOT be delegated (Section 5)"
+      ],
+      "keyPoints": [
+        "Schedule I/II: Extremely restricted (human safety/mercy only)",
+        "Schedule III/IV: Research/education/management",
+        "CWLW personal decision - no delegation",
+        "Violation = Section 51 penalties"
+      ],
+      "relatedSections": ["9", "11", "12", "5", "51"]
+    },
+    "specifiedPlantPermit": {
+      "title": "Specified Plant Permit (Sections 17A, 17B)",
+      "steps": [
+        "Prohibition on picking, uprooting, collecting specified plants (Schedule VI)",
+        "CWLW may grant permit for education, research, scientific management",
+        "Cultivation without licence prohibited (Section 17C)",
+        "Dealing without licence prohibited (Section 17D)",
+        "Stock declaration required (Section 17E)",
+        "Possession by licensee only (Section 17F)",
+        "Purchase from licensee only (Section 17G)",
+        "Plants become Government property (Section 17H)"
+      ],
+      "keyPoints": [
+        "Complete prohibition on Schedule VI plants",
+        "Permit only for research/education/management",
+        "Licence required for cultivation/dealing",
+        "Government property provision"
+      ],
+      "relatedSections": ["17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H"]
+    },
+    "ownershipCertificate": {
+      "title": "Certificate of Ownership (Sections 40, 42, 42A)",
+      "steps": [
+        "Declaration of possession within 30 days (Section 40)",
+        "Inquiry and inventory preparation (Section 41)",
+        "CWLW issues certificate of ownership (Section 42)",
+        "Certificate required for transfer/transport (Section 43)",
+        "2022: VOLUNTARY SURRENDER - give 7 days notice, surrender to CWLW, cert cancelled, NO compensation (Section 42A)",
+        "Surrendered items become State Government property"
+      ],
+      "keyPoints": [
+        "Mandatory declaration within 30 days",
+        "Certificate = legal possession proof",
+        "2022: Voluntary surrender option (no compensation)",
+        "Transfer/transport needs certificate"
+      ],
+      "relatedSections": ["39", "40", "41", "42", "42A", "43"]
+    },
+    "citESTradePermits": {
+      "title": "CITES Trade Permits (Chapter VB, Sections 49H-49L)",
+      "steps": [
+        "Management Authority (ADG Forests+) issues permits",
+        "Scientific Authority advises on non-detriment findings",
+        "EXPORT (Section 49I): Appendix I/II - export permit; Appendix III - permit/certificate of origin",
+        "IMPORT (Section 49J): Appendix I - import permit + export permit/re-export cert; Appendix II - export permit/re-export cert; Appendix III - certificate of origin/export permit/re-export cert",
+        "RE-EXPORT (Section 49K): Appendix I/II - re-export certificate",
+        "INTRODUCTION FROM SEA (Section 49L): Appendix I/II - certificate of introduction from sea",
+        "All trade only at designated ports",
+        "Reporting to Management Authority mandatory"
+      ],
+      "keyPoints": [
+        "Management Authority = permit issuing body",
+        "Scientific Authority = non-detriment advice",
+        "Appendix I: strictest (import + export permits)",
+        "Appendix II: export permit/re-export cert",
+        "Appendix III: certificate of origin/export permit",
+        "Designated ports only"
+      ],
+      "relatedSections": ["49D", "49E", "49F", "49H", "49I", "49J", "49K", "49L"]
+    },
+    "possessionRegistrationCITES": {
+      "title": "Possession Registration for Schedule IV Species (Section 49M)",
+      "steps": [
+        "Report possession of living Schedule IV animal to Management Authority",
+        "Authority may issue registration certificate if lawful possession",
+        "Report transfers (transferor AND transferee)",
+        "Report births of offspring",
+        "Report deaths",
+        "Breeding Appendix I species requires licence (Sections 49N-49O)",
+        "Central Govt may exempt species/quantities/periods"
+      ],
+      "keyPoints": [
+        "Mandatory reporting of possession, transfers, births, deaths",
+        "Registration certificate = legal possession",
+        "Breeding Appendix I = licence from CWLW",
+        "Exemptions possible by Central Govt"
+      ],
+      "relatedSections": ["49M", "49N", "49O", "49D", "49E"]
+    },
+    "offenceInvestigation": {
+      "title": "Offence Investigation & Enforcement (Sections 50, 51, 55)",
+      "steps": [
+        "Authorized officers: Director, CWLW, police, forest officers, customs, coast guard, Management Authority (2022), WCCB (2006)",
+        "Powers: entry, search, arrest without warrant, seizure (Section 50)",
+        "Seizure: animals, articles, trophies, scheduled specimens, vehicles, vessels",
+        "Sample collection for forensic analysis",
+        "Complaint to court by authorized officers only (Section 55)",
+        "Private person: 60-day notice to State Govt before complaint",
+        "Presumptions under Section 57 (burden on accused)",
+        "Compoundable offences: CWLW can compound up to ₹5 lakh (Section 54)"
+      ],
+      "keyPoints": [
+        "Wide range of authorized officers",
+        "Arrest without warrant for cognizable offences",
+        "Vehicle/vessel seizure authorized",
+        "Presumptions favor prosecution",
+        "Compounding available for minor offences"
+      ],
+      "relatedSections": ["50", "51", "54", "55", "57", "58"]
+    },
+    "forfeitureProcedure": {
+      "title": "Forfeiture of Illegally Acquired Property (Chapter VIA, Sections 58A-58Y)",
+      "steps": [
+        "Competent Authority identifies illegally acquired property",
+        "Show cause notice to person (Section 58E)",
+        "Seizure/freezing of property (Section 58F)",
+        "Administrator manages seized property (Section 58G)",
+        "Notice of forfeiture (Section 58H)",
+        "Forfeiture order if illegally acquired (Section 58I)",
+        "Burden of proof on ACCUSED (Section 58J)",
+        "Fine in lieu of forfeiture option (Section 58K)",
+        "Appeal to Appellate Tribunal within 45 days (Section 58O)",
+        "Bar of civil court jurisdiction (Section 58Q)"
+      ],
+      "keyPoints": [
+        "Civil proceeding - not criminal",
+        "Burden of proof on accused",
+        "Appellate Tribunal for appeals",
+        "Civil court jurisdiction barred",
+        "Property management by Administrator"
+      ],
+      "relatedSections": ["58A", "58B", "58C", "58D", "58E", "58F", "58G", "58H", "58I", "58J", "58K", "58N", "58O", "58Q"]
+    },
+    "verminDeclaration": {
+      "title": "Vermin Declaration Procedure (Section 62)",
+      "steps": [
+        "Central Government identifies Schedule II species causing damage",
+        "Issues notification declaring species as vermin for specific area/period",
+        "Declared species deemed NOT in Schedule II for that area/period",
+        "No penalty for hunting/killing declared vermin during notification period",
+        "2022: ONLY Schedule II species eligible (was Schedules III-V)"
+      ],
+      "keyPoints": [
+        "Central Govt notification only",
+        "Area and period specific",
+        "2022: Restricted to Schedule II only",
+        "Removes protection temporarily"
+      ],
+      "relatedSections": ["2(34)", "9", "11", "62"]
+    },
+    "invasiveAlienSpeciesRegulation": {
+      "title": "Invasive Alien Species Regulation (Section 62A, 2022)",
+      "steps": [
+        "Central Government identifies non-native species threatening wildlife/habitat",
+        "Issues notification regulating/prohibiting import, trade, possession, proliferation",
+        "Authorizes Director/officers to seize and dispose (including destruction)",
+        "Species not native to India, introduction/spread threatens wildlife/habitat"
+      ],
+      "keyPoints": [
+        "NEW in 2022 Amendment",
+        "Prevention of invasive species entry/spread",
+        "Seizure and destruction authorized",
+        "Addresses biodiversity threat from alien species"
+      ],
+      "relatedSections": ["2(16A)", "62A", "62B"]
+    }
+  }
+}

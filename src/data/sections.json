@@ -1,0 +1,643 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 (as amended up to 2022)",
+    "lastUpdated": "2024-12-19",
+    "totalSections": 66
+  },
+  "sections": {
+    "1": {
+      "number": "1",
+      "title": "Short title, extent and commencement",
+      "chapter": "I - Preliminary",
+      "summary": "This Act may be called the Wild Life (Protection) Act, 1972. It extends to the whole of India. It shall come into force on such date as the Central Government may appoint.",
+      "keyPoints": [
+        "Act extends to whole of India",
+        "Different dates may be appointed for different provisions",
+        "Different dates may be appointed for different States/UTs"
+      ],
+      "relatedSections": [],
+      "amendments": ["2002", "1991", "2022"],
+      "penalties": "None (preliminary section)"
+    },
+    "2": {
+      "number": "2",
+      "title": "Definitions",
+      "chapter": "I - Preliminary",
+      "summary": "Provides definitions for key terms used throughout the Act including 'animal', 'animal article', 'Board', 'captive animal', 'Chief Wild Life Warden', 'Collector', 'dealer', 'forest officer', 'forest produce', 'hunting', 'livestock', 'manufacturer', 'meat', 'National Board', 'protected area', 'reserve forest', 'sanctuary', 'specified plant', 'taxidermy', 'trophy', 'vermin', 'wild animal', 'wild life', 'zoo', etc.",
+      "keyPoints": [
+        "Animal includes mammals, birds, reptiles, amphibians, fish, other chordates and invertebrates and their young and eggs",
+        "Hunting includes killing, poisoning, capturing, coursing, snaring, trapping, driving, baiting and attempts",
+        "Protected area includes National Park, sanctuary, conservation reserve, community reserve",
+        "Wild animal means any animal specified in Schedules I to IV found wild in nature",
+        "Vermin means any wild animal notified under section 62",
+        "Invasive alien species means species not native to India whose introduction may threaten wildlife (added 2022)",
+        "Scheduled specimen means specimen of species listed in CITES Appendices incorporated in Schedule IV (added 2022)"
+      ],
+      "relatedSections": ["9", "11", "12", "17A", "39", "40", "42", "44", "51", "62"],
+      "amendments": ["1982", "1986", "1991", "1993", "2002", "2006", "2022"],
+      "penalties": "None (definition section)"
+    },
+    "3": {
+      "number": "3",
+      "title": "Appointment of Director and other officers",
+      "chapter": "II - Authorities",
+      "summary": "The Central Government shall appoint a Director of Wild Life Preservation and such other officers and employees as may be necessary. They shall be subordinate to the Director.",
+      "keyPoints": [
+        "Director appointed by Central Government",
+        "Other officers subordinate to Director",
+        "Powers can be delegated with Central Government approval"
+      ],
+      "relatedSections": ["4", "5", "5A"],
+      "amendments": ["2002"],
+      "penalties": "None"
+    },
+    "4": {
+      "number": "4",
+      "title": "Appointment of Chief Wild Life Warden and other officers",
+      "chapter": "II - Authorities",
+      "summary": "The State Government shall appoint a Chief Wild Life Warden, Wild Life Wardens, and Honorary Wild Life Wardens. They shall be subordinate to the Chief Wild Life Warden.",
+      "keyPoints": [
+        "Chief Wild Life Warden appointed by State Government",
+        "Honorary Wild Life Wardens can be appointed",
+        "All subordinate to Chief Wild Life Warden",
+        "Powers can be delegated with State Government approval"
+      ],
+      "relatedSections": ["3", "5", "11", "33", "34"],
+      "amendments": ["1991", "2002"],
+      "penalties": "None"
+    },
+    "5": {
+      "number": "5",
+      "title": "Power to delegate",
+      "chapter": "II - Authorities",
+      "summary": "The Director may delegate powers to subordinate officers with Central Government approval. The Chief Wild Life Warden may delegate powers to subordinate officers with State Government approval (except powers under section 11(1)(a)).",
+      "keyPoints": [
+        "Delegation requires government approval",
+        "Cannot delegate section 11(1)(a) powers (hunting permits)",
+        "Delegated powers have same effect as original"
+      ],
+      "relatedSections": ["3", "4", "11"],
+      "amendments": [],
+      "penalties": "None"
+    },
+    "5A": {
+      "number": "5A",
+      "title": "Constitution of the National Board for Wild Life",
+      "chapter": "II - Authorities",
+      "summary": "The Central Government shall constitute the National Board for Wild Life with the Prime Minister as Chairperson, Minister of Forests as Vice-Chairperson, and members including MPs, NGOs, experts, Secretaries, Directors of key institutions, and Chief Wild Life Wardens.",
+      "keyPoints": [
+        "Prime Minister is Chairperson",
+        "Minister of Forests is Vice-Chairperson",
+        "3 MPs (2 Lok Sabha, 1 Rajya Sabha)",
+        "5 NGO representatives, 10 eminent conservationists",
+        "Director of Wild Life Preservation is Member-Secretary",
+        "Term of non-ex-officio members prescribed by rules"
+      ],
+      "relatedSections": ["5B", "5C", "6", "38L"],
+      "amendments": ["2002", "2022"],
+      "penalties": "None"
+    },
+    "5B": {
+      "number": "5B",
+      "title": "Standing Committee of the National Board",
+      "chapter": "II - Authorities",
+      "summary": "The National Board may constitute a Standing Committee consisting of the Vice-Chairperson, Member-Secretary, and up to 10 members nominated by the Vice-Chairperson. The Board may also constitute sub-committees and study groups.",
+      "keyPoints": [
+        "Vice-Chairperson heads the Standing Committee",
+        "Max 10 members nominated by Vice-Chairperson",
+        "Board can create sub-committees and study groups"
+      ],
+      "relatedSections": ["5A", "5C"],
+      "amendments": ["2002", "2022"],
+      "penalties": "None"
+    },
+    "5C": {
+      "number": "5C",
+      "title": "Functions of the National Board",
+      "chapter": "II - Authorities",
+      "summary": "The National Board promotes conservation and development of wild life and forests. It frames policies, advises governments, makes recommendations on protected areas, conducts impact assessments, reviews progress, and publishes status reports every two years.",
+      "keyPoints": [
+        "Frame policies for wildlife conservation",
+        "Advise Central and State Governments",
+        "Recommend on protected areas management",
+        "Carry out impact assessments",
+        "Review progress every 2 years",
+        "Publish status report on wildlife"
+      ],
+      "relatedSections": ["5A", "5B", "6", "38L"],
+      "amendments": ["2002"],
+      "penalties": "None"
+    },
+    "6": {
+      "number": "6",
+      "title": "Constitution of State Board for Wild Life",
+      "chapter": "II - Authorities",
+      "summary": "State Government shall constitute a State Board for Wild Life with Chief Minister as Chairperson, Forest Minister as Vice-Chairperson, MLAs, NGO representatives, experts, Secretaries, department heads, and Chief Wild Life Warden as Member-Secretary.",
+      "keyPoints": [
+        "Chief Minister is Chairperson",
+        "Forest Minister is Vice-Chairperson",
+        "3 MLAs, 3 NGO reps, 10 experts (incl. 2 ST reps)",
+        "Chief Wild Life Warden is Member-Secretary",
+        "Must be constituted within 6 months of 2002 Amendment"
+      ],
+      "relatedSections": ["5A", "5C", "7", "8"],
+      "amendments": ["2002"],
+      "penalties": "None"
+    },
+    "7": {
+      "number": "7",
+      "title": "Procedure to be followed by the Board",
+      "chapter": "II - Authorities",
+      "summary": "The Board shall meet at least twice a year, regulate its own procedure including quorum. No act is invalid due to vacancy or defect in constitution.",
+      "keyPoints": [
+        "Minimum 2 meetings per year",
+        "Self-regulated procedure and quorum",
+        "Vacancies don't invalidate proceedings"
+      ],
+      "relatedSections": ["6", "8"],
+      "amendments": ["2002"],
+      "penalties": "None"
+    },
+    "8": {
+      "number": "8",
+      "title": "Duties of State Board for Wild Life",
+      "chapter": "II - Authorities",
+      "summary": "The State Board advises the State Government on selection and management of protected areas, policy formulation for wildlife and specified plants, amendment of Schedules, harmonising tribal needs with conservation, and other matters referred by State Government.",
+      "keyPoints": [
+        "Advise on protected area selection/management",
+        "Formulate conservation policy",
+        "Advise on Schedule amendments",
+        "Harmonise tribal needs with conservation"
+      ],
+      "relatedSections": ["6", "7", "35", "36A", "36C"],
+      "amendments": ["2002"],
+      "penalties": "None"
+    },
+    "9": {
+      "number": "9",
+      "title": "Prohibition of hunting",
+      "chapter": "III - Hunting of Wild Animals",
+      "summary": "No person shall hunt any wild animal specified in Schedule I, II, III, and IV (as amended by 2022: Schedules I and II only). Hunting is completely prohibited for these species.",
+      "keyPoints": [
+        "Complete prohibition on hunting Schedule I & II species (2022 Amendment)",
+        "Earlier covered Schedules I, II, III, IV",
+        "Hunting includes killing, poisoning, capturing, trapping, etc.",
+        "Strictest protection for Schedule I & II species"
+      ],
+      "relatedSections": ["11", "12", "29", "35", "39", "40", "51"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "See Section 51 - imprisonment 3-7 years, fine ₹25,000 - ₹1 lakh (higher for Schedule I/II)"
+    },
+    "11": {
+      "number": "11",
+      "title": "Hunting of wild animals to be permitted in certain cases",
+      "chapter": "III - Hunting of Wild Animals",
+      "summary": "The Chief Wild Life Warden may permit hunting of Schedule I/II animals only if: (a) animal is dangerous to human life or property, or (b) animal is disabled/diseased beyond recovery. For Schedule III/IV: for education, research, scientific management. Permits are subject to conditions.",
+      "keyPoints": [
+        "Schedule I/II: only for human safety or mercy killing",
+        "Schedule III/IV: for education, research, management",
+        "Permission only by Chief Wild Life Warden",
+        "Cannot be delegated (Section 5)",
+        "Permit specifies conditions"
+      ],
+      "relatedSections": ["9", "12", "29", "50", "51"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "Violation = Section 51 penalties"
+    },
+    "12": {
+      "number": "12",
+      "title": "Grant of permit for special purposes",
+      "chapter": "III - Hunting of Wild Animals",
+      "summary": "The Chief Wild Life Warden may grant permits for hunting for education, research, scientific management, collection of specimens for zoos/museums, derivation of snake venom for life-saving drugs. Permits have conditions and time limits.",
+      "keyPoints": [
+        "Permits for education, research, scientific management",
+        "Collection for zoos/museums",
+        "Snake venom for life-saving drugs",
+        "Subject to conditions and time limits"
+      ],
+      "relatedSections": ["9", "11", "38I", "39", "51"],
+      "amendments": ["1991", "2002", "2022"],
+      "penalties": "Violation = Section 51 penalties"
+    },
+    "17A": {
+      "number": "17A",
+      "title": "Prohibition of picking, uprooting, etc. of specified plant",
+      "chapter": "IIIA - Protection of Specified Plants",
+      "summary": "No person shall willfully pick, uproot, damage, destroy, acquire or collect any specified plant from any forest land or protected area. Possession, sale, transfer of such plants also prohibited.",
+      "keyPoints": [
+        "Complete prohibition on specified plants (Schedule VI)",
+        "Applies to forest land and protected areas",
+        "Possession, sale, transfer also prohibited",
+        "Specified plants = Schedule VI"
+      ],
+      "relatedSections": ["17B", "17C", "17D", "17E", "17F", "17G", "17H", "39"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹25,000+"
+    },
+    "18": {
+      "number": "18",
+      "title": "Declaration of sanctuary",
+      "chapter": "IV - Protected Areas (Sanctuaries)",
+      "summary": "State Government may declare any area (other than reserve forest/territorial waters) as a sanctuary if it has adequate ecological, faunal, floral, geomorphological, natural or zoological significance. Notification specifies boundaries.",
+      "keyPoints": [
+        "Declared by State Government",
+        "Must have ecological/faunal/floral significance",
+        "Cannot include reserve forest (unless rights settled)",
+        "Boundaries specified in notification"
+      ],
+      "relatedSections": ["18A", "18B", "19-26A", "27-34", "35", "36A"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Entry/violation = Section 51"
+    },
+    "29": {
+      "number": "29",
+      "title": "Destruction, etc., in a sanctuary prohibited without a permit",
+      "chapter": "IV - Protected Areas (Sanctuaries)",
+      "summary": "No person shall destroy, exploit, remove wildlife/forest produce, divert habitat, set fire, use chemicals, or introduce exotic species in a sanctuary without a permit from Chief Wild Life Warden. Grazing/movement of livestock permitted under conditions.",
+      "keyPoints": [
+        "Complete protection within sanctuary",
+        "Permit required from Chief Wild Life Warden",
+        "Prohibits: habitat destruction, fire, chemicals, exotic species",
+        "Livestock grazing permitted under section 33(d)",
+        "2022: 'National Board' substituted for 'Board'"
+      ],
+      "relatedSections": ["18", "27", "28", "33", "34", "35", "51"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹1 lakh+"
+    },
+    "33": {
+      "number": "33",
+      "title": "Control of sanctuaries",
+      "chapter": "IV - Protected Areas (Sanctuaries)",
+      "summary": "The Chief Wild Life Warden shall control, manage and protect all sanctuaries in accordance with management plans approved by him as per Central Government guidelines. In Scheduled Areas, management plan prepared after consultation with Gram Sabha.",
+      "keyPoints": [
+        "Chief Wild Life Warden controls sanctuaries",
+        "Management plans per Central Govt guidelines",
+        "Scheduled Areas: Gram Sabha consultation required",
+        "2022: 'manage and protect' instead of 'manage and maintain'"
+      ],
+      "relatedSections": ["18", "27-32", "33A", "33B", "34"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Violation = Section 51"
+    },
+    "35": {
+      "number": "35",
+      "title": "Declaration of National Parks",
+      "chapter": "IV - Protected Areas (National Parks)",
+      "summary": "State Government may declare an area as a National Park if it has ecological, faunal, floral, geomorphological, natural or zoological significance. Higher protection than sanctuary - no grazing, no habitat alteration. 2022: provisions of sections 27-33A apply immediately on declaration of intent.",
+      "keyPoints": [
+        "Higher protection than sanctuary",
+        "No grazing permitted",
+        "No habitat alteration permitted",
+        "2022: interim protection on declaration of intent (section 35(3A))",
+        "Alternative arrangements for affected persons (section 35(3B))"
+      ],
+      "relatedSections": ["18", "29", "36", "36A", "38", "51"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹1 lakh+"
+    },
+    "36A": {
+      "number": "36A",
+      "title": "Declaration and management of a conservation reserve",
+      "chapter": "IV - Protected Areas",
+      "summary": "State Government may declare government-owned areas as conservation reserves after consulting local communities. Central Government can also declare conservation reserves (2022). Management committee includes local representatives.",
+      "keyPoints": [
+        "Declared by State Govt (or Central Govt post-2022)",
+        "Government-owned land only",
+        "Local community consultation required",
+        "Conservation reserve management committee (section 36B)",
+        "Introduced by 2002 Amendment"
+      ],
+      "relatedSections": ["36B", "36C", "36D", "38", "51"],
+      "amendments": ["2002", "2006", "2022"],
+      "penalties": "Section 51 applies"
+    },
+    "36C": {
+      "number": "36C",
+      "title": "Declaration and management of community reserve",
+      "chapter": "IV - Protected Areas",
+      "summary": "State Government may declare private/community land as community reserve if community agrees to protect wildlife. Management committee includes land owner, State Forest Dept rep, Panchayat/tribal rep. 2022: specific provisions for private land community reserves.",
+      "keyPoints": [
+        "Private/community land with owner consent",
+        "Community agrees to protect wildlife",
+        "Committee includes owner, Forest Dept, Panchayat",
+        "2022: specific rules for private land reserves"
+      ],
+      "relatedSections": ["36A", "36B", "36D", "38", "51"],
+      "amendments": ["2002", "2006", "2022"],
+      "penalties": "Section 51 applies"
+    },
+    "38": {
+      "number": "38",
+      "title": "Power of Central Government to declare areas as sanctuaries or National Parks",
+      "chapter": "IV - Protected Areas",
+      "summary": "Central Government can declare areas as sanctuaries or National Parks if State Government fails to act. 2022: Central Government can also declare conservation reserves. Applies same provisions as State declarations.",
+      "keyPoints": [
+        "Central Govt can declare sanctuaries/National Parks",
+        "2022: Central Govt can declare conservation reserves",
+        "Same provisions as State declarations apply"
+      ],
+      "relatedSections": ["18", "35", "36A", "51"],
+      "amendments": ["2002", "2022"],
+      "penalties": "Section 51 applies"
+    },
+    "38A": {
+      "number": "38A",
+      "title": "Constitution of Central Zoo Authority",
+      "chapter": "IVA - Central Zoo Authority",
+      "summary": "Central Government constitutes Central Zoo Authority with Chairperson, members, Member-Secretary. Regulates zoos, grants recognition, sets standards for housing, upkeep, healthcare of animals.",
+      "keyPoints": [
+        "Central Government constitutes CZA",
+        "Regulates and recognizes zoos",
+        "Sets standards for animal housing, healthcare",
+        "Grants/loans to Authority"
+      ],
+      "relatedSections": ["38B", "38C", "38D", "38E", "38F", "38G", "38H", "38I", "38J"],
+      "amendments": ["1991", "2002", "2006"],
+      "penalties": "Section 51 applies"
+    },
+    "38K": {
+      "number": "38K",
+      "title": "Definitions (Tiger Conservation)",
+      "chapter": "IVB - National Tiger Conservation Authority",
+      "summary": "Defines: National Tiger Conservation Authority, Steering Committee, Tiger Conservation Foundation, Tiger Reserve State, Tiger Reserve. Introduced by 2006 Amendment.",
+      "keyPoints": [
+        "NTCA = Tiger Conservation Authority",
+        "Tiger Reserve = area notified under section 38V",
+        "Tiger Conservation Foundation = established under section 38X",
+        "2006 Amendment creation"
+      ],
+      "relatedSections": ["38L", "38M", "38N", "38O", "38V", "38X"],
+      "amendments": ["2006", "2022"],
+      "penalties": "Section 51C (special tiger reserve penalties)"
+    },
+    "38L": {
+      "number": "38L",
+      "title": "Constitution of National Tiger Conservation Authority",
+      "chapter": "IVB - National Tiger Conservation Authority",
+      "summary": "Central Government constitutes NTCA with Minister of Environment as Chairperson, Minister of State as Vice-Chairperson, 3 MPs, 8 experts, Secretaries, DG Forests, Director WII, Director ZSI, Chief Wild Life Wardens (rotation), Member-Secretary. 2022: renamed to National Tiger Conservation Authority.",
+      "keyPoints": [
+        "Minister of Environment = Chairperson",
+        "8 experts (3 from tribal development)",
+        "Chief Wild Life Wardens on rotation",
+        "Inspector General of Forests = Member-Secretary",
+        "2006 Amendment, renamed 2022"
+      ],
+      "relatedSections": ["38K", "38M", "38N", "38O", "38V", "38X"],
+      "amendments": ["2006", "2022"],
+      "penalties": "None directly"
+    },
+    "38V": {
+      "number": "38V",
+      "title": "Tiger Conservation Plan",
+      "chapter": "IVB - National Tiger Conservation Authority",
+      "summary": "State Government prepares Tiger Conservation Plan for each tiger reserve: core/critical habitat (inviolate), buffer/peripheral area (co-existence). Must ensure ecological connectivity, livelihood needs, agricultural operations not incompatible. Voluntary relocation only with consent and rehabilitation.",
+      "keyPoints": [
+        "Core area = inviolate for tiger conservation",
+        "Buffer area = co-existence with humans",
+        "Ecological corridors between reserves",
+        "Voluntary relocation with consent & rehabilitation",
+        "No Scheduled Tribes displacement without rights settlement"
+      ],
+      "relatedSections": ["38L", "38O", "38W", "38X"],
+      "amendments": ["2006", "2022"],
+      "penalties": "Section 51C for violations"
+    },
+    "38X": {
+      "number": "38X",
+      "title": "Establishment of Tiger Conservation Foundation",
+      "chapter": "IVB - National Tiger Conservation Authority",
+      "summary": "State Government establishes Tiger Conservation Foundation for each tiger reserve to facilitate ecological/economic/social development, promote eco-tourism, raise funds, support research and education. 2022: Chapter IVC renamed to 'Wild Life' from 'Tiger and Other Endangered Species'.",
+      "keyPoints": [
+        "One Foundation per tiger reserve",
+        "Facilitates eco-development, eco-tourism",
+        "Raises and manages funds",
+        "Supports research and education"
+      ],
+      "relatedSections": ["38V", "38L", "38O"],
+      "amendments": ["2006", "2022"],
+      "penalties": "None directly"
+    },
+    "38Y": {
+      "number": "38Y",
+      "title": "Constitution of Wildlife Crime Control Bureau",
+      "chapter": "IVC - Wildlife Crime Control Bureau",
+      "summary": "Central Government constitutes Wildlife Crime Control Bureau (renamed from Tiger and Other Endangered Species Crime Control Bureau in 2022) with Director of Wildlife Preservation as Director, and officers from Police, Customs, Forest, etc.",
+      "keyPoints": [
+        "Director of Wildlife Preservation = Director",
+        "Officers from Police, Customs, Forest Depts",
+        "Centralized wildlife crime intelligence",
+        "2022: Renamed Chapter to 'Wild Life'",
+        "Coordinates with international agencies"
+      ],
+      "relatedSections": ["38Z", "39", "50", "55"],
+      "amendments": ["2006", "2022"],
+      "penalties": "None directly"
+    },
+    "39": {
+      "number": "39",
+      "title": "Wild animals, etc., to be Government property",
+      "chapter": "V - Trade/Commerce in Wild Animals",
+      "summary": "All wild animals (Schedule I-IV), animal articles, trophies, uncured trophies, meat, ivory imported into India, specified plants, and scheduled specimens (2022) are Government property. 2022: Live animals to be housed in recognized zoo/rescue centre. Disposal by Government (no commercial sale).",
+      "keyPoints": [
+        "All Schedule I-IV animals = Govt property",
+        "Animal articles, trophies, meat, ivory = Govt property",
+        "2022: Scheduled specimens (CITES) = Govt property",
+        "2022: Live animals → zoo/rescue centre",
+        "2022: Disposal by Govt (no commercial sale/auction)"
+      ],
+      "relatedSections": ["40", "40A", "41", "42", "43", "44", "48", "49", "49M", "50", "51", "57"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹1 lakh+"
+    },
+    "40": {
+      "number": "40",
+      "title": "Declarations",
+      "chapter": "V - Trade/Commerce in Wild Animals",
+      "summary": "Every person possessing captive animals, animal articles, trophies, uncured trophies, meat, ivory, specified plants must declare to Chief Wild Life Warden within 30 days. 2002: 'Part II of Schedule II' references removed. 2022: includes scheduled specimens.",
+      "keyPoints": [
+        "Mandatory declaration within 30 days",
+        "Applies to captive animals, articles, trophies, meat, ivory",
+        "2002: Simplified Schedule references",
+        "2022: Includes scheduled specimens (Schedule IV)"
+      ],
+      "relatedSections": ["39", "40A", "41", "42", "43", "44"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 for false declaration"
+    },
+    "42": {
+      "number": "42",
+      "title": "Certificate of ownership",
+      "chapter": "V - Trade/Commerce in Wild Animals",
+      "summary": "Chief Wild Life Warden issues certificate of ownership for lawfully possessed captive animals, animal articles, trophies. Required for transfer/transport. 2022: New section 42A allows voluntary surrender of captive animals/ivory with cancellation of certificate (no compensation).",
+      "keyPoints": [
+        "Certificate for lawful possession",
+        "Required for transfer/transport",
+        "2022: Section 42A - voluntary surrender allowed",
+        "Surrender = no compensation, property of State Govt"
+      ],
+      "relatedSections": ["39", "40", "41", "43", "44", "42A"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 for violations"
+    },
+    "44": {
+      "number": "44",
+      "title": "Dealings in trophy and animal articles without licence prohibited",
+      "chapter": "V - Trade/Commerce in Wild Animals",
+      "summary": "No person shall manufacture, deal in trophies/animal articles without licence. 1986 Amendment: Added Chapter VA for scheduled animals. Licence from Chief Wild Life Warden. Taxidermists also need licence. Peacock feather manufacturers exempted.",
+      "keyPoints": [
+        "Licence required for manufacturing/dealing",
+        "Issued by Chief Wild Life Warden",
+        "Taxidermists need licence",
+        "Peacock feather manufacturers exempted",
+        "1986: Chapter VA for scheduled animals"
+      ],
+      "relatedSections": ["39", "40", "42", "43", "45", "49A", "49B", "49C"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹25,000+"
+    },
+    "48A": {
+      "number": "48A",
+      "title": "Restriction on transportation of wild life",
+      "chapter": "V - Trade/Commerce in Wild Animals",
+      "summary": "No person shall transport wild animals, animal articles, trophies, uncured trophies, meat, ivory, specified plants, scheduled specimens (2022) without permission. Transporter must have permit/transit pass. Vehicle can be seized.",
+      "keyPoints": [
+        "Transport permit required",
+        "Applies to animals, articles, trophies, meat, ivory, plants, scheduled specimens",
+        "Vehicle seizure authorized",
+        "2022: Added scheduled specimens"
+      ],
+      "relatedSections": ["39", "40", "43", "44", "50", "51"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹25,000+"
+    },
+    "49A": {
+      "number": "49A",
+      "title": "Definitions (Chapter VA)",
+      "chapter": "VA - Prohibition of Trade in Scheduled Animals",
+      "summary": "Defines: scheduled animal (Schedule I or Part II of Schedule II), scheduled animal article, specified date (2 months from commencement/addition). 2022: 'Part II of Schedule II' references removed throughout.",
+      "keyPoints": [
+        "Scheduled animal = Schedule I or Part II of Schedule II",
+        "Scheduled animal article = article made from scheduled animal",
+        "Specified date = 2 months from commencement/addition",
+        "2002: Simplified Schedule references",
+        "2022: Part II Schedule II removed"
+      ],
+      "relatedSections": ["49B", "49C", "51"],
+      "amendments": ["1986", "2002", "2022"],
+      "penalties": "Section 51A - imprisonment 1-7 years, fine ₹5,000+"
+    },
+    "49B": {
+      "number": "49B",
+      "title": "Prohibition of dealings in trophies, animal articles, etc., derived from scheduled animals",
+      "chapter": "VA - Prohibition of Trade in Scheduled Animals",
+      "summary": "After specified date, no person shall: manufacture/deal in scheduled animal articles, taxidermy scheduled animals, deal in trophies/uncured trophies from scheduled animals, deal in captive scheduled animals, deal in/serve meat from scheduled animals. Exemptions for Govt corporations, taxidermy for Govt/education with permission.",
+      "keyPoints": [
+        "Complete trade ban after specified date",
+        "Covers manufacture, taxidermy, dealing, meat",
+        "Govt corporations exempted for export",
+        "Taxidermy for Govt/education with permission",
+        "Licences before specified date don't authorize"
+      ],
+      "relatedSections": ["49A", "49C", "51"],
+      "amendments": ["1986", "2002", "2022"],
+      "penalties": "Section 51A - imprisonment 1-7 years, fine ₹5,000+"
+    },
+    "49M": {
+      "number": "49M",
+      "title": "Possession, transfer and breeding of living scheduled animal species",
+      "chapter": "VB - Regulation of International Trade (CITES)",
+      "summary": "Every person possessing living Schedule IV animal must report to Management Authority. Authority may issue registration certificate. Transfers, births, deaths must be reported. No possession/transfer/breeding except per this section. 2022: New Chapter VB for CITES implementation.",
+      "keyPoints": [
+        "Mandatory reporting of possession",
+        "Registration certificate for lawful possession",
+        "Transfers, births, deaths must be reported",
+        "Breeding of Appendix I species requires licence (49N)",
+        "Central Govt can exempt certain species/quantities",
+        "2022: New Chapter VB for CITES"
+      ],
+      "relatedSections": ["49D", "49E", "49F", "49N", "49O", "51"],
+      "amendments": ["2022"],
+      "penalties": "Section 51 - imprisonment 3-7 years, fine ₹1 lakh+"
+    },
+    "50": {
+      "number": "50",
+      "title": "Power of entry, search, arrest and detention",
+      "chapter": "VI - Prevention and Detection of Offences",
+      "summary": "Authorized officers (Director, Chief Wild Life Warden, police, forest officers, customs, coast guard - 2022) can enter, search, arrest without warrant, seize. 2022: Added Management Authority officers, customs officers, coast guard officers. Schedules specimen added to seizure items.",
+      "keyPoints": [
+        "Entry, search, arrest without warrant",
+        "Officers: Director, CWLW, police, forest, customs, coast guard",
+        "2022: Added Management Authority officers",
+        "Seizure of animals, articles, trophies, scheduled specimens",
+        "Vehicle/vessel seizure authorized"
+      ],
+      "relatedSections": ["9", "11", "29", "39", "44", "48A", "51", "55"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Enabling provision - see Section 51 for offences"
+    },
+    "51": {
+      "number": "51",
+      "title": "Penalties",
+      "chapter": "VI - Prevention and Detection of Offences",
+      "summary": "General penalty: imprisonment 3-7 years, fine ₹1 lakh (increased from ₹25,000 in 2022). For Schedule I/II/Appendix I Schedule IV: imprisonment 3-7 years, fine ₹25,000 (increased from ₹10,000 in 2002, ₹25,000 in 2022). Second offence: 7 years, fine ₹5 lakh (increased from ₹25,000 in 2022). Section 51A (Chapter VA): 1-7 years, fine ₹5,000+. Section 51C (Tiger Reserve): 3-7 years, fine ₹50,000-2 lakh (first), 7 years, fine ₹5-50 lakh (subsequent).",
+      "keyPoints": [
+        "General: 3-7 years, ₹1 lakh (2022: was ₹25,000)",
+        "Schedule I/II/Appendix I: 3-7 years, ₹25,000 (2022: was ₹10,000)",
+        "Second offence: 7 years, ₹5 lakh (2022: was ₹25,000)",
+        "Section 51A (Chapter VA): 1-7 years, ₹5,000+",
+        "Section 51C (Tiger Reserve): 3-7 years, ₹50K-2L (first), 7 years, ₹5L-50L (repeat)",
+        "Section 54: Compounding up to ₹5 lakh (2022: was ₹25,000)",
+        "Section 60B: Reward up to ₹10,000 (2002)"
+      ],
+      "relatedSections": ["9", "11", "17A", "29", "39", "44", "48A", "49B", "51A", "51C", "54", "55", "57"],
+      "amendments": ["1986", "1991", "2002", "2006", "2022"],
+      "penalties": "See above - this IS the penalty section"
+    },
+    "51A": {
+      "number": "51A",
+      "title": "Certain conditions to apply while granting bail",
+      "chapter": "VI - Prevention and Detection of Offences",
+      "summary": "For offences under Chapter VA (scheduled animals) or relating to Schedule I/II/Appendix I Schedule IV: bail only if Public Prosecutor heard, court satisfied accused not guilty and not likely to commit offence on bail. 2022: Added Appendix I Schedule IV.",
+      "keyPoints": [
+        "Strict bail conditions for serious offences",
+        "Public Prosecutor must be heard",
+        "Court must be satisfied accused not guilty",
+        "Applies to Chapter VA, Schedule I/II, Appendix I Schedule IV"
+      ],
+      "relatedSections": ["51", "49B", "39"],
+      "amendments": ["1986", "2002", "2022"],
+      "penalties": "Bail condition - not a penalty itself"
+    },
+    "55": {
+      "number": "55",
+      "title": "Cognizance of offences",
+      "chapter": "VI - Prevention and Detection of Offences",
+      "summary": "Court can take cognizance only on complaint by: Director, Chief Wild Life Warden, authorized officer, Management Authority (2022), Wildlife Crime Control Bureau officer (2002), or person giving 60-day notice. 2022: Added Management Authority and WCCB officers.",
+      "keyPoints": [
+        "Complaint required from authorized officers",
+        "2022: Management Authority, WCCB officers added",
+        "Private person: 60-day notice required",
+        "Ensures only authorized enforcement"
+      ],
+      "relatedSections": ["50", "51", "56", "57"],
+      "amendments": ["1991", "2002", "2006", "2022"],
+      "penalties": "Procedural - not a penalty itself"
+    },
+    "62": {
+      "number": "62",
+      "title": "Declaration of certain wild animals to be vermin",
+      "chapter": "VII - Miscellaneous",
+      "summary": "Central Government may declare wild animals (except Schedule I/II) as vermin for any area/period. 2022: Changed from 'other than Schedule I and Part II Schedule II' to 'specified in Schedule II'. Declared animals deemed NOT in Schedule II for that area/period.",
+      "keyPoints": [
+        "Central Govt can declare vermin",
+        "2022: Only Schedule II animals (was Schedules III-V)",
+        "Declared animals removed from Schedule II protection",
+        "Area and period specific"
+      ],
+      "relatedSections": ["2", "9", "11", "51"],
+      "amendments": ["1991", "2002", "2022"],
+      "penalties": "Vermin hunting = no penalty under Act"
+    }
+  }
+}

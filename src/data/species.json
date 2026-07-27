@@ -1,0 +1,359 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Species listed in Schedules",
+    "lastUpdated": "2024-12-19",
+    "note": "Key species with schedule listing, common names, scientific names, and protection status"
+  },
+  "species": {
+    "Tiger": {
+      "commonName": "Tiger / बाघ / वाघ",
+      "scientificName": "Panthera tigris",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "38K-38X", "39", "51"],
+      "amendments": ["2006 - NTCA, Tiger Reserves", "2022 - enhanced penalties"],
+      "protectionDetails": "Absolute protection. Hunting prohibited. Core inviolate areas in tiger reserves. Special penalties under Section 51C (3-7 years, ₹50K-2L first offence; 7 years, ₹5-50L subsequent). NTCA oversees conservation."
+    },
+    "AsianElephant": {
+      "commonName": "Asian Elephant / हाथी / हत्ती",
+      "scientificName": "Elephas maximus",
+      "schedule": "I",
+      "category": "Mammal - Megaherbivore",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "12", "39", "40", "42", "43", "44", "48A", "51"],
+      "amendments": ["2002 - captive elephant transport rules", "2022 - transport conditions prescribed by Central Govt"],
+      "protectionDetails": "Absolute protection. Captive elephants require ownership certificate. Transport for religious/other purposes needs Central Govt prescribed conditions (2022). Ivory trade banned. Surrender provision under Section 42A (2022)."
+    },
+    "IndianRhinoceros": {
+      "commonName": "Indian Rhinoceros / गैंडा / गेंडा",
+      "scientificName": "Rhinoceros unicornis",
+      "schedule": "I",
+      "category": "Mammal - Megaherbivore",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Absolute protection. Horn trade completely banned. Poaching = Schedule I penalties."
+    },
+    "Leopard": {
+      "commonName": "Leopard / तेंदुआ / बिबट्या",
+      "scientificName": "Panthera pardus",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Absolute protection. Human-leopard conflict addressed under Section 11 (dangerous to human life)."
+    },
+    "SnowLeopard": {
+      "commonName": "Snow Leopard / हिम तेंदुआ / हिमालयन बिबट्या",
+      "scientificName": "Panthera uncia",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Absolute protection. High altitude habitat protection."
+    },
+    "Lion": {
+      "commonName": "Asiatic Lion / शेर / शेर",
+      "scientificName": "Panthera leo persica",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Absolute protection. Only in Gir Forest, Gujarat."
+    },
+    "Blackbuck": {
+      "commonName": "Blackbuck / काला हिरण / काळा हरीण",
+      "scientificName": "Antilope cervicapra",
+      "schedule": "I",
+      "category": "Mammal - Antelope",
+      "conservationStatus": "Least Concern (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Absolute protection. Grassland species. Community conservation successful in some areas."
+    },
+    "GreatIndianBustard": {
+      "commonName": "Great Indian Bustard / सोन चिड़िया / माळ पक्षी",
+      "scientificName": "Ardeotis nigriceps",
+      "schedule": "I",
+      "category": "Bird",
+      "conservationStatus": "Critically Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Critically endangered. Power line mortality major threat. Habitat protection critical."
+    },
+    "Gharial": {
+      "commonName": "Gharial / घड़ियाल / घड्याळ",
+      "scientificName": "Gavialis gangeticus",
+      "schedule": "I",
+      "category": "Reptile",
+      "conservationStatus": "Critically Endangered (IUCN)",
+      "keySections": ["9", "11", "17A", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Critically endangered. River habitat protection essential. Sand mining threat."
+    },
+    "IndianPangolin": {
+      "commonName": "Indian Pangolin / चींटीखोर / खव्या मांजर",
+      "scientificName": "Manis crassicaudata",
+      "schedule": "I",
+      "category": "Mammal",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "49M", "51"],
+      "amendments": ["2022 - Schedule I, CITES Appendix I (Schedule IV)"],
+      "protectionDetails": "Most trafficked mammal. Scales trade banned. CITES Appendix I - international trade prohibited."
+    },
+    "RedPanda": {
+      "commonName": "Red Panda / लाल पांडा / लाल पांडा",
+      "scientificName": "Ailurus fulgens",
+      "schedule": "I",
+      "category": "Mammal",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Himalayan species. Bamboo habitat protection needed."
+    },
+    "WildBuffalo": {
+      "commonName": "Wild Buffalo / जंगली भैंसा / जंगली महिष",
+      "scientificName": "Bubalus arnee",
+      "schedule": "I",
+      "category": "Mammal - Bovid",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Central India populations. Hybridization with domestic buffalo a threat."
+    },
+    "SwampDeer": {
+      "commonName": "Swamp Deer / बारहसिंगा / बारहसिंगा",
+      "scientificName": "Rucervus duvaucelii",
+      "schedule": "I",
+      "category": "Mammal - Deer",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Wetland grassland specialist. Kanha, Kaziranga strongholds."
+    },
+    "Hangul": {
+      "commonName": "Hangul / कश्मीर हिरण / कश्मीरी हरीण",
+      "scientificName": "Cervus hanglu",
+      "schedule": "I",
+      "category": "Mammal - Deer",
+      "conservationStatus": "Critically Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Only in Dachigam, Kashmir. Critically low numbers."
+    },
+    "NilgiriTahr": {
+      "commonName": "Nilgiri Tahr / नीलगिरी तहर / नीलगिरी तहर",
+      "scientificName": "Nilgiritragus hylocrius",
+      "schedule": "I",
+      "category": "Mammal - Caprid",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Western Ghats endemic. Eravikulam NP stronghold."
+    },
+    "GangeticDolphin": {
+      "commonName": "Gangetic Dolphin / सूंस / सुस",
+      "scientificName": "Platanista gangetica",
+      "schedule": "I",
+      "category": "Mammal - Cetacean",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "National Aquatic Animal. River pollution, dams major threats."
+    },
+    "MarineTurtles": {
+      "commonName": "Marine Turtles / समुद्री कछुए / समुद्री कासव",
+      "scientificName": "Chelonia mydas, Eretmochelys imbricata, Dermochelys coriacea, Lepidochelys olivacea, Caretta caretta",
+      "schedule": "I",
+      "category": "Reptile",
+      "conservationStatus": "Various (VU to CR)",
+      "keySections": ["9", "11", "17A", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "All 5 species in Indian waters protected. Nesting beaches critical. Bycatch major threat."
+    },
+    "KingCobra": {
+      "commonName": "King Cobra / किंग कोबरा / राजा नाग",
+      "scientificName": "Ophiophagus hannah",
+      "schedule": "I",
+      "category": "Reptile",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "17A", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "World's longest venomous snake. Forest habitat protection needed."
+    },
+    "IndianPython": {
+      "commonName": "Indian Rock Python / अजगर / अजगर",
+      "scientificName": "Python molurus",
+      "schedule": "I",
+      "category": "Reptile",
+      "conservationStatus": "Near Threatened (IUCN)",
+      "keySections": ["9", "11", "17A", "39", "51"],
+      "amendments": ["1986 - Chapter VA", "2022 - Schedule I"],
+      "protectionDetails": "Trade in skin prohibited. Schedule I protection."
+    },
+    "Peafowl": {
+      "commonName": "Indian Peafowl / मोर / मोर",
+      "scientificName": "Pavo cristatus",
+      "schedule": "II",
+      "category": "Bird",
+      "conservationStatus": "Least Concern (IUCN)",
+      "keySections": ["9", "11", "39", "44", "49A", "49B", "51"],
+      "amendments": ["1986 - peacock feather trade exemption", "2002 - Schedule II"],
+      "protectionDetails": "National Bird. Feather collection exempted for domestic use (1986 Amendment). Hunting prohibited."
+    },
+    "Chinkara": {
+      "commonName": "Chinkara / छिंकारा / चिंकारा",
+      "scientificName": "Gazella bennettii",
+      "schedule": "I",
+      "category": "Mammal - Antelope",
+      "conservationStatus": "Least Concern (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Desert/grassland species. Rajasthan, Gujarat strongholds."
+    },
+    "FourHornedAntelope": {
+      "commonName": "Four-horned Antelope / चौसिंगा / चौसिंगा",
+      "scientificName": "Tetracerus quadricornis",
+      "schedule": "I",
+      "category": "Mammal - Antelope",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Unique four-horned antelope. Central Indian forests."
+    },
+    "TibetanAntelope": {
+      "commonName": "Tibetan Antelope / चीरू / चीरू",
+      "scientificName": "Pantholops hodgsonii",
+      "schedule": "I",
+      "category": "Mammal - Antelope",
+      "conservationStatus": "Near Threatened (IUCN)",
+      "keySections": ["9", "11", "39", "49M", "51"],
+      "amendments": ["2022 - Schedule I, CITES Appendix I (Schedule IV)"],
+      "protectionDetails": "Shahtoosh wool trade banned. High altitude Ladakh."
+    },
+    "HimalayanMuskDeer": {
+      "commonName": "Himalayan Musk Deer / कस्तूरी मृग / कस्तुरी मृग",
+      "scientificName": "Moschus leucogaster",
+      "schedule": "I",
+      "category": "Mammal",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "49M", "51"],
+      "amendments": ["2022 - Schedule I, CITES Appendix I (Schedule IV)"],
+      "protectionDetails": "Musk pod trade banned. High Himalaya species."
+    },
+    "CloudedLeopard": {
+      "commonName": "Clouded Leopard / मेघ बाघ / मेघ बिबट्या",
+      "scientificName": "Neofelis nebulosa",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Northeast India. Arboreal forest specialist."
+    },
+    "Dhole": {
+      "commonName": "Dhole / जंगली कुत्ता / जंगली कुत्रा",
+      "scientificName": "Cuon alpinus",
+      "schedule": "I",
+      "category": "Mammal - Carnivore",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Pack hunter. Large territory requirements. Prey base depletion threat."
+    },
+    "SlothBear": {
+      "commonName": "Sloth Bear / भालू / अस्वल",
+      "scientificName": "Melursus ursinus",
+      "schedule": "I",
+      "category": "Mammal",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Human-bear conflict common. Dancing bear trade banned."
+    },
+    "HoolockGibbon": {
+      "commonName": "Hoolock Gibbon / हूलॉक गिबन / हूलॉक गिबन",
+      "scientificName": "Hoolock hoolock",
+      "schedule": "I",
+      "category": "Mammal - Primate",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Only ape in India. Northeast forests. Habitat fragmentation threat."
+    },
+    "LionTailedMacaque": {
+      "commonName": "Lion-tailed Macaque / शेर पूंछ बंदर / शेरपुच्छा माकड",
+      "scientificName": "Macaca silenus",
+      "schedule": "I",
+      "category": "Mammal - Primate",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Western Ghats endemic. Rainforest canopy specialist."
+    },
+    "NilgiriLangur": {
+      "commonName": "Nilgiri Langur / नीलगिरी लंगूर / नीलगिरी लंगूर",
+      "scientificName": "Semnopithecus johnii",
+      "schedule": "I",
+      "category": "Mammal - Primate",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Western Ghats endemic. Shola forest specialist."
+    },
+    "GoldenLangur": {
+      "commonName": "Golden Langur / गोल्डन लंगूर / गोल्डन लंगूर",
+      "scientificName": "Trachypithecus geei",
+      "schedule": "I",
+      "category": "Mammal - Primate",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["9", "11", "39", "51"],
+      "amendments": ["2022 - Schedule I protection"],
+      "protectionDetails": "Assam/Bhutan border. Riparian forest specialist."
+    },
+    "RedSandalwood": {
+      "commonName": "Red Sandalwood / रक्त चंदन / रक्तचंदन",
+      "scientificName": "Pterocarpus santalinus",
+      "schedule": "VI",
+      "category": "Plant - Tree",
+      "conservationStatus": "Endangered (IUCN)",
+      "keySections": ["17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "51"],
+      "amendments": ["1991 - Chapter IIIA", "2002", "2022"],
+      "protectionDetails": "High value timber. Smuggling major issue. CITES Appendix II."
+    },
+    "Sandalwood": {
+      "commonName": "Sandalwood / चंदन / चंदन",
+      "scientificName": "Santalum album",
+      "schedule": "VI",
+      "category": "Plant - Tree",
+      "conservationStatus": "Vulnerable (IUCN)",
+      "keySections": ["17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "51"],
+      "amendments": ["1991 - Chapter IIIA", "2002", "2022"],
+      "protectionDetails": "High value heartwood/oil. Cultivation regulated. Karnataka, TN main areas."
+    },
+    "Agarwood": {
+      "commonName": "Agarwood / अगरवुड / अगर",
+      "scientificName": "Aquilaria malaccensis",
+      "schedule": "VI",
+      "category": "Plant - Tree",
+      "conservationStatus": "Critically Endangered (IUCN)",
+      "keySections": ["17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "51"],
+      "amendments": ["2022 - Schedule VI, CITES Appendix II (Schedule IV)"],
+      "protectionDetails": "Resinous heartwood for perfume/incense. Northeast India. CITES regulated."
+    },
+    "Orchids": {
+      "commonName": "Orchids / ऑर्किड / ऑर्किड",
+      "scientificName": "Orchidaceae (all species)",
+      "schedule": "VI",
+      "category": "Plant - Herb",
+      "conservationStatus": "Various",
+      "keySections": ["17A", "17B", "17C", "17D", "17E", "17F", "17G", "17H", "51"],
+      "amendments": ["1991 - Chapter IIIA", "2002", "2022 - CITES Appendix I/II (Schedule IV)"],
+      "protectionDetails": "All orchid species protected. Horticultural trade regulated. CITES permits required."
+    }
+  }
+}

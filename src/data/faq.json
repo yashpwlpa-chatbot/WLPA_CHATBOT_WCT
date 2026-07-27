@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Frequently Asked Questions",
+    "lastUpdated": "2024-12-19",
+    "language": "en"
+  },
+  "faqs": [
+    {
+      "id": "faq_1",
+      "question": "What is the Wildlife (Protection) Act, 1972?",
+      "answer": "The WLPA is India's primary legislation for wildlife conservation. It prohibits hunting of scheduled species, regulates trade in wildlife and wildlife products, establishes protected areas (sanctuaries, national parks, conservation reserves, community reserves), and provides for penalties for violations. It has been amended 8 times (1982, 1986, 1991, 1993, 2002, 2006, 2022).",
+      "category": "general",
+      "sections": ["1", "2"],
+      "keywords": ["what is WLPA", "wildlife protection act", "overview"]
+    },
+    {
+      "id": "faq_2",
+      "question": "Which animals are protected under Schedule I?",
+      "answer": "Schedule I includes species with highest protection: Tiger, Elephant, Rhino, Lion, Leopard, Snow Leopard, Clouded Leopard, Wild Buffalo, Gaur, Blackbuck, Chinkara, Four-horned Antelope, Tibetan Antelope, Hangul, Swamp Deer, Nilgiri Tahr, Gangetic Dolphin, Marine Turtles, Gharial, King Cobra, Indian Python, Pangolin, Red Panda, Great Indian Bustard, Bengal Florican, Vultures, Hornbills, and many more. Complete list in schedules.json.",
+      "category": "species",
+      "sections": ["2", "9", "39"],
+      "keywords": ["schedule 1", "schedule I", "highest protection", "absolute protection"]
+    },
+    {
+      "id": "faq_3",
+      "question": "Can I hunt a wild animal if it enters my farm?",
+      "answer": "Only under Section 11: If a Schedule I/II animal is dangerous to human life or property, or disabled/diseased beyond recovery, the Chief Wild Life Warden may permit hunting. For Schedule III/IV: for education, research, scientific management. You cannot hunt on your own - must get permit from CWLW. Killing without permit = Section 51 penalties (3-7 years, ₹1 lakh+).",
+      "category": "hunting",
+      "sections": ["9", "11", "51"],
+      "keywords": ["hunt", "farm", "crop damage", "human wildlife conflict", "self defense"]
+    },
+    {
+      "id": "faq_4",
+      "question": "What is the difference between a Sanctuary and a National Park?",
+      "answer": "Sanctuary (Section 18): Declared by State Govt, certain rights may continue, grazing may be permitted under conditions, Chief Wild Life Warden controls. National Park (Section 35): Higher protection - no grazing, no habitat alteration, rights must be settled. 2022: On declaration of intent, Sections 27-33A apply immediately. Central Govt can declare both (Section 38).",
+      "category": "protected_areas",
+      "sections": ["18", "35", "38"],
+      "keywords": ["sanctuary vs national park", "difference", "protected area"]
+    },
+    {
+      "id": "faq_5",
+      "question": "What are Conservation Reserves and Community Reserves?",
+      "answer": "Conservation Reserve (Section 36A): Government-owned land declared by State/Central Govt after community consultation. Management committee with local reps. Community Reserve (Section 36C): Private/community land where community agrees to protect wildlife. Owner consent required. Management committee includes owner. Both introduced in 2002 Amendment. 2022: Central Govt can declare conservation reserves.",
+      "category": "protected_areas",
+      "sections": ["36A", "36B", "36C", "36D", "38(2A)"],
+      "keywords": ["conservation reserve", "community reserve", "difference", "new protected areas"]
+    },
+    {
+      "id": "faq_6",
+      "question": "What changed in the 2022 Amendment?",
+      "answer": "Major changes: (1) CITES implementation via Chapter VB (Schedule IV), (2) Rationalized schedules - Part II of Schedule II removed, (3) Central Govt can declare conservation reserves, (4) Invasive alien species regulation (Section 62A), (5) Voluntary surrender of captive animals/ivory (Section 42A), (6) Vermin only from Schedule II (Section 62), (7) Enhanced penalties (general ₹1 lakh, repeat ₹5 lakh), (8) Elephant transport rules by Central Govt, (9) Interim NP protection on intent declaration, (10) WCCB chapter renamed.",
+      "category": "amendments",
+      "sections": ["2", "9", "35", "38", "42A", "49D-49R", "51", "54", "61", "62", "62A", "62B"],
+      "keywords": ["2022 amendment", "what changed", "latest amendment", "citES", "schedule IV"]
+    },
+    {
+      "id": "faq_7",
+      "question": "What is the penalty for hunting a tiger?",
+      "answer": "Tiger is Schedule I. Hunting = Section 51: 3-7 years imprisonment, minimum ₹25,000 fine. If in tiger reserve core area = Section 51C: 3-7 years, ₹50,000-2 lakh (first offence); 7 years, ₹5-50 lakh (repeat). Abetment = same punishment. Second offence under Section 51: 7 years, ₹5 lakh minimum.",
+      "category": "penalties",
+      "sections": ["9", "51", "51C"],
+      "keywords": ["tiger penalty", "hunting tiger", "punishment tiger", "section 51C"]
+    },
+    {
+      "id": "faq_8",
+      "question": "Can I keep a peacock feather at home?",
+      "answer": "Peacock is Schedule II. Peacock feathers are EXEMPTED from trade prohibition under Section 44 (1986 Amendment) - manufacturers/dealers in peacock feather articles don't need licence. However, hunting peacock is prohibited (Section 9). Possession of naturally shed feathers generally tolerated but technically requires declaration under Section 40.",
+      "category": "trade",
+      "sections": ["9", "40", "44", "49A", "49B"],
+      "keywords": ["peacock feather", "peacock", "feather", "schedule II", "exemption"]
+    },
+    {
+      "id": "faq_9",
+      "question": "What should I do if I find an injured wild animal?",
+      "answer": "1. Do NOT handle directly - risk of injury/disease. 2. Contact nearest Forest Department office / Chief Wild Life Warden / Wildlife Rescue Centre. 3. If Schedule I/II animal, Forest Dept must be informed. 4. For marine animals: Coast Guard / Fisheries Dept. 5. Do not attempt to treat/feed. 6. If dead Schedule I/II animal: inform Forest Dept immediately - it's Government property (Section 39).",
+      "category": "procedures",
+      "sections": ["39", "11", "50"],
+      "keywords": ["injured animal", "rescue", "found animal", "what to do", "forest department"]
+    },
+    {
+      "id": "faq_10",
+      "question": "Can forest officers seize my vehicle?",
+      "answer": "Yes, under Section 50. Authorized officers (forest, police, customs, coast guard, Management Authority) can seize vehicles/vessels used in wildlife offences. Vehicle can be confiscated. 2022: Added Management Authority officers, customs inspectors, coast guard Assistant Commandants to authorized officers list.",
+      "category": "enforcement",
+      "sections": ["50", "51"],
+      "keywords": ["vehicle seizure", "forest officer powers", "seizure", "confiscation"]
+    },
+    {
+      "id": "faq_11",
+      "question": "What is the procedure for declaring a Conservation Reserve?",
+      "answer": "1. State Govt (or Central Govt post-2022) identifies government-owned area with conservation value. 2. Consults local communities. 3. Issues notification under Section 36A. 4. Constitutes Conservation Reserve Management Committee (Section 36B) with Forest Officer, Wildlife Warden, Panchayat rep, NGO rep, experts. 5. Committee prepares management plan.",
+      "category": "procedures",
+      "sections": ["36A", "36B", "38(2A)"],
+      "keywords": ["conservation reserve declaration", "procedure", "how to declare"]
+    },
+    {
+      "id": "faq_12",
+      "question": "What are the new CITES provisions in the 2022 Amendment?",
+      "answer": "Chapter VB (Sections 49D-49R): Schedule IV = CITES Appendices I, II, III species. Management Authority (ADG Forests+) issues import/export/re-export/introduction from sea permits. Scientific Authority advises on non-detriment findings. Possession of living Schedule IV animals requires registration (Section 49M). Breeding Appendix I species requires licence from CWLW (Sections 49N-49O). All trade at designated ports only.",
+      "category": "amendments",
+      "sections": ["49D", "49E", "49F", "49H", "49I", "49J", "49K", "49L", "49M", "49N", "49O"],
+      "keywords": ["CITES", "schedule IV", "international trade", "management authority", "scientific authority", "import export"]
+    },
+    {
+      "id": "faq_13",
+      "question": "Can I surrender my captive elephant/ivory voluntarily?",
+      "answer": "YES - Section 42A (2022 Amendment). Give 7 working days notice to Chief Wild Life Warden. Surrender the animal/ivory. Certificate of ownership cancelled. NO compensation payable. Surrendered items become State Government property. Applies to any captive animal, animal article, trophy, uncured trophy, meat, ivory imported into India.",
+      "category": "procedures",
+      "sections": ["42A", "39", "40", "42"],
+      "keywords": ["surrender", "voluntary surrender", "elephant", "ivory", "captive animal", "section 42A"]
+    },
+    {
+      "id": "faq_14",
+      "question": "What is the difference between Schedule II and Schedule III?",
+      "answer": "Schedule II: High protection - hunting prohibited (Section 9), trade banned under Chapter VA (scheduled animals). Only Schedule II species can be declared vermin (2022). Schedule III: Moderate protection - hunting permitted under Section 11 for education/research/management. Trade regulated but not under Chapter VA. Vermin declaration NOT applicable to Schedule III (2022).",
+      "category": "schedules",
+      "sections": ["9", "11", "49A", "49B", "62"],
+      "keywords": ["schedule II vs III", "difference", "vermin", "hunting"]
+    },
+    {
+      "id": "faq_15",
+      "question": "What powers does the Wildlife Crime Control Bureau have?",
+      "answer": "WCCB (Section 38Y-38Z, Chapter IVC): Collect/collate wildlife crime intelligence, disseminate to States/enforcement agencies, coordinate inter-state/international enforcement, implement CITES obligations, assist foreign authorities, build investigation capacity, advise Govt on policy. Officers can file complaints (Section 55). 2022: Chapter renamed from 'Tiger and Other Endangered Species' to 'Wild Life'.",
+      "category": "enforcement",
+      "sections": ["38Y", "38Z", "55"],
+      "keywords": ["WCCB", "wildlife crime control bureau", "powers", "enforcement", "intelligence"]
+    },
+    {
+      "id": "faq_16",
+      "question": "What is the National Tiger Conservation Authority (NTCA)?",
+      "answer": "Statutory body under Chapter IVB (2006 Amendment). Chairperson: Minister of Environment. Vice-Chair: Minister of State. Members: 3 MPs, 8 experts (3 tribal), Secretaries, DG Forests, Directors (WII, ZSI, BSI, IVRI), CWLWs (rotation), IG Forests (Member-Secretary). Powers: Approve Tiger Conservation Plans, disallow ecologically unsustainable land use in tiger reserves, lay tourism norms, address human-wildlife conflict, direct States for tiger protection.",
+      "category": "authorities",
+      "sections": ["38K", "38L", "38M", "38N", "38O", "38V"],
+      "keywords": ["NTCA", "national tiger conservation authority", "tiger conservation", "chapter IVB"]
+    },
+    {
+      "id": "faq_17",
+      "question": "What is the procedure for reporting a wildlife crime?",
+      "answer": "1. Contact nearest Forest Department office / Police station. 2. Call WCCB helpline if available. 3. Provide: location, date/time, species involved, description of activity, photos/videos if safe. 4. Forest officers/police can arrest without warrant (Section 50). 5. Complaint filed by authorized officers (Section 55). 6. You can also give 60-day notice to State Govt and file complaint yourself.",
+      "category": "procedures",
+      "sections": ["50", "55", "38Z"],
+      "keywords": ["report wildlife crime", "complaint", "poaching", "illegal trade", "how to report"]
+    },
+    {
+      "id": "faq_18",
+      "question": "Can I keep a turtle/tortoise as a pet?",
+      "answer": "Most turtles/tortoises are Schedule I (e.g., Star Tortoise, River Terrapin, Marine Turtles) or Schedule IV (CITES). Keeping as pet = possession of scheduled animal = requires ownership certificate (Section 42) and declaration (Section 40). Wild-caught = illegal hunting (Section 9). Captive-bred from licensed breeder only legal. Marine turtles = absolute protection. Star Tortoise = heavily trafficked, strict enforcement.",
+      "category": "species",
+      "sections": ["9", "39", "40", "42", "49M"],
+      "keywords": ["turtle pet", "tortoise pet", "star tortoise", "marine turtle", "possession"]
+    },
+    {
+      "id": "faq_19",
+      "question": "What is the penalty for illegal ivory trade?",
+      "answer": "Ivory = elephant tusk = Schedule I. Trade = Section 44/Chapter VA. Penalties: Section 51 (general) - 3-7 years, ₹1 lakh minimum. Section 51 proviso (Schedule I) - 3-7 years, ₹25,000 minimum. Section 51A (Chapter VA) - 1-7 years, ₹5,000 minimum. Second offence: 7 years, ₹5 lakh. Import/export without CITES permit = Chapter VB penalties. Ivory imported into India = animal article (Section 2).",
+      "category": "penalties",
+      "sections": ["39", "44", "49A", "49B", "51", "51A", "49H-49L"],
+      "keywords": ["ivory trade", "ivory penalty", "elephant tusk", "illegal trade"]
+    },
+    {
+      "id": "faq_20",
+      "question": "What are the rights of Scheduled Tribes in protected areas?",
+      "answer": "Section 65: Rights of Scheduled Tribes protected. 2006 Amendment (Section 38V): Voluntary relocation ONLY after rights recognition under FRA 2006, consent of Gram Sabha, rehabilitation package. 2022 Amendment (Section 33): Sanctuary management plans in Scheduled Areas after Gram Sabha consultation. Core tiger habitat: rights protected, no displacement without FRA compliance, Gram Sabha consent, ecological assessment, rehabilitation.",
+      "category": "rights",
+      "sections": ["33", "38V", "65"],
+      "keywords": ["scheduled tribes", "tribal rights", "forest rights act", "FRA", "relocation", "gram sabha"]
+    }
+  ]
+}

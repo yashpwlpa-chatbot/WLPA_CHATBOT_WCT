@@ -1,0 +1,162 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Penalty Provisions (as amended 2022)",
+    "lastUpdated": "2024-12-19",
+    "note": "Penalties have been progressively enhanced through amendments. Current figures reflect 2022 Amendment."
+  },
+  "penalties": {
+    "section51_general": {
+      "section": "51(1)",
+      "description": "General penalty for contravening any provision of the Act (except Chapter VA)",
+      "imprisonment": "3 to 7 years",
+      "fine": "Minimum ₹1,00,000 (enhanced from ₹25,000 in 2022)",
+      "firstProviso": {
+        "condition": "Offence relating to Schedule I or Schedule II or Appendix I of Schedule IV",
+        "imprisonment": "3 to 7 years",
+        "fine": "Minimum ₹25,000 (enhanced from ₹10,000 in 2002, ₹25,000 in 2022)",
+        "additionalCondition": "Offence inside sanctuary/National Park boundaries OR relating to Appendix I Schedule IV specimen"
+      },
+      "secondProviso": {
+        "condition": "Second or subsequent offence",
+        "imprisonment": "7 years",
+        "fine": "Minimum ₹5,00,000 (enhanced from ₹25,000 in 2022)"
+      }
+    },
+    "section51_chapterVA": {
+      "section": "51(1A)",
+      "description": "Penalty for contravening Chapter VA (trade in scheduled animals)",
+      "imprisonment": "1 to 7 years",
+      "fine": "Minimum ₹5,000",
+      "amendments": ["1986 - inserted", "2002 - schedule references updated", "2022 - Part II Schedule II removed"]
+    },
+    "section51A_bail": {
+      "section": "51A",
+      "description": "Bail conditions for serious offences",
+      "conditions": [
+        "Public Prosecutor must be heard",
+        "Court must be satisfied accused is not guilty",
+        "Court must be satisfied accused not likely to commit offence on bail"
+      ],
+      "appliesTo": [
+        "Chapter VA offences (scheduled animals)",
+        "Offences relating to Schedule I or Schedule II",
+        "Offences relating to Appendix I of Schedule IV (2022 addition)"
+      ]
+    },
+    "section51C_tigerReserve": {
+      "section": "51C",
+      "description": "Special enhanced penalties for offences in tiger reserve core area or tiger hunting",
+      "insertedBy": "2006 Amendment",
+      "firstConviction": {
+        "imprisonment": "3 to 7 years",
+        "fine": "₹50,000 to ₹2,00,000"
+      },
+      "secondOrSubsequentConviction": {
+        "imprisonment": "7 years",
+        "fine": "₹5,00,000 to ₹50,00,000"
+      },
+      "abetment": {
+        "section": "51C(1D)",
+        "description": "Abetment of Section 51C offence punishable with same punishment"
+      },
+      "appliesTo": [
+        "Offence in core area of tiger reserve",
+        "Hunting in tiger reserve",
+        "Altering boundaries of tiger reserve"
+      ]
+    },
+    "section54_compounding": {
+      "section": "54",
+      "description": "Power to compound offences",
+      "authority": "Chief Wild Life Warden or authorized officer",
+      "maxAmount": "₹5,00,000 (enhanced from ₹50,000 in 2002, ₹5,00,000 in 2022)",
+      "conditions": [
+        "Offence not under Chapter VA or Section 51C",
+        "Accused agrees to compound",
+        "Payment within specified time"
+      ],
+      "effect": "Compound = no further proceedings, release if in custody"
+    },
+    "section58Y_forfeiture": {
+      "section": "58Y",
+      "description": "Punishment for acquiring property subject to forfeiture proceedings",
+      "imprisonment": "Up to 5 years",
+      "fine": "Up to ₹50,000",
+      "chapter": "Chapter VIA (Forfeiture of Property)"
+    },
+    "section60A_reward": {
+      "section": "60A",
+      "description": "Reward to informants from fine money",
+      "percentage": "50% of fine (enhanced from 20% in 2002)",
+      "paidTo": "Person rendering assistance in detection/apprehension"
+    },
+    "section60B_stateReward": {
+      "section": "60B",
+      "description": "Reward by State Government",
+      "insertedBy": "2002 Amendment",
+      "maxAmount": "₹10,000",
+      "authority": "Chief Wild Life Warden",
+      "purpose": "Assistance in detection of offence or apprehension of offender"
+    },
+    "summaryTable": {
+      "note": "All figures reflect 2022 Amendment (Act 18 of 2022)",
+      "offences": [
+        {
+          "offence": "General WLPA violation (Section 51)",
+          "imprisonment": "3-7 years",
+          "fine": "₹1,00,000 min",
+          "repeatOffence": "7 years, ₹5,00,000 min"
+        },
+        {
+          "offence": "Schedule I/II / Appendix I Schedule IV (Section 51 proviso)",
+          "imprisonment": "3-7 years",
+          "fine": "₹25,000 min",
+          "repeatOffence": "7 years, ₹5,00,000 min"
+        },
+        {
+          "offence": "Chapter VA - Scheduled animal trade (Section 51A)",
+          "imprisonment": "1-7 years",
+          "fine": "₹5,000 min",
+          "repeatOffence": "As per Section 51"
+        },
+        {
+          "offence": "Tiger reserve core area / tiger hunting (Section 51C)",
+          "imprisonment": "3-7 years (1st), 7 years (repeat)",
+          "fine": "₹50K-2L (1st), ₹5L-50L (repeat)",
+          "repeatOffence": "Mandatory 7 years, ₹5-50 lakh"
+        },
+        {
+          "offence": "Compounding (Section 54)",
+          "imprisonment": "N/A (compounded)",
+          "fine": "Up to ₹5,00,000",
+          "repeatOffence": "Not compoundable"
+        },
+        {
+          "offence": "Forfeiture property acquisition (Section 58Y)",
+          "imprisonment": "Up to 5 years",
+          "fine": "Up to ₹50,000",
+          "repeatOffence": "N/A"
+        }
+      ]
+    },
+    "presumptions_section57": {
+      "section": "57",
+      "description": "Presumptions in certain cases (amended 2022)",
+      "presumptions": [
+        "Possession of wild animal/captive animal/scheduled specimen → presumed illegal unless proved otherwise",
+        "Possession of animal article/trophy/uncured trophy/meat/ivory/scheduled specimen → presumed illegal",
+        "Person in possession of scheduled specimen → presumed to know nature of specimen",
+        "Burden of proof on accused for lawful possession"
+      ],
+      "amended2022": "Added 'wild animal, captive animal' and 'scheduled specimen' to presumptions"
+    }
+  },
+  "historicalProgression": {
+    "1972_original": { "imprisonment": "Up to 3 years", "fine": "Up to ₹2,000" },
+    "1986_chapterVA": { "imprisonment": "1-7 years", "fine": "₹5,000+" },
+    "1991_major": { "imprisonment": "Up to 3 years", "fine": "Up to ₹25,000" },
+    "2002_differentiated": { "schedule_I_II": "₹10,000", "general": "₹25,000", "compounding": "₹50,000", "reward": "50%" },
+    "2006_tiger": { "section_51C": "₹50K-2L (1st), ₹5L-50L (repeat)" },
+    "2022_current": { "general": "₹1,00,000", "schedule_I_II": "₹25,000", "repeat": "₹5,00,000", "compounding": "₹5,00,000" }
+  }
+}

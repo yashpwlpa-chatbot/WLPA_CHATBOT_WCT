@@ -1,0 +1,70 @@
+version: '3.8'
+
+services:
+  # Main WLPA Bot (Telegram + WhatsApp)
+  wlpa-bot:
+    build: .
+    container_name: wlpa-bot
+    environment:
+      - NODE_ENV=production
+      - MONGODB_URI=${MONGODB_URI}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - WHISPER_API_KEY=${WHISPER_API_KEY}
+      - TRANSCRIPTION_SERVICE_URL=http://transcription:5000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - transcription
+    volumes:
+      - ./assets:/app/assets
+    restart: unless-stopped
+    networks:
+      - wlpa-network
+
+  # Whisper Transcription Service
+  transcription:
+    build:
+      context: ./transcription_service
+      dockerfile: Dockerfile
+    container_name: wlpa-transcription
+    environment:
+      - WHISPER_MODEL=base
+      - WHISPER_DEVICE=cpu
+      - WHISPER_COMPUTE_TYPE=int8
+      - MAX_FILE_SIZE_MB=25
+    ports:
+      - "5000:5000"
+    volumes:
+      - whisper_models:/tmp/whisper_models
+    restart: unless-stopped
+    networks:
+      - wlpa-network
+    deploy:
+      resources:
+        limits:
+          memory: 2G
+        reservations:
+          memory: 1G
+
+  # MongoDB (if not using external)
+  mongodb:
+    image: mongo:7
+    container_name: wlpa-mongodb
+    environment:
+      - MONGO_INITDB_DATABASE=wlpa_bot
+    volumes:
+      - mongo_data:/data/db
+    ports:
+      - "27017:27017"
+    restart: unless-stopped
+    networks:
+      - wlpa-network
+
+volumes:
+  whisper_models:
+  mongo_data:
+
+networks:
+  wlpa-network:
+    driver: bridge

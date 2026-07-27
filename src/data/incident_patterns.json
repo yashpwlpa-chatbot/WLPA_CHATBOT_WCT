@@ -1,0 +1,271 @@
+{
+  "metadata": {
+    "source": "Wildlife (Protection) Act, 1972 - Incident Patterns for Scenario Understanding",
+    "lastUpdated": "2024-12-19",
+    "purpose": "Map real-life scenarios to WLPA sections, offences, and procedures"
+  },
+  "incidentPatterns": {
+    "dead_animal": {
+      "name": "Dead Animal Found",
+      "description": "Finding a dead wild animal (natural causes, poaching, accident, electrocution, etc.)",
+      "scenarios": [
+        "Found dead tiger/leopard/elephant in forest/farm",
+        "Dead schedule I animal on railway track/road",
+        "Dead marine turtle on beach",
+        "Dead bird (vulture, bustard) near power lines"
+      ],
+      "applicableSections": {
+        "immediate": ["39 - Government property", "50 - Seizure powers", "55 - Cognizance"],
+        "investigation": ["51 - Penalties if poaching", "51C - Tiger reserve core", "57 - Presumptions"],
+        "procedure": ["Section 39 - handover to Forest Dept", "Post-mortem by authorized vet", "Forensic samples if poaching suspected"]
+      },
+      "offencesIfPoaching": ["9 - Hunting prohibition", "51 - Penalties", "51C - Tiger reserve enhanced"],
+      "practicalSteps": [
+        "Do NOT touch/move the carcass",
+        "Inform nearest Forest Department office immediately",
+        "Note location (GPS if possible), date, time",
+        "Take photos from distance (don't disturb evidence)",
+        "Wait for Forest Dept / authorized officer",
+        "If poaching suspected: inform police/WCCB"
+      ],
+      "keywords": ["dead", "carcass", "found dead", "mortality", "carcass found"]
+    },
+    "poaching": {
+      "name": "Poaching / Illegal Hunting",
+      "description": "Illegal killing, trapping, poisoning of wild animals",
+      "scenarios": [
+        "Animal shot/trapped/snared for body parts",
+        "Poisoned waterhole/bait",
+        "Night hunting with lights/vehicles",
+        "Organized poaching gang activity",
+        "Tiger/leopard/elephant/rhino poaching"
+      ],
+      "applicableSections": {
+        "primary": ["9 - Hunting prohibition", "51 - Penalties (3-7 yrs, ₹1L+)"],
+        "scheduleSpecific": ["51 proviso - Schedule I/II: ₹25K min", "51C - Tiger reserve core: ₹50K-2L/₹5-50L"],
+        "trade": ["39 - Govt property", "44 - Trade without licence", "49B - Chapter VA scheduled animals"],
+        "enforcement": ["50 - Search/arrest/seizure", "55 - Cognizance", "57 - Presumptions", "58A-58Y - Forfeiture"]
+      },
+      "offences": ["9", "51", "51C", "39", "44", "49B", "50", "55", "57"],
+      "practicalSteps": [
+        "Report immediately to Forest Dept / Police / WCCB",
+        "Do not confront poachers - safety first",
+        "Note: vehicle numbers, descriptions, GPS location",
+        "Preserve evidence: don't touch traps/snares/weapons",
+        "Forest officers can arrest without warrant (Section 50)",
+        "Presumptions under Section 57 favor prosecution"
+      ],
+      "keywords": ["poaching", "hunting", "killed", "trapped", "snared", "poisoned", "poacher"]
+    },
+    "illegal_trade": {
+      "name": "Illegal Wildlife Trade",
+      "description": "Possession, sale, transport, smuggling of wildlife parts/products",
+      "scenarios": [
+        "Selling tiger/leopard skin, bones, claws",
+        "Ivory trade (raw/artifacts)",
+        "Pangolin scales trade",
+        "Live animal trade (parrots, turtles, reptiles)",
+        "Shahtoosh (Tibetan antelope wool)",
+        "Red sandalwood/agarwood/sandalwood smuggling",
+        "Online wildlife trade"
+      ],
+      "applicableSections": {
+        "possession": ["39 - Govt property", "40 - Declaration", "42 - Ownership certificate"],
+        "trade": ["44 - Licence required", "49B - Chapter VA ban", "49H-49L - CITES permits"],
+        "transport": ["48A - Transport restriction", "50 - Seizure"],
+        "penalties": ["51 - General", "51A - Chapter VA", "51C - Tiger reserve", "54 - Compounding"],
+        "forfeiture": ["58A-58Y - Property forfeiture"]
+      },
+      "offences": ["39", "40", "42", "44", "48A", "49B", "49H", "49I", "49J", "49K", "49L", "51", "51A"],
+      "practicalSteps": [
+        "Report to Forest Dept / WCCB / Customs / Police",
+        "Do not buy/handle suspected illegal wildlife products",
+        "Online trade: report to platform + enforcement agencies",
+        "Check for ownership certificate (Section 42) before any purchase",
+        "CITES permits mandatory for international trade (Schedule IV)",
+        "Scheduled specimens (Schedule IV) - registration required (Section 49M)"
+      ],
+      "keywords": ["trade", "selling", "buying", "smuggling", "ivory", "skin", "scales", "live animal", "online"]
+    },
+    "human_wildlife_conflict": {
+      "name": "Human-Wildlife Conflict",
+      "description": "Crop damage, livestock depredation, human injury/death, property damage by wildlife",
+      "scenarios": [
+        "Elephant crop raiding",
+        "Leopard/tiger livestock killing",
+        "Wild boar/nilgai crop damage",
+        "Snake bite",
+        "Human injury/death by wildlife",
+        "Property damage by elephants"
+      ],
+      "applicableSections": {
+        "prevention": ["11 - Hunting permit if dangerous", "33 - Sanctuary management", "38V - Tiger conservation plan"],
+        "compensation": ["State Govt schemes (ex-gratia)", "Section 60B - Reward for assistance"],
+        "management": ["38V - Tiger reserve buffer zone coexistence", "36A/36C - Conservation/community reserves"],
+        "legal": ["9 - No hunting without permit", "51 - Penalties for illegal killing", "11 - Only CWLW can permit"]
+      },
+      "offences": ["9", "11", "51"],
+      "practicalSteps": [
+        "Do NOT kill/injure animal - illegal without permit",
+        "Contact Forest Dept immediately for conflict situations",
+        "Apply for ex-gratia compensation from State Govt",
+        "Preventive measures: fencing, early warning, crop insurance",
+        "Section 11 permit ONLY from CWLW for dangerous animals",
+        "Tiger reserves: buffer zone coexistence measures (Section 38V)",
+        "Community reserves for community-based management (Section 36C)"
+      ],
+      "keywords": ["conflict", "crop damage", "livestock killing", "human injury", "elephant", "leopard", "tiger", "wild boar", "nilgai"]
+    },
+    "plant_destruction": {
+      "name": "Protected Plant Destruction",
+      "description": "Illegal collection, uprooting, trade of Schedule VI plants",
+      "scenarios": [
+        "Red sandalwood/agarwood/sandalwood smuggling",
+        "Orchid collection from wild",
+        "Medicinal plant over-harvesting",
+        "Tree felling in protected areas",
+        "Commercial cultivation without licence"
+      ],
+      "applicableSections": {
+        "prohibition": ["17A - Picking/uprooting prohibited", "17C - Cultivation without licence", "17D - Dealing without licence"],
+        "possession": ["17E - Stock declaration", "17F - Possession by licensee only", "17G - Purchase from licensee"],
+        "governmentProperty": ["17H - Plants to Govt property"],
+        "penalties": ["51 - 3-7 years, ₹25K+"]
+      },
+      "offences": ["17A", "17C", "17D", "17E", "17F", "17G", "17H", "51"],
+      "practicalSteps": [
+        "Do not collect plants from forests/protected areas",
+        "Check if plant is Schedule VI before any collection",
+        "Cultivation/dealing requires licence from CWLW",
+        "Report illegal plant trade to Forest Dept",
+        "CITES permits for international plant trade (Schedule IV)"
+      ],
+      "keywords": ["plant", "sandalwood", "red sandalwood", "agarwood", "orchid", "medicinal plant", "uprooting"]
+    },
+    "nest_disturbance": {
+      "name": "Nest/Breeding Site Disturbance",
+      "description": "Disturbance of nesting sites, breeding colonies, eggs, chicks",
+      "scenarios": [
+        "Village children disturbing heron/stork nests",
+        "Egg collection from wild",
+        "Tree cutting with active nests",
+        "Disturbing turtle nesting beaches",
+        "Photography/disturbance at breeding sites"
+      ],
+      "applicableSections": {
+        "protection": ["9 - Hunting includes eggs/nests (Section 2(31) trophy)", "17A - Specified plants", "29 - Sanctuary protection", "35 - National Park protection"],
+        "eggs": ["2(20) meat includes eggs", "2(31) trophy includes eggs/nests", "39 - Govt property"],
+        "penalties": ["51 - 3-7 years, ₹1L+", "51C - Tiger reserve if applicable"]
+      },
+      "offences": ["9", "29", "35", "39", "51"],
+      "practicalSteps": [
+        "Do NOT disturb nests, eggs, chicks - it's hunting under Section 9",
+        "Report nest disturbance to Forest Dept",
+        "Tree cutting: check for nests first, avoid breeding season",
+        "Turtle nesting beaches: no lights, no vehicles, no disturbance",
+        "Photography: maintain distance, no flash at nests",
+        "Community protection of nesting sites encouraged"
+      ],
+      "keywords": ["nest", "eggs", "chicks", "breeding", "heron", "stork", "turtle nesting", "bird nest"]
+    },
+    "illegal_possession": {
+      "name": "Illegal Possession of Wildlife/Parts",
+      "description": "Possessing wild animals, parts, products without legal authority",
+      "scenarios": [
+        "Keeping parrot/turtle as pet without certificate",
+        "Possessing tiger claw/leopard tooth as talisman",
+        "Keeping ivory artifacts without declaration",
+        "Possessing scheduled specimen (CITES) without registration",
+        "Inherited wildlife items without paperwork"
+      ],
+      "applicableSections": {
+        "declaration": ["40 - Mandatory declaration within 30 days"],
+        "ownership": ["42 - Certificate of ownership required", "42A - Voluntary surrender option"],
+        "citES": ["49M - Schedule IV possession registration", "49N - Appendix I breeding licence"],
+        "presumptions": ["57 - Presumption of illegal possession"],
+        "penalties": ["51 - 3-7 years, ₹1L+"]
+      },
+      "offences": ["39", "40", "42", "42A", "49M", "49N", "57", "51"],
+      "practicalSteps": [
+        "Declare ALL wildlife items within 30 days (Section 40)",
+        "Apply for ownership certificate (Section 42)",
+        "Schedule IV (CITES) living animals: register with Management Authority (Section 49M)",
+        "Voluntary surrender option: Section 42A (no compensation)",
+        "Inherited items: declare and get certificate",
+        "Burden of proof on YOU to show legal possession (Section 57)"
+      ],
+      "keywords": ["possession", "pet", "kept", "own", "certificate", "declaration", "illegal possession"]
+    },
+    "animal_attack": {
+      "name": "Wild Animal Attack on Human",
+      "description": "Wild animal injuring or killing a person",
+      "scenarios": [
+        "Tiger/leopard attack on human",
+        "Elephant attack",
+        "Bear attack",
+        "Wild boar attack",
+        "Snake bite"
+      ],
+      "applicableSections": {
+        "immediate": ["11 - CWLW can permit hunting if dangerous to human life"],
+        "compensation": ["State Govt ex-gratia schemes", "Section 60B - Reward"],
+        "investigation": ["50 - Powers of entry/search", "Post-mortem if fatal"],
+        "management": ["38V - Tiger reserve conflict mitigation", "33 - Sanctuary management"]
+      },
+      "offences": ["9", "11"],
+      "practicalSteps": [
+        "Immediate medical attention for victim",
+        "Inform Forest Dept / Police immediately",
+        "CWLW can issue Section 11 permit for dangerous animal",
+        "Do NOT take matters into own hands - illegal hunting",
+        "Apply for ex-gratia compensation from State Govt",
+        "Forest Dept will assess: problem animal vs chance encounter",
+        "Capture/tranquilize by authorized team only"
+      ],
+      "keywords": ["attack", "injured", "killed", "human death", "man-eater", "problem animal"]
+    },
+    "vehicle_seizure": {
+      "name": "Vehicle Used in Wildlife Offence",
+      "description": "Vehicle/vessel seized for transporting wildlife contraband or used in poaching",
+      "scenarios": [
+        "Vehicle carrying poached meat/parts",
+        "Vehicle used to chase/hunt wildlife",
+        "Boat used for illegal fishing/turtle poaching",
+        "Vehicle entering sanctuary/NP illegally"
+      ],
+      "applicableSections": {
+        "seizure": ["50 - Power to seize vehicles/vessels", "51 - Penalties"],
+        "authorizedOfficers": ["Forest officers", "Police", "Customs", "Coast Guard", "Management Authority (2022)"],
+        "procedure": ["Seizure memo", "Produce before Magistrate", "Confiscation on conviction"]
+      },
+      "offences": ["9", "29", "35", "44", "48A", "50", "51"],
+      "practicalSteps": [
+        "Authorized officers can seize vehicle on suspicion",
+        "Vehicle produced before Magistrate",
+        "Confiscation if offence proved",
+        "Owner can claim if not involved (burden on owner)",
+        "2022: More officers authorized (Management Authority, customs, coast guard)"
+      ],
+      "keywords": ["vehicle seized", "vehicle confiscated", "transport", "seizure", "confiscation"]
+    }
+  },
+  "incidentReportFields": {
+    "required": [
+      "incidentType",
+      "location (GPS/address)",
+      "dateTime",
+      "speciesInvolved",
+      "description"
+    ],
+    "optional": [
+      "witnesses (names/contact)",
+      "photos/videos",
+      "evidenceCollected",
+      "suspectInfo",
+      "vehicleDetails",
+      "actionTaken",
+      "reportingOfficer",
+      "followUpRequired"
+    ]
+  }
+}
