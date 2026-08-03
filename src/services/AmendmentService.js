@@ -30,7 +30,7 @@ class AmendmentService {
       if (fs.existsSync(amendmentsPath)) {
         this.data = JSON.parse(fs.readFileSync(amendmentsPath, 'utf8'));
         this.initialized = true;
-        logger.info('AmendmentService: Initialized');
+        logger.debug('AmendmentService: Initialized');
       }
     } catch (err) {
       logger.error('AmendmentService: Initialization failed', { error: err.message });

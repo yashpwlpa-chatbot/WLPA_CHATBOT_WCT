@@ -46,7 +46,7 @@ class SearchService {
       if (fs.existsSync(synonymsPath)) {
         const raw = JSON.parse(fs.readFileSync(synonymsPath, 'utf8'));
         this.synonyms = raw.synonyms || {};
-        logger.info('SearchService: Synonyms loaded', { count: Object.keys(this.synonyms).length });
+        logger.debug('SearchService: Synonyms loaded', { count: Object.keys(this.synonyms).length });
       } else {
         logger.warn('SearchService: Synonyms file not found, proceeding without synonym expansion');
         this.synonyms = {};
@@ -125,7 +125,7 @@ class SearchService {
           const raw = JSON.parse(fs.readFileSync(filePath, 'utf8'));
           this.data[key] = raw;
           this.indices[key] = this._createFuseIndex(key, raw, weight);
-          logger.info('SearchService: Indexed ' + key + ' (' + file + ')');
+          logger.debug('SearchService: Indexed ' + key + ' (' + file + ')');
         } else {
           logger.warn('SearchService: File not found: ' + filePath);
         }
@@ -135,7 +135,7 @@ class SearchService {
     }
 
     this.initialized = true;
-    logger.info('SearchService: All indices initialized');
+    logger.debug('SearchService: All indices initialized');
   }
 
   /**

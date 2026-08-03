@@ -17,8 +17,14 @@ const UserSchema = new mongoose.Schema(
   {
     telegramId: {
       type: Number,
-      required: true,
       unique: true,
+      sparse: true,
+      index: true,
+    },
+    whatsappId: {
+      type: String,
+      unique: true,
+      sparse: true,
       index: true,
     },
     username: {

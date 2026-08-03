@@ -7,6 +7,7 @@
  */
 
 const ChatMessage = require('../models/ChatMessage');
+const User = require('../models/User');
 const ConversationMemoryService = require('./ConversationMemoryService');
 const logger = require('../utils/logger');
 
@@ -19,6 +20,7 @@ class ChatService {
   async save({
     userId,
     telegramId,
+    sessionId = null,
     messageType,
     question,
     transcription = null,
@@ -52,20 +54,20 @@ class ChatService {
       // Swallow the error — the user-facing flow must continue.
     }
 
-    // Update in-memory conversation memory (for real-time context)
-    if (telegramId && question) {
+    // Store each turn through the hybrid memory service for RAM speed and durable recovery.
+    const activeSessionId = sessionId || telegramId;
+    if (activeSessionId && question) {
       try {
-        // Add user question
-        ConversationMemoryService.addTurn(telegramId, 'user', question, language, {
+        await ConversationMemoryService.addPersistentTurn(activeSessionId, userId, 'user', question, language, {
           messageType,
           transcription,
           metadata,
           mongoId: mongoDoc?._id
         });
 
-        // Add bot answer if present
+        // Keep the generated answer as a separate assistant turn for Gemini context.
         if (answer) {
-          ConversationMemoryService.addTurn(telegramId, 'model', answer, language, {
+          await ConversationMemoryService.addPersistentTurn(activeSessionId, userId, 'model', answer, language, {
             aiModel,
             metadata,
             mongoId: mongoDoc?._id
@@ -82,10 +84,12 @@ class ChatService {
   /**
    * Fetch recent history from MongoDB.
    */
-  async getRecentForUser(telegramId, limit = 20) {
-    return ChatMessage.find({ telegramId })
+  async getRecentForUser(userId, telegramId, limit = 20) {
+    const query = userId ? { userId } : { telegramId };
+    return ChatMessage.find(query)
       .sort({ createdAt: -1 })
       .limit(limit)
+      .select('question answer language messageType aiModel createdAt')
       .lean();
   }
 
@@ -93,16 +97,30 @@ class ChatService {
    * Restore recent persisted messages when the process has no in-memory history.
    * This keeps Telegram follow-up questions meaningful after a server restart.
    */
-  async ensureConversationMemory(telegramId) {
-    if (!telegramId || ConversationMemoryService.getHistory(telegramId, 1).length > 0) {
-      return;
-    }
+  async ensureConversationMemory(sessionId, telegramId = null) {
+    if (!sessionId) return null;
 
     try {
-      const messages = await this.getRecentForUser(telegramId, 10);
+      // Resolve the User reference required by the durable Conversation model.
+      let user = null;
+      if (telegramId) {
+        user = await User.findOne({ telegramId }).select('_id').lean();
+      } else {
+        // If it's WhatsApp, the sessionId is the phoneNumber, so find by whatsappId
+        user = await User.findOne({ whatsappId: sessionId }).select('_id').lean();
+      }
+      
+      await ConversationMemoryService.ensureLoaded(sessionId, user?._id);
+
+      if (ConversationMemoryService.getHistory(sessionId, 1).length > 0) {
+        return user?._id || null;
+      }
+
+      // Preserve access to existing ChatMessage records until they naturally age out.
+      const messages = await this.getRecentForUser(user?._id, telegramId, 10);
       for (const message of messages.reverse()) {
         ConversationMemoryService.addTurn(
-          telegramId,
+          sessionId,
           'user',
           message.question,
           message.language,
@@ -111,7 +129,7 @@ class ChatService {
 
         if (message.answer) {
           ConversationMemoryService.addTurn(
-            telegramId,
+            sessionId,
             'model',
             message.answer,
             message.language,
@@ -119,47 +137,51 @@ class ChatService {
           );
         }
       }
+
+      // Callers pass this verified owner to Gemini for a second ownership-safe load.
+      return user?._id || null;
     } catch (err) {
       logger.warn('ChatService: Failed to restore conversation memory', {
-        telegramId,
+        sessionId,
         error: err.message,
       });
+      return null;
     }
   }
 
   /**
    * Get in-memory conversation history (for real-time context).
    */
-  getConversationMemory(telegramId, limit = 10) {
-    return ConversationMemoryService.getHistory(telegramId, limit);
+  getConversationMemory(sessionId, limit = 10) {
+    return ConversationMemoryService.getHistory(sessionId, limit);
   }
 
   /**
    * Get conversation context formatted for Gemini.
    */
-  getContextForGemini(telegramId, currentQuestion) {
-    return ConversationMemoryService.buildContextForGemini(telegramId, currentQuestion);
+  getContextForGemini(sessionId, currentQuestion) {
+    return ConversationMemoryService.buildContextForGemini(sessionId, currentQuestion);
   }
 
   /**
    * Detect if current question is a follow-up.
    */
-  detectFollowup(telegramId, currentQuestion) {
-    return ConversationMemoryService.detectFollowup(telegramId, currentQuestion);
+  detectFollowup(sessionId, currentQuestion) {
+    return ConversationMemoryService.detectFollowup(sessionId, currentQuestion);
   }
 
   /**
    * Get referenced entities from conversation.
    */
-  getReferencedEntities(telegramId) {
-    return ConversationMemoryService.getReferencedEntities(telegramId);
+  getReferencedEntities(sessionId) {
+    return ConversationMemoryService.getReferencedEntities(sessionId);
   }
 
   /**
    * Clear conversation memory for a user.
    */
-  clearMemory(telegramId) {
-    ConversationMemoryService.clearHistory(telegramId);
+  clearMemory(sessionId) {
+    ConversationMemoryService.clearHistory(sessionId);
   }
 }
 

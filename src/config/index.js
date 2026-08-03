@@ -84,4 +84,9 @@ module.exports = {
     defaultLanguage: optional('DEFAULT_LANGUAGE', 'en'),
     corsOrigin: optional('CORS_ORIGIN', '*'),
   },
+
+  // Defaults to concise operational logs; set LOG_LEVEL=debug only while diagnosing issues.
+  logging: {
+    level: optional('LOG_LEVEL', 'info'),
+  },
 };

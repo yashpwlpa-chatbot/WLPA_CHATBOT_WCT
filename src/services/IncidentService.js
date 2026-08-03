@@ -77,7 +77,7 @@ class IncidentService {
    * Initialize the service (called at startup).
    */
   async initialize() {
-    logger.info('IncidentService: Initialized');
+    logger.debug('IncidentService: Initialized');
   }
 
   /**

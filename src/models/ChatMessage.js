@@ -28,7 +28,8 @@ const ChatMessageSchema = new mongoose.Schema(
     },
     telegramId: {
       type: Number,
-      required: true,
+      required: false,
+      default: null,
       index: true,
     },
     messageType: {

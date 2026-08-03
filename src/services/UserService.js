@@ -54,6 +54,46 @@ class UserService {
     }
   }
 
+  /**
+   * Idempotent upsert: create or update user by WhatsApp phone number.
+   */
+  async upsertFromWhatsApp(phoneNumber, preferredLanguage = 'en') {
+    if (!phoneNumber) {
+      throw new Error('UserService.upsertFromWhatsApp: missing phoneNumber');
+    }
+
+    const now = new Date();
+    const update = {
+      $set: {
+        whatsappId: phoneNumber,
+        preferredLanguage,
+        lastActiveAt: now,
+      },
+    };
+
+    try {
+      const user = await User.findOneAndUpdate(
+        { whatsappId: phoneNumber },
+        update,
+        {
+          new: true,
+          upsert: true,
+          runValidators: true,
+          setDefaultsOnInsert: true,
+        }
+      );
+
+      logger.debug('User upserted (WhatsApp)', {
+        whatsappId: user.whatsappId,
+        language: user.preferredLanguage,
+      });
+      return user;
+    } catch (err) {
+      logger.error('UserService.upsertFromWhatsApp failed', { error: err.message });
+      throw err;
+    }
+  }
+
   async findByTelegramId(telegramId) {
     return User.findOne({ telegramId });
   }

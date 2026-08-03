@@ -40,7 +40,7 @@ class TelegramService {
       return true;
     } catch (err) {
       const apiMessage = err.response?.data?.description || err.message;
-      logger.error('Telegram sendMessage failed', { chatId, error: apiMessage });
+      logger.error('Telegram sendMessage failed', { error: apiMessage });
       // Final fallback: try without HTML in case formatting caused it.
       try {
         await this.client.post('/sendMessage', {
@@ -51,7 +51,6 @@ class TelegramService {
         return true;
       } catch (innerErr) {
         logger.error('Telegram fallback sendMessage failed', {
-          chatId,
           error: innerErr.response?.data?.description || innerErr.message,
         });
         return false;
@@ -141,8 +140,6 @@ class TelegramService {
     } catch (err) {
       const apiMsg = err.response?.data?.description || err.message;
       logger.warn('Telegram editMessageText failed', {
-        chatId,
-        messageId,
         error: apiMsg,
       });
       return false;
@@ -165,8 +162,6 @@ class TelegramService {
     } catch (err) {
       const apiMsg = err.response?.data?.description || err.message;
       logger.warn('Telegram editMessageReplyMarkup failed', {
-        chatId,
-        messageId,
         error: apiMsg,
       });
       return false;
@@ -208,7 +203,7 @@ class TelegramService {
       return true;
     } catch (err) {
       const apiMsg = err.response?.data?.description || err.message;
-      logger.error('Telegram sendDocument failed', { chatId, error: apiMsg });
+      logger.error('Telegram sendDocument failed', { error: apiMsg });
       throw err;
     }
   }

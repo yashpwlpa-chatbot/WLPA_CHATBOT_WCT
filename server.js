@@ -17,6 +17,14 @@ const ScenarioUnderstandingService = require('./src/services/ScenarioUnderstandi
 const AmendmentService = require('./src/services/AmendmentService');
 const IncidentService = require('./src/services/IncidentService');
 
+// Startup diagnostics expose configuration state without leaking credentials.
+const maskValue = (value, visible = 4) => {
+  const text = String(value || '');
+  if (!text) return '(not set)';
+  if (text.length <= visible) return '*'.repeat(text.length);
+  return `${text.slice(0, visible)}…${'*'.repeat(Math.min(8, text.length - visible))}`;
+};
+
 const start = async () => {
   try {
     // 1. Database first so failures here abort cleanly before opening ports.
@@ -54,6 +62,22 @@ const start = async () => {
         env: config.env,
         telegramWebhook: config.telegram.useWebhook,
         whatsappWebhook: config.whatsapp.useWebhook,
+      });
+      // Detailed credential and route diagnostics are available only when debugging.
+      logger.debug('WhatsApp startup audit', {
+        nodeVersion: process.version,
+        routes: ['GET /whatsapp', 'POST /whatsapp'],
+        webhookBaseUrl: config.whatsapp.webhookUrl || '(not set)',
+        expectedWebhookUrl: config.whatsapp.webhookUrl
+          ? `${config.whatsapp.webhookUrl.replace(/\/+$/, '')}/whatsapp`
+          : '(not set)',
+        phoneNumberId: maskValue(config.whatsapp.phoneNumberId),
+        businessAccountId: maskValue(config.whatsapp.businessAccountId),
+        verifyToken: maskValue(config.whatsapp.webhookVerifyToken),
+        appSecretSet: !!config.whatsapp.appSecret && !/^(your_|test_)/i.test(config.whatsapp.appSecret),
+        accessToken: maskValue(config.whatsapp.accessToken),
+        geminiApiKeySet: !!config.gemini.apiKey,
+        mongoReadyState: require('mongoose').connection.readyState,
       });
     });
 

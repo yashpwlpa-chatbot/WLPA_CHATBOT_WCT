@@ -49,7 +49,7 @@ class ScenarioUnderstandingService {
       }
 
       this.initialized = true;
-      logger.info('ScenarioUnderstandingService: Initialized');
+      logger.debug('ScenarioUnderstandingService: Initialized');
     } catch (err) {
       logger.error('ScenarioUnderstandingService: Initialization failed', { error: err.message });
     }

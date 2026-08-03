@@ -20,7 +20,8 @@ const devFormat = printf(({ level, message, timestamp: ts, ...meta }) => {
 });
 
 const logger = winston.createLogger({
-  level: config.env === 'production' ? 'info' : 'debug',
+  // Debug events remain available on demand without cluttering normal terminals.
+  level: config.logging.level,
   format: combine(
     timestamp({ format: 'YYYY-MM-DD HH:mm:ss' }),
     errors({ stack: true }),

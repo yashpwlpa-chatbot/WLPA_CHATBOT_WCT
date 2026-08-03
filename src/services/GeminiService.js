@@ -1,14 +1,14 @@
 /**
  * GeminiService
  * -------------
- * Enhanced wrapper around the Gemini REST API with RAG pipeline.
+ * Enhanced wrapper around the Gemini REST API with JSON knowledge lookup.
  * Integrates: KnowledgeService, ConversationMemory, PromptEngineering, ScenarioUnderstanding.
  *
  * Flow:
  * 1. Search knowledge base (KnowledgeService)
- * 2. If NO verified knowledge found -> Return "I don't have sufficient verified information."
- * 3. If verified knowledge FOUND -> Build enriched prompt with context + history + scenario
- * 4. Call Gemini with enriched prompt (ALWAYS use Gemini to format the answer)
+ * 2. Load the latest cached or durable conversation turns.
+ * 3. Build one final prompt from system rules, relevant knowledge, history, and question.
+ * 4. Call Gemini once with that final prompt.
  * 5. Cache frequent Q&A
  */
 
@@ -43,7 +43,8 @@ class GeminiService {
 
   /**
    * Main entry point: Generate answer for a user question.
-   * Implements: Search -> If NO knowledge -> "I don't have sufficient verified information" | Knowledge FOUND -> Gemini formats answer
+   * Implements: Search -> provide matching knowledge to Gemini -> Gemini answers with
+   * retrieved knowledge as its primary source and a cautious fallback for gaps.
    *
    * @param {string} question - User's question
    * @param {string} language - ISO code (en | hi | mr)
@@ -58,102 +59,108 @@ class GeminiService {
       return { answer: '', model: this.model, source: 'empty', confidence: 0 };
     }
 
-    const { telegramId, isVoice, scenarioText } = opts;
+    const { telegramId, sessionId, userId, isVoice, scenarioText } = opts;
+    const activeSessionId = sessionId || telegramId;
     const normalizedQ = question.trim();
     const cacheKey = `${language}:${normalizedQ.toLowerCase()}`;
-    const conversationHistory = telegramId
-      ? this.memoryService.buildContextForGemini(telegramId, normalizedQ)
+
+    // Hydrate only a cold RAM cache; failures are handled inside the memory service.
+    if (activeSessionId) {
+      if (userId) {
+        await this.memoryService.ensureLoaded(activeSessionId, userId);
+      } else if (telegramId) {
+        // Telegram cold caches hydrate through the existing Telegram-ID lookup.
+        await this.memoryService.ensureLoadedByTelegramId(telegramId);
+      }
+    }
+
+    const conversationHistory = activeSessionId
+      ? this.memoryService.getHistoryAsText(activeSessionId)
       : '';
     const hasConversationHistory = Boolean(conversationHistory);
-    const followup = telegramId
-      ? this.memoryService.detectFollowup(telegramId, normalizedQ)
+    const followup = activeSessionId
+      ? this.memoryService.detectFollowup(activeSessionId, normalizedQ)
       : { isFollowup: false };
 
     // Cached standalone answers must not override a context-dependent follow-up.
     if (!hasConversationHistory && answerCache.has(cacheKey)) {
       const cached = answerCache.get(cacheKey);
       if (Date.now() - cached.timestamp < CACHE_TTL_MS) {
-        logger.info('GeminiService: Cache hit', { query: normalizedQ.substring(0, 50) });
-        return { ...cached.data, source: 'cache' };
+        logger.debug('GeminiService: Cache hit');
+        // Keep source attribution accurate even when a previously generated answer is reused.
+        const answer = this._applySourceAttribution(cached.data.answer, this._getSourceLabel(normalizedQ));
+        return { ...cached.data, answer, source: 'cache' };
       } else {
         answerCache.delete(cacheKey);
       }
     }
 
     try {
-      // Step 1: Check for amendment-specific questions (special handling)
+      // Keep amendment-specific material as relevant knowledge in the same Gemini request.
       const amendmentAnswer = await this.amendmentService.answerQuestion(normalizedQ, language);
-      if (amendmentAnswer) {
-        const formatted = this._formatAmendmentAnswer(amendmentAnswer, language);
-        if (!hasConversationHistory) {
-          this._setCache(cacheKey, { answer: formatted, model: this.model, source: 'amendment_kb', confidence: 0.95 });
-        }
-        return { answer: formatted, model: this.model, source: 'amendment_kb', confidence: 0.95 };
-      }
 
       // Step 1: Search knowledge base using KnowledgeService
       const previousQuestion = followup.isFollowup
-        ? this.memoryService.getLastUserQuestion(telegramId)?.text
+        ? this.memoryService.getLastUserQuestion(activeSessionId)?.text
         : '';
       const retrievalQuery = previousQuestion
         ? `${previousQuestion}\nFollow-up: ${normalizedQ}`
         : normalizedQ;
       const knowledgeResult = await this.knowledgeService.search(retrievalQuery);
 
-      // Step 2: Check if ANY verified knowledge was found
-      const hasVerifiedKnowledge = knowledgeResult.results && knowledgeResult.results.length > 0;
-
-      if (!hasVerifiedKnowledge) {
-        // NO verified knowledge found - return standard message
-        const answer = "I don't have sufficient verified information.";
-        if (!hasConversationHistory) {
-          this._setCache(cacheKey, { answer, model: this.model, source: 'no_knowledge', confidence: 0 });
-        }
-        return { answer, model: this.model, source: 'no_knowledge', confidence: 0 };
-      }
-
-      // Step 3: Verified knowledge FOUND - ALWAYS use Gemini to format the answer
-      logger.info('GeminiService: Verified knowledge found, using Gemini to format answer', {
-        query: normalizedQ.substring(0, 50),
+      // Search failures or empty results still reach Gemini with the available history.
+      // Log prompt inputs without exposing the complete user conversation.
+      logger.debug('GeminiService: Building final prompt', {
         resultsCount: knowledgeResult.results.length,
         confidence: knowledgeResult.confidence,
         sources: [...new Set(knowledgeResult.results.map(r => r.source))]
       });
 
-      // Get conversation history
-      // Analyze scenario if present
+      // Scenario analysis is locally derived from project JSON and stays inside the knowledge block.
       let scenarioAnalysis = '';
       if (scenarioText || this._isScenarioQuestion(normalizedQ)) {
         const analysis = await this.scenarioService.analyzeScenario(scenarioText || normalizedQ, language);
         scenarioAnalysis = this.scenarioService.formatResponse(analysis, language);
       }
 
-      // Build knowledge base context for Gemini
-      const kbContext = this.knowledgeService.formatContextForGemini(knowledgeResult);
+      // Keep the JSON context small and add any amendment/scenario material to this same block.
+      // Scenarios need broader evidence; simple questions use the top three matches to limit prompt cost.
+      const knowledgeContextLimit = scenarioAnalysis ? 5 : 3;
+      const knowledgeParts = [this.knowledgeService.formatContextForGemini(knowledgeResult, knowledgeContextLimit)];
+      if (amendmentAnswer) knowledgeParts.push(this._formatAmendmentAnswer(amendmentAnswer, language));
+      if (scenarioAnalysis) knowledgeParts.push(scenarioAnalysis);
+      const kbContext = knowledgeParts.filter(Boolean).join('\n\n') || 'No relevant knowledge was found.';
 
-      // Build system prompt with all context
+      // Reuse the existing system prompt unchanged, without injecting other prompt sections.
       const systemPrompt = this.promptService.buildSystemPrompt({
         language,
-        context: kbContext,
-        conversationHistory,
-        scenarioAnalysis
+        context: '',
+        conversationHistory: '',
+        scenarioAnalysis: ''
       });
 
-      // Build user message
-      const userMessage = this.promptService.buildUserMessage(normalizedQ, {
-        isFollowup: followup.isFollowup,
-        scenarioText
+      // One Gemini request receives the four required sections in a stable order.
+      const finalPrompt = this._buildFinalPrompt({
+        systemPrompt,
+        knowledge: kbContext,
+        conversationHistory: conversationHistory || 'No previous conversation is available.',
+        currentQuestion: normalizedQ,
       });
 
       // Call Gemini API
-      const { answer } = await this._callGemini(systemPrompt, userMessage, language);
+      const { answer } = await this._callGemini(finalPrompt, language);
+      // Normalize high-confidence amendment attribution instead of relying on model formatting.
+      const answerWithSource = this._applySourceAttribution(
+        answer,
+        this._getSourceLabel(normalizedQ, knowledgeResult)
+      );
 
       // Cache the result
       if (!hasConversationHistory) {
-        this._setCache(cacheKey, { answer, model: this.model, source: 'gemini', confidence: knowledgeResult.confidence });
+        this._setCache(cacheKey, { answer: answerWithSource, model: this.model, source: 'gemini', confidence: knowledgeResult.confidence });
       }
 
-      return { answer, model: this.model, source: 'gemini', confidence: knowledgeResult.confidence };
+      return { answer: answerWithSource, model: this.model, source: 'gemini', confidence: knowledgeResult.confidence };
 
     } catch (err) {
       logger.error('GeminiService: generateAnswer failed', { error: err.message, code: err.code });
@@ -162,36 +169,125 @@ class GeminiService {
   }
 
   /**
-   * Call Gemini API with system prompt and user message.
+   * Keep all context in a single prompt so Gemini receives one coherent request.
    */
-  async _callGemini(systemPrompt, userMessage, language) {
-    const contents = [{ role: 'user', parts: [{ text: userMessage }] }];
+  _buildFinalPrompt({ systemPrompt, knowledge, conversationHistory, currentQuestion }) {
+    return [
+      'SYSTEM PROMPT',
+      systemPrompt,
+      'RELEVANT KNOWLEDGE',
+      knowledge,
+      'PREVIOUS CONVERSATION',
+      conversationHistory,
+      'CURRENT USER QUESTION',
+      currentQuestion,
+      'INSTRUCTIONS',
+      // Retrieved JSON remains the primary source, while Gemini can still help when a valid WLPA topic is absent from it.
+      'Use the relevant knowledge as your primary source and resolve follow-up references from the conversation when possible. If the relevant knowledge is empty or incomplete, provide a cautious answer using reliable WLPA knowledge. Never invent or present uncertain legal details as facts.',
+    ].join('\n\n----------------------------------------------------\n\n');
+  }
 
-    const url = `${BASE_URL}/${this.model}:generateContent`;
-
-    const response = await axios.post(
-      `${url}?key=${this.apiKey}`,
-      {
-        systemInstruction: { parts: [{ text: systemPrompt }] },
-        contents,
-        generationConfig: {
-          temperature: 0.2,
-          topP: 0.85,
-          topK: 30,
-          maxOutputTokens: 2048,
-        },
-        safetySettings: [
-          { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_ONLY_HIGH' },
-          { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_ONLY_HIGH' },
-        ],
-      },
-      { timeout: 30000 }
+  /**
+   * Use a specific amendment title when the user's topic is CITES or the 2022
+   * amendment, while leaving other source labels generated from their context.
+   */
+  _getSourceLabel(question, knowledgeResult = null) {
+    const query = (question || '').toLowerCase();
+    const isCitesOr2022Topic = /\bcites\b|\bschedule\s*iv\b|\bchapter\s*vb\b|\b2022\s+amendment\b/.test(query);
+    const has2022AmendmentResult = knowledgeResult?.results?.some((result) =>
+      result.source === 'amendments' && Number(result.item?.year) === 2022
     );
 
-    const answer = response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
-    return { answer };
+    return isCitesOr2022Topic || has2022AmendmentResult
+      ? 'The Wild Life (Protection) Amendment Act, 2022'
+      : null;
+  }
+
+  /**
+   * Replace Gemini's generic Source line, or add one before the disclaimer,
+   * so CITES answers consistently cite the amendment that introduced it.
+   */
+  _applySourceAttribution(answer, sourceLabel) {
+    if (!answer || !sourceLabel) return answer;
+
+    const sourcePattern = /(\*{1,2}Source\*{1,2}\s*\n)[^\n]*/i;
+    if (sourcePattern.test(answer)) {
+      return answer.replace(sourcePattern, `$1${sourceLabel}`);
+    }
+
+    const disclaimerIndex = answer.search(/\n\s*⚠️/);
+    const sourceBlock = `\n\n**Source**\n${sourceLabel}\n`;
+    return disclaimerIndex >= 0
+      ? `${answer.slice(0, disclaimerIndex)}${sourceBlock}${answer.slice(disclaimerIndex)}`
+      : `${answer}${sourceBlock}`;
+  }
+
+  /**
+   * Call Gemini once with the fully assembled prompt in a single user message.
+   */
+  async _callGemini(finalPrompt, language) {
+    const contents = [{ role: 'user', parts: [{ text: finalPrompt }] }];
+
+    const url = `${BASE_URL}/${this.model}:generateContent`;
+    const startedAt = Date.now();
+
+    // Log prompt shape rather than legal text or conversation content.
+    logger.debug('Gemini request started', {
+      model: this.model,
+      endpoint: url,
+      promptLength: finalPrompt.length,
+      hasSystemPrompt: finalPrompt.includes('SYSTEM PROMPT'),
+      hasKnowledge: finalPrompt.includes('RELEVANT KNOWLEDGE'),
+      hasConversation: finalPrompt.includes('PREVIOUS CONVERSATION'),
+      language,
+    });
+
+    try {
+      const response = await axios.post(
+        `${url}?key=${this.apiKey}`,
+        {
+          contents,
+          generationConfig: {
+            temperature: 0.2,
+            topP: 0.85,
+            topK: 30,
+            maxOutputTokens: 2048,
+          },
+          safetySettings: [
+            { category: 'HARM_CATEGORY_HARASSMENT', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_HATE_SPEECH', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_SEXUALLY_EXPLICIT', threshold: 'BLOCK_ONLY_HIGH' },
+            { category: 'HARM_CATEGORY_DANGEROUS_CONTENT', threshold: 'BLOCK_ONLY_HIGH' },
+          ],
+        },
+        { timeout: 30000 }
+      );
+
+      const answer = response.data?.candidates?.[0]?.content?.parts?.[0]?.text?.trim() || '';
+      // Gemini returns authoritative per-request usage metadata; use it instead of estimating from characters.
+      const usageMetadata = response.data?.usageMetadata || {};
+      const usage = {
+        inputTokens: usageMetadata.promptTokenCount ?? null,
+        outputTokens: usageMetadata.candidatesTokenCount ?? null,
+        thinkingTokens: usageMetadata.thoughtsTokenCount ?? null,
+        totalTokens: usageMetadata.totalTokenCount ?? null,
+      };
+      logger.info('Gemini response received', {
+        status: response.status,
+        elapsedMs: Date.now() - startedAt,
+        answerLength: answer.length,
+        ...usage,
+      });
+      return { answer, usage };
+    } catch (err) {
+      logger.error('Gemini request failed', {
+        endpoint: url,
+        elapsedMs: Date.now() - startedAt,
+        status: err.response?.status,
+        error: err.response?.data?.error?.message || err.message,
+      });
+      throw err;
+    }
   }
 
     /**

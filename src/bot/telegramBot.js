@@ -236,13 +236,14 @@ async function processSyntheticQuestion(msg, question, language) {
   );
 
   try {
-    await ChatService.ensureConversationMemory(msg.from.id);
+    const userId = await ChatService.ensureConversationMemory(msg.from.id, msg.from.id);
     const { answer, model } = await GeminiService.generateAnswer(question, language, {
-      telegramId: msg.from.id
+      telegramId: msg.from.id,
+      sessionId: msg.from.id,
+      userId,
     });
-    const user = await UserService.findByTelegramId(msg.from.id);
     await ChatService.save({
-      userId: user?._id,
+      userId,
       telegramId: msg.from.id,
       messageType: MESSAGE_TYPES.TEXT,
       question,
@@ -315,8 +316,6 @@ async function handleText(msg) {
 
   logger.info('incoming_message', {
     type: MESSAGE_TYPES.TEXT,
-    telegramId: msg.from.id,
-    chatId,
     length: text.length,
     language,
   });
@@ -332,15 +331,16 @@ async function handleText(msg) {
   );
 
   try {
-    await ChatService.ensureConversationMemory(msg.from.id);
+    const userId = await ChatService.ensureConversationMemory(msg.from.id, msg.from.id);
     const { answer, model, source, confidence } = await GeminiService.generateAnswer(text, language, {
       telegramId: msg.from.id,
+      sessionId: msg.from.id,
+      userId,
       scenarioText: isScenario ? text : undefined
     });
 
-    const user = await UserService.findByTelegramId(msg.from.id);
     await ChatService.save({
-      userId: user?._id,
+      userId,
       telegramId: msg.from.id,
       messageType: MESSAGE_TYPES.TEXT,
       question: text,
@@ -412,16 +412,15 @@ async function handleVoice(msg) {
       chatId,
       messages.ACK_TEXT.voiceThinking[language] || messages.ACK_TEXT.voiceThinking.en
     );
-    await ChatService.ensureConversationMemory(msg.from.id);
+    const userId = await ChatService.ensureConversationMemory(msg.from.id, msg.from.id);
     const { answer, model } = await GeminiService.generateAnswer(
       transcription,
       effectiveLanguage,
-      { telegramId: msg.from.id }
+      { telegramId: msg.from.id, sessionId: msg.from.id, userId }
     );
 
-    const user = await UserService.findByTelegramId(msg.from.id);
     await ChatService.save({
-      userId: user?._id,
+      userId,
       telegramId: msg.from.id,
       messageType: MESSAGE_TYPES.VOICE,
       question: transcription,
@@ -581,7 +580,7 @@ async function handleCallbackQuery(query) {
         query.id,
         messages.FEEDBACK_THANKS[language] || messages.FEEDBACK_THANKS.en
       );
-      logger.info('feedback_positive', { telegramId: fromId });
+      logger.debug('feedback_positive');
       return;
 
     case INLINE_CALLBACKS.NOT_HELPFUL:
@@ -589,7 +588,7 @@ async function handleCallbackQuery(query) {
         query.id,
         messages.FEEDBACK_IMPROVE[language] || messages.FEEDBACK_IMPROVE.en
       );
-      logger.info('feedback_negative', { telegramId: fromId });
+      logger.debug('feedback_negative');
       return;
 
     case INLINE_CALLBACKS.READ_PDF:
@@ -783,7 +782,7 @@ async function handleCallbackQuery(query) {
   }
 
   if (data) {
-    logger.warn('Unhandled callback_data', { data, telegramId: fromId });
+    logger.warn('Unhandled Telegram callback action');
     try { await TelegramService.answerCallbackQuery(query.id, 'Unknown action'); } catch (_) {}
   }
 }
@@ -840,7 +839,7 @@ function _registerHandlers(bot) {
 
   bot.on('message', (msg) => {
     if (!msg.text && !msg.voice) {
-      logger.debug('Unsupported message type ignored', { chatId: msg.chat.id });
+      logger.debug('Unsupported Telegram message type ignored');
     }
   });
 

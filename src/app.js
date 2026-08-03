@@ -73,7 +73,7 @@ const buildApp = () => {
   // Error handler — must remain LAST.
   app.use(errorHandler);
 
-  logger.info('Express app built');
+  logger.debug('Express app built');
 
   return app;
 };
