@@ -16,9 +16,17 @@
  * 5. WLPA domain-specific terms in each language
  */
 
-const { franc, francAll } = require('franc-min');
 const logger = require('../utils/logger');
 const { LANGUAGES, SUPPORTED_LANGUAGES } = require('../utils/constants');
+
+let francModulePromise;
+
+const loadFrancModule = () => {
+  if (!francModulePromise) {
+    francModulePromise = import('franc-min');
+  }
+  return francModulePromise;
+};
 
 // Devanagari Unicode range
 const DEVANAGARI_REGEX = /[\u0900-\u097F]/;
@@ -144,23 +152,24 @@ class LanguageDetectionService {
 
     if (hasDevanagari && !hasLatin) {
       // Pure Devanagari - use franc-min to distinguish Hindi vs Marathi
-      return this._detectDevanagariLanguage(text);
+      return await this._detectDevanagariLanguage(text);
     }
 
     if (hasLatin && !hasDevanagari) {
       // Pure Latin script - could be English, Roman Hindi, or Roman Marathi
-      return this._detectLatinLanguage(normalized, words);
+      return await this._detectLatinLanguage(normalized, words);
     }
 
     // Mixed script - analyze both
-    return this._detectMixedScript(text, normalized, words);
+    return await this._detectMixedScript(text, normalized, words);
   }
 
   /**
    * Detect Hindi vs Marathi in Devanagari script.
    */
-  _detectDevanagariLanguage(text) {
+  async _detectDevanagariLanguage(text) {
     try {
+      const { franc, francAll } = await loadFrancModule();
       const ranked = francAll(text) || [];
       for (const [code] of ranked) {
         if (code === 'hin') return LANGUAGES.HI;
@@ -192,7 +201,7 @@ class LanguageDetectionService {
   /**
    * Detect language in Latin script (English, Roman Hindi, Roman Marathi).
    */
-  _detectLatinLanguage(normalized, words) {
+  async _detectLatinLanguage(normalized, words) {
     let enScore = 0, hiScore = 0, mrScore = 0;
 
     // Count keyword matches
@@ -230,6 +239,7 @@ class LanguageDetectionService {
 
     // Franc-min as tiebreaker for Latin text
     try {
+      const { franc } = await loadFrancModule();
       const code = franc(normalized);
       if (code === 'eng') enScore += 2;
       else if (code === 'hin') hiScore += 2;
@@ -271,17 +281,17 @@ class LanguageDetectionService {
   /**
    * Detect language in mixed script text.
    */
-  _detectMixedScript(text, normalized, words) {
+  async _detectMixedScript(text, normalized, words) {
     // Count Devanagari vs Latin characters
     const devChars = (text.match(DEVANAGARI_REGEX) || []).length;
     const latChars = (text.match(LATIN_REGEX) || []).length;
 
     if (devChars > latChars * 2) {
       // Mostly Devanagari
-      return this._detectDevanagariLanguage(text);
+      return await this._detectDevanagariLanguage(text);
     } else if (latChars > devChars * 2) {
       // Mostly Latin
-      return this._detectLatinLanguage(normalized, words);
+      return await this._detectLatinLanguage(normalized, words);
     } else {
       // Truly mixed - analyze keywords in both scripts
       let hiScore = 0, mrScore = 0, enScore = 0;
