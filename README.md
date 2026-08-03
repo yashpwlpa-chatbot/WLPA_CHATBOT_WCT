@@ -524,4 +524,5 @@ The repository currently includes the Node.js source, legal data, PDFs, and the 
 
 ## License
 
-This project is licensed under the MIT License.
+Copyright (c) 2026 Wildlife Conservation Trust (WCT)
+All rights reserved.
