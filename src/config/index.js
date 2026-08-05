@@ -67,11 +67,14 @@ module.exports = {
 
   transcription: {
     // Local faster-whisper microservice
-    serviceUrl: optional('TRANSCRIPTION_SERVICE_URL', 'http://localhost:5000'),
+    serviceUrl: optional('TRANSCRIPTION_SERVICE_URL', 'http://127.0.0.1:5000'),
     useLocal: optional('USE_LOCAL_TRANSCRIPTION', 'true') === 'true',
     model: optional('WHISPER_MODEL', 'base'),
     defaultLanguage: optional('WHISPER_LANGUAGE', 'en'),
     timeout: parseInt(optional('TRANSCRIPTION_TIMEOUT', '60000'), 10),
+    healthTimeout: parseInt(optional('TRANSCRIPTION_HEALTH_TIMEOUT', '3000'), 10),
+    retries: parseInt(optional('TRANSCRIPTION_RETRIES', '3'), 10),
+    retryDelay: parseInt(optional('TRANSCRIPTION_RETRY_DELAY_MS', '1000'), 10),
     maxFileSize: parseInt(optional('MAX_FILE_SIZE_MB', '25'), 10) * 1024 * 1024,
   },
 

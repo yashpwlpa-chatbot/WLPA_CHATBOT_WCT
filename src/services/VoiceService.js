@@ -18,10 +18,26 @@ const logger = require('../utils/logger');
 
 const WHISPER_URL = 'https://api.openai.com/v1/audio/transcriptions';
 
+function normalizeTranscriptionServiceUrl(value) {
+  const configuredUrl = String(value || 'http://127.0.0.1:5000').trim();
+
+  try {
+    const parsed = new URL(configuredUrl);
+    if (parsed.hostname === 'localhost' || parsed.hostname === '::1') {
+      parsed.hostname = '127.0.0.1';
+    }
+    return parsed.toString().replace(/\/+$/, '');
+  } catch (_err) {
+    return configuredUrl.replace(/\/+$/, '');
+  }
+}
+
 class VoiceService {
   constructor() {
     // Configuration
-    this.transcriptionServiceUrl = config.transcription?.serviceUrl || process.env.TRANSCRIPTION_SERVICE_URL || 'http://localhost:5000';
+    this.transcriptionServiceUrl = normalizeTranscriptionServiceUrl(
+      config.transcription?.serviceUrl || process.env.TRANSCRIPTION_SERVICE_URL
+    );
     this.openaiApiKey = config.whisper?.apiKey || process.env.WHISPER_API_KEY;
     this.useLocalService = config.transcription?.useLocal !== false; // Default to local
     this.defaultModel = config.transcription?.model || process.env.WHISPER_MODEL || 'base';
@@ -29,6 +45,9 @@ class VoiceService {
     
     // Timeout settings
     this.transcriptionTimeout = config.transcription?.timeout || 60000; // 60 seconds
+    this.healthTimeout = config.transcription?.healthTimeout || 3000;
+    this.transcriptionRetries = Math.max(1, config.transcription?.retries || 3);
+    this.transcriptionRetryDelay = Math.max(0, config.transcription?.retryDelay || 1000);
     this.maxFileSize = config.transcription?.maxFileSize || 25 * 1024 * 1024; // 25MB
 
     // Liveness cache (avoids repeated 3s health-check timeouts per message).
@@ -72,6 +91,20 @@ class VoiceService {
   }
 
   /**
+   * Probe the configured transcription backends during application startup.
+   * This removes the first-request race when the local service is ready.
+   */
+  async warmup() {
+    const backend = await this._probeBackendCache();
+    logger.info('VoiceService startup probe completed', {
+      backend: backend || 'none',
+      localService: this.useLocalService ? this.transcriptionServiceUrl : null,
+      openaiConfigured: Boolean(this.openaiApiKey),
+    });
+    return backend;
+  }
+
+  /**
    * Get the best available transcription backend.
    * Priority: Local service > OpenAI API.
    * Uses a 30s liveness cache so we don't spam /health checks.
@@ -92,15 +125,29 @@ class VoiceService {
    */
   async _resolveBackend(forceLog) {
     if (this.useLocalService) {
-      try {
-        const response = await axios.get(`${this.transcriptionServiceUrl}/health`, { timeout: 3000 });
-        if (response.data.status === 'healthy') {
-          this._backendWarnedDown = false;
-          return 'local';
-        }
-      } catch (err) {
-        if (forceLog || !this._backendWarnedDown) {
-          logger.warn('Local transcription service unavailable, falling back to OpenAI', { error: err.message || '' });
+      for (let attempt = 1; attempt <= this.transcriptionRetries; attempt += 1) {
+        try {
+          const response = await axios.get(`${this.transcriptionServiceUrl}/health`, { timeout: this.healthTimeout });
+          if (response.data.status === 'healthy') {
+            this._backendWarnedDown = false;
+            return 'local';
+          }
+        } catch (err) {
+          if (attempt < this.transcriptionRetries && this._isRetryableError(err)) {
+            const delay = this.transcriptionRetryDelay * attempt;
+            logger.warn('Local transcription health check failed; retrying', {
+              attempt,
+              retries: this.transcriptionRetries,
+              delayMs: delay,
+              error: err.message || '',
+            });
+            await this._sleep(delay);
+            continue;
+          }
+
+          if (forceLog || !this._backendWarnedDown) {
+            logger.warn('Local transcription service unavailable, falling back to OpenAI', { error: err.message || '' });
+          }
         }
       }
     }
@@ -135,7 +182,7 @@ class VoiceService {
       throw err;
     }
 
-    const backend = await this._getBackend();
+    let backend = await this._getBackend();
     
     if (!backend) {
       const err = new Error('No transcription backend available. Configure TRANSCRIPTION_SERVICE_URL or WHISPER_API_KEY');
@@ -159,7 +206,17 @@ class VoiceService {
       let text;
       
       if (backend === 'local') {
-        text = await this._transcribeLocal(buffer, filename, language, model);
+        try {
+          text = await this._transcribeLocal(buffer, filename, language, model);
+        } catch (err) {
+          if (!this.openaiApiKey || !this._isRetryableError(err)) throw err;
+
+          logger.warn('Local transcription failed; falling back to OpenAI', {
+            error: err.message || '',
+          });
+          backend = 'openai';
+          text = await this._transcribeOpenAI(buffer, filename, language);
+        }
       } else {
         text = await this._transcribeOpenAI(buffer, filename, language);
       }
@@ -202,36 +259,74 @@ class VoiceService {
    * Transcribe using local faster-whisper microservice
    */
   async _transcribeLocal(buffer, filename, language, model) {
-    const fileStream = Buffer.isBuffer(buffer) ? Readable.from(buffer) : buffer;
-    const form = new FormData();
-    form.append('audio', fileStream, {
-      filename,
-      contentType: this._getContentType(filename),
-      knownLength: Buffer.isBuffer(buffer) ? buffer.length : undefined,
-    });
-    form.append('language', language);
-    form.append('model', model);
-    form.append('vad_filter', 'true');
-    form.append('beam_size', '5');
+    let lastError;
 
-    const response = await axios.post(
-      `${this.transcriptionServiceUrl}/transcribe`,
-      form,
-      {
-        headers: {
-          ...form.getHeaders(),
-        },
-        timeout: this.transcriptionTimeout,
-        maxBodyLength: Infinity,
-        maxContentLength: Infinity,
+    for (let attempt = 1; attempt <= this.transcriptionRetries; attempt += 1) {
+      try {
+        const fileStream = Buffer.isBuffer(buffer) ? Readable.from(buffer) : buffer;
+        const form = new FormData();
+        form.append('audio', fileStream, {
+          filename,
+          contentType: this._getContentType(filename),
+          knownLength: Buffer.isBuffer(buffer) ? buffer.length : undefined,
+        });
+        form.append('language', language);
+        form.append('model', model);
+        form.append('vad_filter', 'true');
+        form.append('beam_size', '5');
+
+        const response = await axios.post(
+          `${this.transcriptionServiceUrl}/transcribe`,
+          form,
+          {
+            headers: {
+              ...form.getHeaders(),
+            },
+            timeout: this.transcriptionTimeout,
+            maxBodyLength: Infinity,
+            maxContentLength: Infinity,
+          }
+        );
+
+        if (response.data.error) {
+          const serviceError = new Error(response.data.error);
+          serviceError.retryable = false;
+          throw serviceError;
+        }
+
+        return response.data.text;
+      } catch (err) {
+        lastError = err;
+        if (attempt >= this.transcriptionRetries || !this._isRetryableError(err)) break;
+
+        const delay = this.transcriptionRetryDelay * attempt;
+        logger.warn('Local transcription request failed; retrying', {
+          attempt,
+          retries: this.transcriptionRetries,
+          delayMs: delay,
+          error: err.message || '',
+        });
+        await this._sleep(delay);
       }
-    );
-
-    if (response.data.error) {
-      throw new Error(response.data.error);
     }
 
-    return response.data.text;
+    this._backendCache = null;
+    logger.error('Local transcription request failed after retries', {
+      retries: this.transcriptionRetries,
+      error: lastError?.message || 'unknown error',
+    });
+    throw lastError;
+  }
+
+  _isRetryableError(err) {
+    if (err?.retryable === false) return false;
+    const status = err?.response?.status;
+    const retryableCodes = new Set(['ECONNREFUSED', 'ECONNRESET', 'ETIMEDOUT', 'EAI_AGAIN', 'ECONNABORTED']);
+    return !status || status === 429 || status >= 500 || retryableCodes.has(err?.code);
+  }
+
+  _sleep(delayMs) {
+    return new Promise((resolve) => setTimeout(resolve, delayMs));
   }
 
   /**

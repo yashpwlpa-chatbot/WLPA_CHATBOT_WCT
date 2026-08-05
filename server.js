@@ -16,6 +16,7 @@ const SearchService = require('./src/services/SearchService');
 const ScenarioUnderstandingService = require('./src/services/ScenarioUnderstandingService');
 const AmendmentService = require('./src/services/AmendmentService');
 const IncidentService = require('./src/services/IncidentService');
+const VoiceService = require('./src/services/VoiceService');
 
 // Startup diagnostics expose configuration state without leaking credentials.
 const maskValue = (value, visible = 4) => {
@@ -33,16 +34,19 @@ const start = async () => {
     // 2. Express app
     const app = buildApp();
 
-    // 3. Initialize Telegram bot (loads ESM/CJS dynamically)
+    // 3. Warm transcription before Telegram polling or HTTP webhooks begin.
+    await VoiceService.warmup();
+
+    // 4. Initialize Telegram bot (loads ESM/CJS dynamically)
     await telegramBot.init();
 
-    // 4. Initialize WhatsApp services
+    // 5. Initialize WhatsApp services
     await SearchService.initialize();
     await ScenarioUnderstandingService.initialize();
     await AmendmentService.initialize();
     await IncidentService.initialize();
 
-    // 5. Webhook registration (only if configured)
+    // 6. Webhook registration (only if configured)
     if (config.telegram.useWebhook) {
       if (!config.telegram.webhookUrl) {
         throw new Error('USE_WEBHOOK=true requires WEBHOOK_URL to be set');
@@ -50,12 +54,12 @@ const start = async () => {
       await telegramController.setupWebhook();
     }
 
-    // 6. WhatsApp webhook registration (if configured)
+    // 7. WhatsApp webhook registration (if configured)
     if (config.whatsapp.useWebhook && config.whatsapp.webhookUrl) {
       await whatsappController.setupWebhook();
     }
 
-    // 7. HTTP listen
+    // 8. HTTP listen
     const server = app.listen(config.port, () => {
       logger.info('HTTP server listening', {
         port: config.port,
@@ -81,7 +85,7 @@ const start = async () => {
       });
     });
 
-    // 8. Graceful shutdown
+    // 9. Graceful shutdown
     const shutdown = (signal) => {
       logger.info(`Received ${signal}, shutting down`);
       server.close(() => {

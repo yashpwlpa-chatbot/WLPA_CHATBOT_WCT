@@ -1,0 +1,17 @@
+.git
+.gitignore
+.env
+.env.*
+!.env.example
+node_modules
+.whisper_cache
+coverage
+dist
+build
+logs
+*.log
+__pycache__
+*.pyc
+.venv
+README.md
+docker-compose.yml

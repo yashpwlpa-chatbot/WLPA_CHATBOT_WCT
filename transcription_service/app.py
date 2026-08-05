@@ -216,5 +216,7 @@ if __name__ == "__main__":
     get_model()
     logger.info("Model loaded, starting Flask server...")
     
-    port = int(os.getenv("PORT", 5000))
-    app.run(host="0.0.0.0", port=port, debug=False)
+    host = os.getenv("TRANSCRIPTION_HOST", "127.0.0.1")
+    port = int(os.getenv("TRANSCRIPTION_PORT", "5000"))
+    logger.info("Transcription service listening on %s:%s", host, port)
+    app.run(host=host, port=port, debug=False, threaded=True)

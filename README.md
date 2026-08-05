@@ -177,10 +177,20 @@ The WhatsApp route is always webhook-based. The code includes placeholder defaul
 | Variable | Required | Default | Description |
 | --- | --- | --- | --- |
 | `USE_LOCAL_TRANSCRIPTION` | No | `true` | Probe and use the local faster-whisper service first. |
-| `TRANSCRIPTION_SERVICE_URL` | No | `http://localhost:5000` | Base URL of the transcription service. |
+| `TRANSCRIPTION_SERVICE_URL` | No | `http://127.0.0.1:5000` | Base URL of the transcription service. |
+| `TRANSCRIPTION_HOST` | No | `127.0.0.1` | Python transcription bind address. |
+| `TRANSCRIPTION_PORT` | No | `5000` | Internal Python transcription port; keep separate from Railway's `PORT`. |
+| `TRANSCRIPTION_STARTUP_TIMEOUT_SECONDS` | No | `300` | Maximum supervisor wait for Python `/health`. |
+| `TRANSCRIPTION_STARTUP_INTERVAL_SECONDS` | No | `2` | Supervisor health-check interval. |
 | `WHISPER_MODEL` | No | `base` | Model such as `tiny`, `base`, `small`, `medium`, `large`, `large-v2`, or `large-v3`. |
+| `WHISPER_DEVICE` | No | `cpu` | Faster-whisper device. Use `cuda` only with a CUDA-capable image/runtime. |
+| `WHISPER_COMPUTE_TYPE` | No | `int8` | Faster-whisper compute type. |
+| `WHISPER_CACHE_DIR` | No | platform-dependent | Model cache directory. |
 | `WHISPER_LANGUAGE` | No | `en` | Language hint passed to the transcription service. |
 | `TRANSCRIPTION_TIMEOUT` | No | `60000` | Request timeout in milliseconds. |
+| `TRANSCRIPTION_HEALTH_TIMEOUT` | No | `3000` | Health-check timeout in milliseconds. |
+| `TRANSCRIPTION_RETRIES` | No | `3` | Retry attempts for health and local transcription requests. |
+| `TRANSCRIPTION_RETRY_DELAY_MS` | No | `1000` | Linear backoff delay between retries. |
 | `MAX_FILE_SIZE_MB` | No | `25` | Maximum audio size accepted by the Node service and Flask service. |
 | `WHISPER_API_KEY` | No | unset | OpenAI API key used as a fallback when local transcription is unavailable. |
 
@@ -293,14 +303,14 @@ PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
-pip install flask faster-whisper
+pip install -r transcription_service/requirements.txt
 ```
 
 macOS/Linux:
 
 ```bash
 source .venv/bin/activate
-pip install flask faster-whisper
+pip install -r transcription_service/requirements.txt
 ```
 
 Start the service from the project root:
@@ -312,8 +322,8 @@ npm run transcription:dev
 The service listens on port `5000` by default. Verify it with:
 
 ```text
-http://localhost:5000/health
-http://localhost:5000/models
+http://127.0.0.1:5000/health
+http://127.0.0.1:5000/models
 ```
 
 The transcription endpoint is `POST /transcribe` with multipart field `audio`. It accepts OGG, WAV, MP3, M4A, WebM, FLAC, and Opus files. Optional form fields are `language`, `model`, `vad_filter`, and `beam_size`.
@@ -432,7 +442,12 @@ MongoDB stores the following models:
 │   ├── services/               # Gemini, search, memory, PDF, voice, and domain logic
 │   └── utils/                  # Constants, messages, keyboards, and logging
 ├── transcription_service/
-│   └── app.py                  # Flask faster-whisper microservice
+│   ├── app.py                  # Flask faster-whisper microservice
+│   └── requirements.txt        # Python production dependencies
+├── docker/
+│   └── start.sh                # Single-container process supervisor
+├── Dockerfile                  # Railway single-container image
+├── .dockerignore               # Docker build context exclusions
 ├── .env.example                # Environment template
 ├── docker-compose.yml          # Compose configuration
 ├── package.json                # Scripts and dependencies
@@ -441,13 +456,38 @@ MongoDB stores the following models:
 
 ## Docker
 
-`docker-compose.yml` describes three services:
+Railway uses the root `Dockerfile` and runs both application processes in one container:
 
-- `wlpa-bot` on port `3000`
-- `transcription` on port `5000`
-- `mongodb` on port `27017`
+- Node.js listens on Railway's `PORT` value.
+- Faster-whisper listens internally on `127.0.0.1:5000`.
+- `docker/start.sh` starts Python first, waits for `/health`, and then starts Node.js.
 
-The intended commands are:
+Build and run locally:
+
+```bash
+docker build -t wlpa-bot .
+docker run --rm --env-file .env -e PORT=8080 -p 3000:8080 wlpa-bot
+```
+
+The image does not copy `.env`; pass secrets at runtime. The first startup downloads the configured Whisper model into `/opt/whisper_cache`. Use a persistent Railway volume for that path if you want to avoid downloading the model after every redeploy.
+
+### Required single-container variables
+
+```dotenv
+PORT=8080
+TRANSCRIPTION_SERVICE_URL=http://127.0.0.1:5000
+TRANSCRIPTION_HOST=127.0.0.1
+TRANSCRIPTION_PORT=5000
+WHISPER_MODEL=base
+WHISPER_DEVICE=cpu
+WHISPER_COMPUTE_TYPE=int8
+```
+
+`TRANSCRIPTION_SERVICE_URL` is normalized from `localhost` or `::1` to `127.0.0.1` by `VoiceService`, so existing Railway variables using `http://localhost:5000` do not resolve to IPv6 loopback.
+
+`docker-compose.yml` remains as an optional legacy local multi-container setup. It is not used by Railway and is not required for the single-container deployment.
+
+The legacy Compose commands are:
 
 ```bash
 npm run docker:build
@@ -456,7 +496,7 @@ npm run docker:logs
 npm run docker:down
 ```
 
-Before using Compose, review the file and provide the required environment variables. The current checkout does not contain the root `Dockerfile` referenced by the `wlpa-bot` service, so the bot image cannot be built until that Dockerfile is added or the Compose service is changed to use an available image/build definition. The transcription service also expects `transcription_service/Dockerfile`; add it before building that service if it is not supplied separately.
+The legacy Compose file still expects a separate `transcription_service/Dockerfile`; use the root Dockerfile for the supported Railway single-container deployment.
 
 ## Scripts
 
@@ -501,7 +541,7 @@ Set `WHATSAPP_APP_SECRET` to the Meta app secret. A wrong secret or a request bo
 
 ### Voice messages are unavailable
 
-Check `http://localhost:5000/health`, confirm `USE_LOCAL_TRANSCRIPTION=true`, and verify that `TRANSCRIPTION_SERVICE_URL` matches the service address. If using the fallback, set `WHISPER_API_KEY` and restart the Node process.
+Check `http://127.0.0.1:5000/health`, confirm `USE_LOCAL_TRANSCRIPTION=true`, and verify that `TRANSCRIPTION_SERVICE_URL` matches the service address. If using the fallback, set `WHISPER_API_KEY` and restart the Node process.
 
 ### PDFs are not sent
 
@@ -520,7 +560,7 @@ Run the application from the project root and verify that `WLPA_PDF_PATH` exists
 
 ## Repository status
 
-The repository currently includes the Node.js source, legal data, PDFs, and the Python transcription service. The package scripts also reference integration tests, a database seed script, and Dockerfiles that are not present in the current checkout; those commands require the corresponding files to be added or supplied by the deployment environment. The `lint` script is present, but ESLint is not declared in `package.json`, so provide it in the development environment before running that command.
+The repository includes the Node.js source, legal data, PDFs, Python transcription service, and the root Dockerfile used by Railway. The legacy Compose transcription command still references a separate `transcription_service/Dockerfile`; it is not needed for the supported single-container deployment. The package scripts also reference integration tests and a database seed script that are not present in the current checkout. The `lint` script is present, but ESLint is not declared in `package.json`, so provide it in the development environment before running that command.
 
 ## License
 
