@@ -11,12 +11,37 @@ export TRANSCRIPTION_HOST
 export TRANSCRIPTION_PORT
 export TRANSCRIPTION_SERVICE_URL
 
-transcription_pid=""
-node_pid=""
-
 log() {
   printf '[container] %s\n' "$*"
 }
+
+PYTHON_BIN="${PYTHON_BIN:-${VIRTUAL_ENV:-/opt/venv}/bin/python}"
+PIP_BIN="${PIP_BIN:-${VIRTUAL_ENV:-/opt/venv}/bin/pip}"
+
+if [[ ! -x "${PYTHON_BIN}" || ! -x "${PIP_BIN}" ]]; then
+  log "Configured Python virtual environment is unavailable"
+  log "python=${PYTHON_BIN}"
+  log "pip=${PIP_BIN}"
+  exit 1
+fi
+
+log "Python executable: ${PYTHON_BIN}"
+log "pip executable: ${PIP_BIN}"
+"${PYTHON_BIN}" - <<'PY'
+import site
+import sys
+
+print(f"[container] Python version: {sys.version.split()[0]}")
+print(f"[container] sys.executable: {sys.executable}")
+print(f"[container] sys.path: {sys.path}")
+print(f"[container] site-packages: {site.getsitepackages()}")
+PY
+"${PIP_BIN}" show requests
+"${PIP_BIN}" freeze
+"${PYTHON_BIN}" -c "import requests; from faster_whisper import WhisperModel; print('[container] Python imports verified: requests=' + requests.__version__)"
+
+transcription_pid=""
+node_pid=""
 
 cleanup() {
   local status=$?
@@ -46,7 +71,7 @@ trap cleanup EXIT
 trap 'exit 143' INT TERM
 
 log "Starting faster-whisper on ${TRANSCRIPTION_HOST}:${TRANSCRIPTION_PORT}"
-python3 -u transcription_service/app.py &
+"${PYTHON_BIN}" -u transcription_service/app.py &
 transcription_pid=$!
 
 ready=0

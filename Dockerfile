@@ -32,7 +32,12 @@ RUN python3 -m venv /opt/venv \
     && /opt/venv/bin/pip install --no-cache-dir --upgrade pip \
     && /opt/venv/bin/pip install --no-cache-dir -r transcription_service/requirements.txt
 
-ENV PATH=/opt/venv/bin:$PATH
+ENV VIRTUAL_ENV=/opt/venv \
+    PATH=/opt/venv/bin:$PATH
+
+RUN /opt/venv/bin/pip show requests \
+    && /opt/venv/bin/python -c "import requests; from faster_whisper import WhisperModel; print('Python dependency imports verified:', requests.__version__)" \
+    && /opt/venv/bin/pip freeze
 
 COPY . .
 
