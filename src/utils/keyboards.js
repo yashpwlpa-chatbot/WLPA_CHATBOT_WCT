@@ -74,9 +74,9 @@ function buildFeedbackKeyboard(_language) {
 function buildLanguageInlineKeyboard() {
   return {
     inline_keyboard: [
-      [{ text: '🇬🇧 English', callback_data: INLINE_CALLBACKS.LANG_EN }],
-      [{ text: '🇮🇳 हिन्दी', callback_data: INLINE_CALLBACKS.LANG_HI }],
-      [{ text: '🇲🇷 मराठी', callback_data: INLINE_CALLBACKS.LANG_MR }],
+      [{ text: ' English', callback_data: INLINE_CALLBACKS.LANG_EN }],
+      [{ text: ' हिन्दी', callback_data: INLINE_CALLBACKS.LANG_HI }],
+      [{ text: ' मराठी', callback_data: INLINE_CALLBACKS.LANG_MR }],
     ],
   };
 }
