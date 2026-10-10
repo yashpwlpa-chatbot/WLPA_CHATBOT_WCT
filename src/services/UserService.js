@@ -94,6 +94,23 @@ class UserService {
     }
   }
 
+   /** Create a WhatsApp user only if absent; atomically claim the first interaction. */
+  async createWhatsAppUserIfNew(phoneNumber) {
+    if (!phoneNumber) throw new Error('UserService.createWhatsAppUserIfNew: missing phoneNumber');
+    try {
+      const result = await User.updateOne(
+        { whatsappId: phoneNumber },
+        { $setOnInsert: { whatsappId: phoneNumber } },
+        { upsert: true, runValidators: true, setDefaultsOnInsert: true }
+      );
+      return result.upsertedCount === 1;
+    } catch (err) {
+      // Another worker may have inserted the same unique whatsappId first.
+      if (err?.code === 11000) return false;
+      throw err;
+    }
+  }
+  
   async findByTelegramId(telegramId) {
     return User.findOne({ telegramId });
   }
