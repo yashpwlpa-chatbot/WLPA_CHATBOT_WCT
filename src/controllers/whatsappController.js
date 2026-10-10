@@ -241,6 +241,26 @@ async function handleTextMessage(phoneNumber, text) {
 async function _dispatchQueuedMessage(message) {
   const phoneNumber = message.from;
   if (message.id) await WhatsAppService.markAsRead(message.id).catch(() => null);
+  try {
+    if (await UserService.createWhatsAppUserIfNew(phoneNumber)) {
+      logger.info('New WhatsApp user detected', { phoneNumber });
+      await WhatsAppService.sendTextMessage(phoneNumber, `👋 Welcome to the WCT WLPA Bot!
+
+A digital assistant for India's Wildlife (Protection) Act, 1972 and amendments up to 2022.
+
+You can ask about:
+• Sections and Chapters
+• Protected Species & Schedules
+• Wildlife Offences & Penalties
+• Amendments
+• Practical WLPA questions
+
+This bot provides general legal information, not legal advice.`);
+      logger.info('Welcome message sent', { phoneNumber });
+    }
+  } catch (err) {
+    logger.warn('WhatsApp welcome failed; continuing original message', { phoneNumber, error: err.message });
+  }
   if (message.type === 'text') return handleTextMessage(phoneNumber, message.text?.body || '');
   if (message.type === 'audio' || message.type === 'voice') {
     if (!VoiceService.isAvailable()) return WhatsAppService.sendTextMessage(phoneNumber, 'Voice messages are not configured on this server.');
